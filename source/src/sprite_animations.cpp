@@ -10,7 +10,7 @@
 #include "bn_sprites_actions.h"
 #include "bn_sprite_animate_actions.h"
 
-# include "bn_sprite_palette_ptr.h"
+#include "bn_sprite_palette_ptr.h"
 
 #include "bn_sprite_items_reimu_idle_spritesheet.h"
 #include "bn_sprite_items_cirno_spritesheet.h"

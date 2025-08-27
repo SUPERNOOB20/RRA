@@ -59,13 +59,13 @@ main.o: /home/supernoob20/GBA_Dev_LM/RRA/source/src/main.cpp \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_animate_actions_fwd.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_palette_ptr.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_ptr.h \
- /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen1n.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_item.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_bg_palette_item.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_map_item.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_size.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_map_cell.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_tiles_item.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen1n.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen2n.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_keypad.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_log.h \
@@ -132,13 +132,13 @@ main.o: /home/supernoob20/GBA_Dev_LM/RRA/source/src/main.cpp \
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_animate_actions_fwd.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_palette_ptr.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_ptr.h:
-/home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen1n.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_item.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_bg_palette_item.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_map_item.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_size.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_map_cell.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_tiles_item.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen1n.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen2n.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_keypad.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_log.h:

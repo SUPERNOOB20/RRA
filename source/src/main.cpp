@@ -12,12 +12,12 @@
 #include "bn_sprites_actions.h"
 #include "bn_sprite_animate_actions.h"
 
-# include "bn_sprite_palette_ptr.h"
+#include "bn_sprite_palette_ptr.h"
 
 // #include "bn_sprite_builder.h"
 
 #include <bn_regular_bg_ptr.h>
-// #include <bn_regular_bg_item.h>
+#include <bn_regular_bg_item.h>
 #include "bn_regular_bg_items_screen1n.h"
 #include "bn_regular_bg_items_screen2n.h"
 
@@ -26,7 +26,7 @@
 
 #include "sprite_animations.h"
 
-#pragma once
+#include <tuple>
 
 int main()
 {
@@ -41,20 +41,32 @@ int main()
     // const int cirno_idle_frames = 25;
     // const int cirno_laughing_frames = 10;
 
+    std::tuple<int, char> current_stage = std::make_tuple(1, 'n');
+
     while(true)
     {
 
+        
 
         rra::sprite_anim::reimu_anim(frame_counter, reimu_anim_frames, player_x, player_y);
 
-        bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
+        bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
+
+        
+        if ((std::get<0>(current_stage)) == 1){
+            bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
+            if (bn::keypad::b_pressed()){
+                BN_LOG("OK");
+                BN_LOG("frame_counter:", frame_counter, "player_x:", player_x);
+            }
+        }
+        
 
         if (player_x > 128) {
-            bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
+            current_stage = std::make_tuple(2, 'n');
+            bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
             player_x = -96;
         }
-
-            
 
 
 
@@ -73,8 +85,10 @@ int main()
 
         if (bn::keypad::b_pressed())
         {
-            BN_LOG("frame_counter: ");
-            BN_LOG(frame_counter, player_x);
+            // BN_LOG("frame_counter: ");
+            // BN_LOG(frame_counter, player_x);
+            // BN_LOG(std::get<0>(current_stage));
+            int decoy = 0;
         }
 
         bn::core::update();
