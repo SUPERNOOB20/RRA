@@ -22,38 +22,30 @@
 #include "bn_keypad.h"
 #include "bn_log.h"
 
+#include "sprite_animations.h"
+#include "game.h"
+
+struct global_data
+{
+    bn::sprite_ptr reimu_idle_spritesheet;
+    bn::sprite_ptr reimu_jump_spritesheet;
+    bn::sprite_ptr cirno_spritesheet;
+    bn::sprite_ptr akyuu_spritesheet;
+
+    bn::regular_bg_ptr screen1n;
+    bn::regular_bg_ptr screen12;
+};
+
+global_data* global_ptr;
+
+
 int frame_counter = 0;    // As a timer for animations :3
-
-int player_x = -96;
-int player_y = 48;
-
-int current_stage = 1;
-char current_difficulty = 'n';
-
-void change_stage() {
-    if (player_x > 118) {
-        current_stage++;
-        player_x = -96;
-    }
-
-    if (player_x < -118) {
-        current_stage--;
-        player_x = 96;
-    }
-}
-
-const int reimu_anim_frames = 20;       // Sets the amount of frames each sprite should play for (i.e. frame speed). anim_frames == 60 means 1fps animation, anim_frames == 30 means 2fps animation, etc.
-const int akyuu_anim_frames = 30;
-    // const int cirno_idle_frames = 25;
-    // const int cirno_laughing_frames = 10;
-
-// collision(x, y)
 
 int main()
 {
     bn::core::init();
 
-    struct global_data global_instance = {
+    global_data global_instance = {
 
         // vvv   Do these need top_left() method...?   vvv
 
