@@ -29,7 +29,7 @@
 int frame_counter = 0;    // As a timer for animations :3
 
 int player_x = -96;
-int player_y = 64;
+int player_y = 48;
 
 int current_stage = 1;
 char current_difficulty = 'n';
@@ -51,7 +51,7 @@ const int akyuu_anim_frames = 30;
     // const int cirno_idle_frames = 25;
     // const int cirno_laughing_frames = 10;
 
-collision(x, y)
+// collision(x, y)
 
 int main()
 {
@@ -93,7 +93,7 @@ int main()
         
 
         // void akyuu_anim(int frame_counter)    
-        bn::sprite_ptr akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);
+        bn::sprite_ptr akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(96, 16);
         akyuu_sprite.set_visible(false);
 
         if (current_stage == 2){
