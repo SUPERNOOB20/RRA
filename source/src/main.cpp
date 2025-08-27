@@ -1,18 +1,17 @@
 #include "bn_core.h"
-#include <bn_sprites.h>
-#include <bn_sprite_ptr.h>
-#include <bn_sprite_tiles.h>
-#include <bn_sprite_tiles_ptr.h>
+// #include <bn_sprites.h>
+// #include <bn_sprite_ptr.h>
+// #include <bn_sprite_tiles.h>
+// #include <bn_sprite_tiles_ptr.h>
 // #include "bn_sprite_items_ice_block.h"
-#include "bn_sprite_item.h"
+// #include "bn_sprite_item.h"
 
 
+// #include "bn_sprite_actions.h"
+// #include "bn_sprites_actions.h"
+// #include "bn_sprite_animate_actions.h"
 
-#include "bn_sprite_actions.h"
-#include "bn_sprites_actions.h"
-#include "bn_sprite_animate_actions.h"
-
-#include "bn_sprite_palette_ptr.h"
+// #include "bn_sprite_palette_ptr.h"
 
 // #include "bn_sprite_builder.h"
 
