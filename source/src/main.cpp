@@ -3,16 +3,11 @@
 #include <bn_sprite_ptr.h>
 #include <bn_sprite_tiles.h>
 #include <bn_sprite_tiles_ptr.h>
-<<<<<<< HEAD
 
 #include "bn_sprite_item.h"
 // #include "bn_sprite_items_ice_block.h"
 #include "bn_sprite_items_reimu_idle_spritesheet.h"
 #include "bn_sprite_items_akyuu_spritesheet.h"
-=======
-// #include "bn_sprite_items_ice_block.h"
-#include "bn_sprite_item.h"
->>>>>>> 5306bc5 (Revert "qwq")
 
 #include "bn_sprite_items_reimu_idle_spritesheet.h"
 #include "bn_sprite_items_reimu_jump_spritesheet.h"
@@ -27,7 +22,6 @@
 #include "bn_keypad.h"
 #include "bn_log.h"
 
-<<<<<<< HEAD
 int frame_counter = 0;    // As a timer for animations :3
 
 int player_x = -96;
@@ -55,27 +49,6 @@ const int akyuu_anim_frames = 30;
 
 // collision(x, y)
 
-=======
-#include "sprite_animations.h"
-#include "game.h"
-
-struct global_data
-{
-    bn::sprite_ptr reimu_idle_spritesheet;
-    bn::sprite_ptr reimu_jump_spritesheet;
-    bn::sprite_ptr cirno_spritesheet;
-    bn::sprite_ptr akyuu_spritesheet;
-
-    bn::regular_bg_ptr screen1n;
-    bn::regular_bg_ptr screen12;
-};
-
-global_data* global_ptr;
-
-
-int frame_counter = 0;    // As a timer for animations :3
-
->>>>>>> 5306bc5 (Revert "qwq")
 int main()
 {
     bn::core::init();
