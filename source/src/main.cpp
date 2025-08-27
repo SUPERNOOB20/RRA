@@ -31,12 +31,20 @@ int frame_counter = 0;    // As a timer for animations :3
 int player_x = -96;
 int player_y = 64;
 
-const int reimu_anim_frames = 20;       // Sets the amount of frames each sprite should playy for (i.e. frame speed). anim_frames == 60 means 1fps animation, anim_frames == 30 means 2fps animation, etc.
-// const int cirno_idle_frames = 25;
-// const int cirno_laughing_frames = 10;
-
 int current_stage = 1;
 char current_difficulty = 'n';
+
+void change_stage() {
+    if (player_x > 118) {
+        current_stage++;
+        player_x = -96;
+    }
+
+    if (player_x < -118) {
+        current_stage--;
+        player_x = 96;
+    }
+}
 
 int main()
 {
@@ -45,17 +53,9 @@ int main()
     while(true)
     {
 
-        rra::sprite_anim::reimu_anim(frame_counter, reimu_anim_frames, player_x, player_y);
+        rra::sprite_anim::reimu_anim(frame_counter, player_x, player_y);
         
-        if (player_x > 118) {
-            current_stage++;
-            player_x = -96;
-        }
-
-        if (player_x < -118) {
-            current_stage--;
-            player_x = 96;
-        }
+        change_stage();
 
         // bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
 
@@ -65,6 +65,7 @@ int main()
             current_stage_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
         } else if (current_stage == 2) {
             current_stage_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
+            rra::sprite_anim::akyuu_anim(frame_counter);
         } else {
             int nop = 0;            // hey_compiler_whats_up_xddd
         }
