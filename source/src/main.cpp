@@ -3,20 +3,21 @@
 #include <bn_sprite_ptr.h>
 #include <bn_sprite_tiles.h>
 #include <bn_sprite_tiles_ptr.h>
+<<<<<<< HEAD
 
 #include "bn_sprite_item.h"
 // #include "bn_sprite_items_ice_block.h"
 #include "bn_sprite_items_reimu_idle_spritesheet.h"
 #include "bn_sprite_items_akyuu_spritesheet.h"
+=======
+// #include "bn_sprite_items_ice_block.h"
+#include "bn_sprite_item.h"
+>>>>>>> 5306bc5 (Revert "qwq")
 
-
-// #include "bn_sprite_actions.h"
-// #include "bn_sprites_actions.h"
-// #include "bn_sprite_animate_actions.h"
-
-// #include "bn_sprite_palette_ptr.h"
-
-// #include "bn_sprite_builder.h"
+#include "bn_sprite_items_reimu_idle_spritesheet.h"
+#include "bn_sprite_items_reimu_jump_spritesheet.h"
+#include "bn_sprite_items_cirno_spritesheet.h"
+#include "bn_sprite_items_akyuu_spritesheet.h"
 
 #include <bn_regular_bg_ptr.h>
 #include <bn_regular_bg_item.h>
@@ -26,6 +27,7 @@
 #include "bn_keypad.h"
 #include "bn_log.h"
 
+<<<<<<< HEAD
 int frame_counter = 0;    // As a timer for animations :3
 
 int player_x = -96;
@@ -53,13 +55,50 @@ const int akyuu_anim_frames = 30;
 
 // collision(x, y)
 
+=======
+#include "sprite_animations.h"
+#include "game.h"
+
+struct global_data
+{
+    bn::sprite_ptr reimu_idle_spritesheet;
+    bn::sprite_ptr reimu_jump_spritesheet;
+    bn::sprite_ptr cirno_spritesheet;
+    bn::sprite_ptr akyuu_spritesheet;
+
+    bn::regular_bg_ptr screen1n;
+    bn::regular_bg_ptr screen12;
+};
+
+global_data* global_ptr;
+
+
+int frame_counter = 0;    // As a timer for animations :3
+
+>>>>>>> 5306bc5 (Revert "qwq")
 int main()
 {
     bn::core::init();
 
+    global_data global_instance = {
+
+        // vvv   Do these need top_left() method...?   vvv
+
+        bn::sprite_items::reimu_idle_spritesheet.create_sprite(0, 0),
+        bn::sprite_items::reimu_jump_spritesheet.create_sprite(0, 0),
+        bn::sprite_items::cirno_spritesheet.create_sprite(0, 0),
+        bn::sprite_items::akyuu_spritesheet.create_sprite(0, 0),
+
+        bn::regular_bg_items::screen1n.create_bg(0, 0),
+        bn::regular_bg_items::screen2n.create_bg(0, 0)
+    };
+
+    global_ptr = &global_instance;
+
     while(true)
     {
 
+<<<<<<< HEAD
 
         // "collision" should be "(x1, y1, x2, y2)"
         // I need to try to make a vector with "spike" collisions, and a vector with "block" collissions.
@@ -124,26 +163,11 @@ int main()
 
         bn::regular_bg_ptr regular_bg = current_stage_bg;
 
+=======
+        rra::game::handle_frame(global_ptr, frame_counter);
+>>>>>>> 5306bc5 (Revert "qwq")
 
         frame_counter++;
-
-        if (bn::keypad::right_held())
-        {
-            player_x++;
-        }
-
-        if (bn::keypad::left_held())
-        {
-            player_x--;
-        }
-
-
-        if (bn::keypad::b_pressed())
-        {
-            BN_LOG("frame_counter, player_x, current_stage: ");
-            BN_LOG(frame_counter, " ", player_x, " ", current_stage);
-            // int decoy = 0;
-        }
 
         bn::core::update();
     }
