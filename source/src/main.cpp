@@ -26,8 +26,6 @@
 
 #include "sprite_animations.h"
 
-#include <tuple>
-
 int main()
 {
     bn::core::init();
@@ -41,7 +39,8 @@ int main()
     // const int cirno_idle_frames = 25;
     // const int cirno_laughing_frames = 10;
 
-    std::tuple<int, char> current_stage = std::make_tuple(1, 'n');
+    int current_stage = 1;
+    char current_difficulty = 'n';
 
     while(true)
     {
@@ -49,25 +48,23 @@ int main()
         
 
         rra::sprite_anim::reimu_anim(frame_counter, reimu_anim_frames, player_x, player_y);
-
-        bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
-
         
-        if ((std::get<0>(current_stage)) == 1){
-            bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
-            if (bn::keypad::b_pressed()){
-                BN_LOG("OK");
-                BN_LOG("frame_counter:", frame_counter, "player_x:", player_x);
-            }
-        }
-        
-
         if (player_x > 128) {
-            current_stage = std::make_tuple(2, 'n');
-            bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
+            current_stage++;
             player_x = -96;
         }
 
+        bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(99, 99);
+
+        if (current_stage == 1) {
+            bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
+        } else if (current_stage == 2) {
+            bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
+        } else {
+            int nop = 0;            // hey_compiler_whats_up_xddd
+        }
+
+        
 
 
         frame_counter++;
