@@ -62,7 +62,6 @@ int main()
 
     while(true)
     {
-
         rra::game::handle_frame(global_ptr, frame_counter);
 
         frame_counter++;
