@@ -61,7 +61,10 @@ sprite_animations.o: \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_shape_size.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_palette_item.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_color.h \
- /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_cirno_spritesheet.h
+ /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_cirno_spritesheet.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_log.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_config_log.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_log_backend.h
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_core.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_span.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_array.h:
@@ -124,3 +127,6 @@ sprite_animations.o: \
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_palette_item.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_color.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_cirno_spritesheet.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_log.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_config_log.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_log_backend.h:

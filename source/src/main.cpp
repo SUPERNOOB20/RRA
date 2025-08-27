@@ -45,31 +45,31 @@ int main()
     while(true)
     {
 
-        
-
         rra::sprite_anim::reimu_anim(frame_counter, reimu_anim_frames, player_x, player_y);
         
-        if (player_x > 128) {
+        if (player_x > 118) {
             current_stage++;
             player_x = -96;
         }
 
-        if (player_x < -128) {
+        if (player_x < -118) {
             current_stage--;
             player_x = 96;
         }
 
         // bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
 
+        auto current_stage_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
+
         if (current_stage == 1) {
-            bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
+            current_stage_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
         } else if (current_stage == 2) {
-            bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
+            current_stage_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
         } else {
             int nop = 0;            // hey_compiler_whats_up_xddd
         }
 
-        
+        bn::regular_bg_ptr regular_bg = current_stage_bg;
 
 
         frame_counter++;

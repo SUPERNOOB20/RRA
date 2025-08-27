@@ -15,7 +15,7 @@
 #include "bn_sprite_items_reimu_idle_spritesheet.h"
 #include "bn_sprite_items_cirno_spritesheet.h"
 
-
+#include "bn_log.h"
 
 // #pragma once
 
