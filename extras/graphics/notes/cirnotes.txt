@@ -1,0 +1,22 @@
+A (25 frames):  v
+A (100 frames): v
+B (25 frames):  ^
+C (10 frames):  v l
+D (10 frames):  ^ l
+
+
+
+AB x5
+AA
+DC x6
+
+
+
+so basically uh:
+
+0f < 25f
+
+
+
+
+0f to 469f

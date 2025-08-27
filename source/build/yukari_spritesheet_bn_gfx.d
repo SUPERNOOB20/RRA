@@ -1,0 +1,1 @@
+yukari_spritesheet_bn_gfx.o: yukari_spritesheet_bn_gfx.s

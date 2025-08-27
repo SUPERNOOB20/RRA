@@ -1,0 +1,7 @@
+colours:
+
+less S: FF51A5
+
+mid S: FF3296
+
+most S: FF1988

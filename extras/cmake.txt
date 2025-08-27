@@ -1,0 +1,7 @@
+"cmake.cmakePath": "/usr/local/bin/cmake"
+
+C:\Program Files\CMake\
+
+
+
+"cmake.cmakePath": C:\Program Files\CMake\

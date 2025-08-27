@@ -1,0 +1,17 @@
+How to do retro blocks
+by yours truly
+
+1) 45° gradient with colours of your choice (two opposite corners, basically)
+2) 4bpp and as much dithering as you can
+3) do left to right white to black gradient on a separate gradient
+4) Duplicate said B&W gradient
+5) lightest corner: screen blending mode. Darkest corner: multiply blending mode
+6) Enjoy :3 ✨
+
+
+
+
+
+
+(color #1) Purple: 9500DB
+(color #2) Pink: FFBFE9

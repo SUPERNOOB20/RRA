@@ -1,0 +1,206 @@
+[
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -DPRODUCTION_BUILD=0 -DRESOURCES_PATH=\"\\\"C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/resources/\\\"\" @CMakeFiles/spaceGame.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\spaceGame.dir\\src\\gameLayer\\gameLayer.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\src\\gameLayer\\gameLayer.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/src/gameLayer/gameLayer.cpp",
+  "output": "CMakeFiles/spaceGame.dir/src/gameLayer/gameLayer.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -DPRODUCTION_BUILD=0 -DRESOURCES_PATH=\"\\\"C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/resources/\\\"\" @CMakeFiles/spaceGame.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\spaceGame.dir\\src\\platform\\glfwMain.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\src\\platform\\glfwMain.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/src/platform/glfwMain.cpp",
+  "output": "CMakeFiles/spaceGame.dir/src/platform/glfwMain.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -DPRODUCTION_BUILD=0 -DRESOURCES_PATH=\"\\\"C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/resources/\\\"\" @CMakeFiles/spaceGame.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\spaceGame.dir\\src\\platform\\opterPlatformFunctions.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\src\\platform\\opterPlatformFunctions.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/src/platform/opterPlatformFunctions.cpp",
+  "output": "CMakeFiles/spaceGame.dir/src/platform/opterPlatformFunctions.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build",
+  "command": "C:\\MinGW\\bin\\g++.exe -DPRODUCTION_BUILD=0 -DRESOURCES_PATH=\"\\\"C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/resources/\\\"\" @CMakeFiles/spaceGame.dir/includes_CXX.rsp -g -std=gnu++1z -o CMakeFiles\\spaceGame.dir\\src\\platform\\platformInput.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\src\\platform\\platformInput.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/src/platform/platformInput.cpp",
+  "output": "CMakeFiles/spaceGame.dir/src/platform/platformInput.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\context.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\context.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/context.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/context.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\init.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\init.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/init.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/init.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\input.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\input.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/input.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/input.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\monitor.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\monitor.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/monitor.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/monitor.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\vulkan.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\vulkan.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/vulkan.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/vulkan.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\window.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\window.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/window.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/window.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_init.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\win32_init.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/win32_init.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/win32_init.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\win32_joystick.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/win32_joystick.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/win32_joystick.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\win32_monitor.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/win32_monitor.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/win32_monitor.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_time.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\win32_time.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/win32_time.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/win32_time.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_thread.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\win32_thread.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/win32_thread.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/win32_thread.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\win32_window.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\win32_window.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/win32_window.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/win32_window.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\wgl_context.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\wgl_context.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/wgl_context.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/wgl_context.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\egl_context.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\egl_context.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/egl_context.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/egl_context.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glfw-3.3.2/src",
+  "command": "C:\\MinGW\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=gnu99 -Wall -Wdeclaration-after-statement -o CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glfw-3.3.2\\src\\osmesa_context.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glfw-3.3.2/src/osmesa_context.c",
+  "output": "thirdparty/glfw-3.3.2/src/CMakeFiles/glfw.dir/osmesa_context.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glad",
+  "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/glad.dir/includes_C.rsp -g -o CMakeFiles\\glad.dir\\src\\glad.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glad\\src\\glad.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glad/src/glad.c",
+  "output": "thirdparty/glad/CMakeFiles/glad.dir/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/stb_image",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/stb_image.dir/includes_CXX.rsp -g -o CMakeFiles\\stb_image.dir\\src\\stb_image.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\stb_image\\src\\stb_image.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/stb_image/src/stb_image.cpp",
+  "output": "thirdparty/stb_image/CMakeFiles/stb_image.dir/src/stb_image.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/stb_truetype",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/stb_truetype.dir/includes_CXX.rsp -g -o CMakeFiles\\stb_truetype.dir\\src\\stb_truetype.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\stb_truetype\\src\\stb_truetype.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/stb_truetype/src/stb_truetype.cpp",
+  "output": "thirdparty/stb_truetype/CMakeFiles/stb_truetype.dir/src/stb_truetype.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/raudio",
+  "command": "C:\\MinGW\\bin\\gcc.exe  @CMakeFiles/raudio.dir/includes_C.rsp -g -o CMakeFiles\\raudio.dir\\src\\raudio.c.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\raudio\\src\\raudio.c\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/raudio/src/raudio.c",
+  "output": "thirdparty/raudio/CMakeFiles/raudio.dir/src/raudio.c.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/imgui-docking",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -g -o CMakeFiles\\imgui.dir\\imgui\\imgui.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\imgui-docking\\imgui\\imgui.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/imgui-docking/imgui/imgui.cpp",
+  "output": "thirdparty/imgui-docking/CMakeFiles/imgui.dir/imgui/imgui.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/imgui-docking",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -g -o CMakeFiles\\imgui.dir\\imgui\\imgui_demo.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\imgui-docking\\imgui\\imgui_demo.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/imgui-docking/imgui/imgui_demo.cpp",
+  "output": "thirdparty/imgui-docking/CMakeFiles/imgui.dir/imgui/imgui_demo.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/imgui-docking",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -g -o CMakeFiles\\imgui.dir\\imgui\\imgui_draw.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\imgui-docking\\imgui\\imgui_draw.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/imgui-docking/imgui/imgui_draw.cpp",
+  "output": "thirdparty/imgui-docking/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/imgui-docking",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -g -o CMakeFiles\\imgui.dir\\imgui\\imgui_tables.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\imgui-docking\\imgui\\imgui_tables.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/imgui-docking/imgui/imgui_tables.cpp",
+  "output": "thirdparty/imgui-docking/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/imgui-docking",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -g -o CMakeFiles\\imgui.dir\\imgui\\imgui_widgets.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\imgui-docking\\imgui\\imgui_widgets.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/imgui-docking/imgui/imgui_widgets.cpp",
+  "output": "thirdparty/imgui-docking/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/imgui-docking",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -g -o CMakeFiles\\imgui.dir\\imgui\\backends\\imgui_impl_glfw.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\imgui-docking\\imgui\\backends\\imgui_impl_glfw.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/imgui-docking/imgui/backends/imgui_impl_glfw.cpp",
+  "output": "thirdparty/imgui-docking/CMakeFiles/imgui.dir/imgui/backends/imgui_impl_glfw.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/imgui-docking",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/imgui.dir/includes_CXX.rsp -g -o CMakeFiles\\imgui.dir\\imgui\\backends\\imgui_impl_opengl3.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\imgui-docking\\imgui\\backends\\imgui_impl_opengl3.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/imgui-docking/imgui/backends/imgui_impl_opengl3.cpp",
+  "output": "thirdparty/imgui-docking/CMakeFiles/imgui.dir/imgui/backends/imgui_impl_opengl3.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/safeSave",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/safeSave.dir/includes_CXX.rsp -g -o CMakeFiles\\safeSave.dir\\src\\safeSave.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\safeSave\\src\\safeSave.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/safeSave/src/safeSave.cpp",
+  "output": "thirdparty/safeSave/CMakeFiles/safeSave.dir/src/safeSave.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/gl2d",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/gl2d.dir/includes_CXX.rsp -g -o CMakeFiles\\gl2d.dir\\src\\gl2d.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\gl2d\\src\\gl2d.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/gl2d/src/gl2d.cpp",
+  "output": "thirdparty/gl2d/CMakeFiles/gl2d.dir/src/gl2d.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/gl2d",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/gl2d.dir/includes_CXX.rsp -g -o CMakeFiles\\gl2d.dir\\src\\gl2dParticleSystem.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\gl2d\\src\\gl2dParticleSystem.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/gl2d/src/gl2dParticleSystem.cpp",
+  "output": "thirdparty/gl2d/CMakeFiles/gl2d.dir/src/gl2dParticleSystem.cpp.obj"
+},
+{
+  "directory": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/build/thirdparty/glui",
+  "command": "C:\\MinGW\\bin\\g++.exe  @CMakeFiles/glui.dir/includes_CXX.rsp -g -o CMakeFiles\\glui.dir\\src\\glui.cpp.obj -c \"C:\\Users\\SUPERNOOB20\\Documents\\Reimu's ribbon adventure\\game-in-cpp-full-course - framework\\thirdparty\\glui\\src\\glui.cpp\"",
+  "file": "C:/Users/SUPERNOOB20/Documents/Reimu's ribbon adventure/game-in-cpp-full-course - framework/thirdparty/glui/src/glui.cpp",
+  "output": "thirdparty/glui/CMakeFiles/glui.dir/src/glui.cpp.obj"
+}
+]

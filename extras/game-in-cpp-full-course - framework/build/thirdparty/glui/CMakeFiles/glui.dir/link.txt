@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libglui.a CMakeFiles/glui.dir/src/glui.cpp.obj
+C:\MinGW\bin\ranlib.exe libglui.a

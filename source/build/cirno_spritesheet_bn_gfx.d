@@ -1,0 +1,1 @@
+cirno_spritesheet_bn_gfx.o: cirno_spritesheet_bn_gfx.s

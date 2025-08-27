@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libgl2d.a CMakeFiles/gl2d.dir/src/gl2d.cpp.obj CMakeFiles/gl2d.dir/src/gl2dParticleSystem.cpp.obj
+C:\MinGW\bin\ranlib.exe libgl2d.a

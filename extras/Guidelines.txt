@@ -1,0 +1,9 @@
+30x30 sprite
+10x10 hitbox
+
+10x5 projectiles
+
+
+20x20 ying yang
+
+Save file: jsoncpp (json parser)

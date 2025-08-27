@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libraudio.a CMakeFiles/raudio.dir/src/raudio.c.obj
+C:\MinGW\bin\ranlib.exe libraudio.a

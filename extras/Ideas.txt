@@ -1,0 +1,3 @@
+Ribbon plot (Yukari final boss with Reimu's ribbon...
+...Reimu defeats her and gets her ribbon back. The player
+will now have a togglable to wear the ribbon (turned ON by default)).

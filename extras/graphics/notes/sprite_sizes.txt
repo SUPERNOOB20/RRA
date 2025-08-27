@@ -1,0 +1,2 @@
+reimu_idle: 32x96
+reimu_jump: 32x64

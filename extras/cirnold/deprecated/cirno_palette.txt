@@ -1,0 +1,13 @@
+cirno_palette:
+
+cyans:
+- C1FFE4
+- D1FFE9
+
+darkish cyan:
+- A3C6B6
+
+blue:
+- 
+
+greenish:
