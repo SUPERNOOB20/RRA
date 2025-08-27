@@ -1,22 +1,22 @@
 tte_init_bmp.o: \
- /home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/src/tte/tte_init_bmp.c \
- /home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_memdef.h \
- /home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_core.h \
- /home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_memmap.h \
- /home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_types.h \
- /home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_memdef.h \
- /home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_video.h \
- /home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_core.h \
- /home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_tte.h \
- /home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_surface.h \
- /home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_surface.h
-/home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_memdef.h:
-/home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_core.h:
-/home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_memmap.h:
-/home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_types.h:
-/home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_memdef.h:
-/home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_video.h:
-/home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_core.h:
-/home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_tte.h:
-/home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_surface.h:
-/home/supernoob20/GBA_Dev_LM/Reimu-s_Ribbon_Adventure/butano/hw/3rd_party/libtonc/include/tonc_surface.h:
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/src/tte/tte_init_bmp.c \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_memdef.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_core.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_memmap.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_types.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_memdef.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_video.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_core.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_tte.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_surface.h \
+ /home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_surface.h
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_memdef.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_core.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_memmap.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_types.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_memdef.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_video.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_core.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_tte.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_surface.h:
+/home/supernoob20/GBA_Dev_LM/RRA/source/butano/hw/3rd_party/libtonc/include/tonc_surface.h:

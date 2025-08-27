@@ -1,12 +1,23 @@
+#include "bn_core.h"
+#include <bn_sprites.h>
 #include "bn_sprite_ptr.h"
+#include <bn_sprite_tiles.h>
+#include <bn_sprite_tiles_ptr.h>
+
 #include "sprite_animations.h"
+
+#include "bn_sprite_actions.h"
+#include "bn_sprites_actions.h"
+#include "bn_sprite_animate_actions.h"
+
+# include "bn_sprite_palette_ptr.h"
 
 #include "bn_sprite_items_reimu_idle_spritesheet.h"
 #include "bn_sprite_items_cirno_spritesheet.h"
 
 
 
-#pragma once
+// #pragma once
 
 
 
@@ -30,6 +41,7 @@ namespace sprite_anim
             reimu_sprite.set_tiles(bn::sprite_items::reimu_idle_spritesheet.tiles_item().create_tiles(2));                
         }
 
+        return;
     }
     // cirno_anim(int frame_counter);
         // cirno_sprite.set_tiles(bn::sprite_items::cirno_spritesheet.tiles_item().create_tiles(3));
