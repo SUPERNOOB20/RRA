@@ -26,21 +26,21 @@
 
 #include "sprite_animations.h"
 
+int frame_counter = 0;    // As a timer for animations :3
+
+int player_x = -96;
+int player_y = 64;
+
+const int reimu_anim_frames = 20;       // Sets the amount of frames each sprite should playy for (i.e. frame speed). anim_frames == 60 means 1fps animation, anim_frames == 30 means 2fps animation, etc.
+// const int cirno_idle_frames = 25;
+// const int cirno_laughing_frames = 10;
+
+int current_stage = 1;
+char current_difficulty = 'n';
+
 int main()
 {
     bn::core::init();
-
-    int frame_counter = 0;    // As a timer for animations :3
-
-    int player_x = -96;
-    int player_y = 64;
-
-    const int reimu_anim_frames = 20;       // Sets the amount of frames each sprite should playy for (i.e. frame speed). anim_frames == 60 means 1fps animation, anim_frames == 30 means 2fps animation, etc.
-    // const int cirno_idle_frames = 25;
-    // const int cirno_laughing_frames = 10;
-
-    int current_stage = 1;
-    char current_difficulty = 'n';
 
     while(true)
     {
@@ -54,7 +54,12 @@ int main()
             player_x = -96;
         }
 
-        bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(99, 99);
+        if (player_x < -128) {
+            current_stage--;
+            player_x = 96;
+        }
+
+        bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
 
         if (current_stage == 1) {
             bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
@@ -82,10 +87,9 @@ int main()
 
         if (bn::keypad::b_pressed())
         {
-            // BN_LOG("frame_counter: ");
-            // BN_LOG(frame_counter, player_x);
-            // BN_LOG(std::get<0>(current_stage));
-            int decoy = 0;
+            BN_LOG("frame_counter, player_x, current_stage: ");
+            BN_LOG(frame_counter, " ", player_x, " ", current_stage);
+            // int decoy = 0;
         }
 
         bn::core::update();
