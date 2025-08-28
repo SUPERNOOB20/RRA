@@ -25,6 +25,7 @@
 #include "sprite_animations.h"
 #include "game.h"
 
+
 struct global_data
 {
     bn::sprite_ptr reimu_idle_spritesheet;
@@ -33,7 +34,7 @@ struct global_data
     bn::sprite_ptr akyuu_spritesheet;
 
     bn::regular_bg_ptr screen1n;
-    bn::regular_bg_ptr screen12;
+    bn::regular_bg_ptr screen2n;
 };
 
 global_data* global_ptr;
@@ -45,6 +46,7 @@ int main()
 {
     bn::core::init();
 
+    
     global_data global_instance = {
 
         // vvv   Do these need top_left() method...?   vvv
@@ -59,10 +61,13 @@ int main()
     };
 
     global_ptr = &global_instance;
+    
 
     while(true)
     {
         rra::game::handle_frame(global_ptr, frame_counter);
+
+        // rra::game::handle_frame(bn::sprite_ptr&, bn::regular_bg_ptr&, frame_counter);
 
         frame_counter++;
 
