@@ -57,12 +57,18 @@ int main()
         bn::sprite_items::cirno_spritesheet.create_sprite(0, 0),
         bn::sprite_items::akyuu_spritesheet.create_sprite(0, 0),
 
-        bn::regular_bg_items::screen1n.create_bg(0, 0),
-        bn::regular_bg_items::screen2n.create_bg(0, 0)
+        bn::regular_bg_items::screen1n.create_bg(8, 48),
+        bn::regular_bg_items::screen2n.create_bg(8, 48)
     };
 
     global_ptr = &global_instance;
     
+
+
+    global_ptr->reimu_jump_sprite.set_visible(false);
+    global_ptr->cirno_sprite.set_visible(false);
+
+
 
     while(true)
     {

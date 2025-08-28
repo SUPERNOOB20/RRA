@@ -42,7 +42,7 @@ namespace sprite_anim
     void reimu_anim(global_data* global_sprites_and_backgrounds, int frame_counter, int player_x, int player_y){
 
         // bn::sprite_ptr reimu_sprite = bn::sprite_items::reimu_idle_spritesheet.create_sprite(player_x, player_y);
-        global_sprites_and_backgrounds->reimu_idle_spritesheet.set_position(player_x, player_y);
+        global_sprites_and_backgrounds->reimu_idle_sprite.set_top_left_position(player_x, player_y);
 
         int i = 0;
 
@@ -54,7 +54,7 @@ namespace sprite_anim
             i = 2;
         }
 
-        global_sprites_and_backgrounds->reimu_idle_spritesheet.set_tiles(bn::sprite_items::reimu_idle_spritesheet.tiles_item().create_tiles(i));                
+        global_sprites_and_backgrounds->reimu_idle_sprite.set_tiles(bn::sprite_items::reimu_idle_spritesheet.tiles_item().create_tiles(i));                
 
         return;
     }
@@ -64,7 +64,7 @@ namespace sprite_anim
         // bn::sprite_ptr akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);
         // bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);
 
-        global_sprites_and_backgrounds->akyuu_sprite.set_position(50, 50);
+        global_sprites_and_backgrounds->akyuu_sprite.set_top_left_position(216, 80);
 
         // sprite_pointer akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);
 

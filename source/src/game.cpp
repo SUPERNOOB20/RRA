@@ -27,8 +27,8 @@
 
 // #include "global_ptr.h"
 
-int player_x = -96;
-int player_y = 64;
+int player_x = 15;
+int player_y = 112;
 
 int current_stage = 1;
 char current_difficulty = 'n';
@@ -42,25 +42,32 @@ namespace game
 {
 
     void change_stage(global_data* global_sprites_and_backgrounds, int frame_counter) {
-        if (player_x > 118) {
+        if (player_x > 235) {
             current_stage++;
-            player_x = -96;
+            player_x = 10;
         }
 
-        if (player_x < -118) {
+        if (player_x < 0) {
             current_stage--;
-            player_x = 96;
+            player_x = 225;
         }
 
         
-
+        // Do I need to destroy backgrounds???
+        // bn::screen1n.~regular_bg_ptr();
+        // bn::screen2n.~regular_bg_ptr();
 
         auto current_stage_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
 
+        global_sprites_and_backgrounds->screen1n.set_visible(false);
+        global_sprites_and_backgrounds->screen2n.set_visible(false);
+
         if (current_stage == 1) {
-            current_stage_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
+            // current_stage_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
+            global_sprites_and_backgrounds->screen1n.set_visible(true);
         } else if (current_stage == 2) {
-            current_stage_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
+            // current_stage_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
+            global_sprites_and_backgrounds->screen2n.set_visible(true);
             rra::sprite_anim::akyuu_anim(global_sprites_and_backgrounds, frame_counter);
         } else {
             int nop = 0;            // hey_compiler_whats_up_xddd
@@ -80,11 +87,6 @@ namespace game
         rra::game::change_stage(global_sprites_and_backgrounds, frame_counter);
 
         rra::sprite_anim::reimu_anim(global_sprites_and_backgrounds, frame_counter, player_x, player_y);
-        
-        // change_stage(frame_counter);
-
-        // bn::regular_bg_ptr regular_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
-
 
         frame_counter++;
 

@@ -1,4 +1,4 @@
-// #pragma once
+#pragma once
 
 // #include "bn_sprite_ptr.h"
 // #include "bn_regular_bg_ptr.h"
