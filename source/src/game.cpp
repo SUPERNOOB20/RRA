@@ -68,7 +68,7 @@ namespace game
         } else if (current_stage == 2) {
             // current_stage_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
             global_sprites_and_backgrounds->screen2n.set_visible(true);
-            global_sprites_and_backgrounds->cirno_sprite.set_visible(true);
+            global_sprites_and_backgrounds->akyuu_sprite.set_visible(true);
             rra::sprite_anim::akyuu_anim(global_sprites_and_backgrounds, frame_counter);
         } else {
             int nop = 0;            // hey_compiler_whats_up_xddd
