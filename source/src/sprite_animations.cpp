@@ -20,7 +20,7 @@
 
 #include "bn_log.h"
 
-#include "global_ptr.h"
+// #include "global_ptr.h"
 
 // #pragma once
 

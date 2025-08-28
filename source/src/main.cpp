@@ -25,7 +25,7 @@
 #include "sprite_animations.h"
 #include "game.h"
 
-
+/*
 struct global_data
 {
     bn::sprite_ptr reimu_idle_spritesheet;
@@ -36,6 +36,7 @@ struct global_data
     bn::regular_bg_ptr screen1n;
     bn::regular_bg_ptr screen2n;
 };
+*/
 
 global_data* global_ptr;
 

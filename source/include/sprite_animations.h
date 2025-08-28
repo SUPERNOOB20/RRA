@@ -1,5 +1,8 @@
 #pragma once
 
+#include "bn_sprite_ptr.h"
+#include "bn_regular_bg_ptr.h"
+
 struct global_data
 {
     bn::sprite_ptr reimu_idle_spritesheet;
@@ -10,6 +13,7 @@ struct global_data
     bn::regular_bg_ptr screen1n;
     bn::regular_bg_ptr screen2n;
 };
+
 
 namespace rra
 {

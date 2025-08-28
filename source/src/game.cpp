@@ -25,7 +25,7 @@
 
 #include "sprite_animations.h"
 
-#include "global_ptr.h"
+// #include "global_ptr.h"
 
 int player_x = -96;
 int player_y = 64;
