@@ -25,6 +25,8 @@
 
 #include "sprite_animations.h"
 
+#include "global_ptr.h"
+
 int player_x = -96;
 int player_y = 64;
 
@@ -40,7 +42,7 @@ namespace game
 {
 
 
-    void handle_frame(global_ptr* global_sprites_and_backgrounds, int frame_counter) {
+    void handle_frame(global_ptr global_sprites_and_backgrounds, int frame_counter) {
 
         change_stage(global_sprites_and_backgrounds, frame_counter);
 
@@ -79,7 +81,7 @@ namespace game
 
 
 
-void change_stage(global_ptr* global_sprites_and_backgrounds, int frame_counter) {
+void change_stage(global_ptr global_sprites_and_backgrounds, int frame_counter) {
     if (player_x > 118) {
         current_stage++;
         player_x = -96;

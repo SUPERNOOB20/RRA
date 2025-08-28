@@ -46,12 +46,9 @@ main.o: /home/supernoob20/GBA_Dev_LM/RRA/source/src/main.cpp \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_palette_item.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_color.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_reimu_idle_spritesheet.h \
-<<<<<<< HEAD
-=======
+ /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_akyuu_spritesheet.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_reimu_jump_spritesheet.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_cirno_spritesheet.h \
->>>>>>> 5306bc5 (Revert "qwq")
- /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_akyuu_spritesheet.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_ptr.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_item.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_bg_palette_item.h \
@@ -64,13 +61,9 @@ main.o: /home/supernoob20/GBA_Dev_LM/RRA/source/src/main.cpp \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_keypad.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_log.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_config_log.h \
-<<<<<<< HEAD
- /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_log_backend.h
-=======
  /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_log_backend.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/include/sprite_animations.h \
  /home/supernoob20/GBA_Dev_LM/RRA/source/include/game.h
->>>>>>> 5306bc5 (Revert "qwq")
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_core.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_span.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_array.h:
@@ -118,12 +111,9 @@ main.o: /home/supernoob20/GBA_Dev_LM/RRA/source/src/main.cpp \
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_palette_item.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_color.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_reimu_idle_spritesheet.h:
-<<<<<<< HEAD
-=======
+/home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_akyuu_spritesheet.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_reimu_jump_spritesheet.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_cirno_spritesheet.h:
->>>>>>> 5306bc5 (Revert "qwq")
-/home/supernoob20/GBA_Dev_LM/RRA/source/build/bn_sprite_items_akyuu_spritesheet.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_ptr.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_item.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_bg_palette_item.h:
@@ -137,8 +127,5 @@ main.o: /home/supernoob20/GBA_Dev_LM/RRA/source/src/main.cpp \
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_log.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_config_log.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/butano/include/bn_log_backend.h:
-<<<<<<< HEAD
-=======
 /home/supernoob20/GBA_Dev_LM/RRA/source/include/sprite_animations.h:
 /home/supernoob20/GBA_Dev_LM/RRA/source/include/game.h:
->>>>>>> 5306bc5 (Revert "qwq")
