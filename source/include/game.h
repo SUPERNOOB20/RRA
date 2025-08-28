@@ -25,6 +25,7 @@ namespace rra
 namespace game
 {
 void handle_frame(global_data* global_sprites_and_backgrounds, int frame_counter);
+void change_stage(global_data* global_sprites_and_backgrounds, int frame_counter);
 }
 
 
