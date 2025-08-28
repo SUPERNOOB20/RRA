@@ -62,6 +62,10 @@ namespace game
         global_sprites_and_backgrounds->screen1n.set_visible(false);
         global_sprites_and_backgrounds->screen2n.set_visible(false);
 
+        global_sprites_and_backgrounds->reimu_jump_sprite.set_visible(false);
+        global_sprites_and_backgrounds->akyuu_sprite.set_visible(false);
+        global_sprites_and_backgrounds->cirno_sprite.set_visible(false);
+
         if (current_stage == 1) {
             // current_stage_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
             global_sprites_and_backgrounds->screen1n.set_visible(true);

@@ -64,7 +64,7 @@ namespace sprite_anim
         // bn::sprite_ptr akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);
         // bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);
 
-        global_sprites_and_backgrounds->akyuu_sprite.set_top_left_position(216, 80);
+        global_sprites_and_backgrounds->akyuu_sprite.set_top_left_position(190, 80);
 
         // sprite_pointer akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);
 

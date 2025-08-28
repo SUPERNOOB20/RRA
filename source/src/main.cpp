@@ -65,9 +65,7 @@ int main()
     
 
 
-    global_ptr->reimu_jump_sprite.set_visible(false);
-    global_ptr->akyuu_sprite.set_visible(false);
-    global_ptr->cirno_sprite.set_visible(false);
+
 
 
 
