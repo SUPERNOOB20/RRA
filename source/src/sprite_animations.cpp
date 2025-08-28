@@ -39,10 +39,10 @@ namespace sprite_anim
     // const int cirno_idle_frames = 25;
     // const int cirno_laughing_frames = 10;
 
-    void reimu_anim(global_ptr global_sprites_and_backgrounds, int frame_counter, int player_x, int player_y){
+    void reimu_anim(global_data* global_sprites_and_backgrounds, int frame_counter, int player_x, int player_y){
 
         // bn::sprite_ptr reimu_sprite = bn::sprite_items::reimu_idle_spritesheet.create_sprite(player_x, player_y);
-        global_sprites_and_backgrounds->reimu_idle_spritesheet.create_sprite(player_x, player_y);
+        global_sprites_and_backgrounds->reimu_idle_spritesheet.set_position(player_x, player_y);
 
         int i = 0;
 
@@ -59,7 +59,7 @@ namespace sprite_anim
         return;
     }
 
-    void akyuu_anim(global_ptr global_sprites_and_backgrounds, int frame_counter){
+    void akyuu_anim(global_data* global_sprites_and_backgrounds, int frame_counter){
         
         // bn::sprite_ptr akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);
         // bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);

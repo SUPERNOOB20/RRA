@@ -42,7 +42,7 @@ namespace game
 {
 
 
-    void handle_frame(global_ptr global_sprites_and_backgrounds, int frame_counter) {
+    void handle_frame(global_data* global_sprites_and_backgrounds, int frame_counter) {
 
         change_stage(global_sprites_and_backgrounds, frame_counter);
 
@@ -81,7 +81,7 @@ namespace game
 
 
 
-void change_stage(global_ptr global_sprites_and_backgrounds, int frame_counter) {
+void change_stage(global_data* global_sprites_and_backgrounds, int frame_counter) {
     if (player_x > 118) {
         current_stage++;
         player_x = -96;
@@ -98,7 +98,7 @@ void change_stage(global_ptr global_sprites_and_backgrounds, int frame_counter) 
         current_stage_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
     } else if (current_stage == 2) {
         current_stage_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
-        rra::sprite_anim::akyuu_anim(frame_counter);
+        rra::sprite_anim::akyuu_anim(global_data* global_sprites_and_backgrounds, frame_counter);
     } else {
         int nop = 0;            // hey_compiler_whats_up_xddd
     }
