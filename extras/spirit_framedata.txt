@@ -1,0 +1,25 @@
+1
+2
+3
+4
+3 (vertically flipped)
+2 (vertically flipped)
+1 (vertically flipped)
+2 (vertically flipped)
+3 (vertically flipped)
+4 (vertically flipped)
+4
+3
+2
+etc...
+
+---> https://gvaliente.github.io/butano/classbn_1_1sprite__ptr.html#a155f4853962d09d9e1d562ba1ffc8fb1
+---> void set_vertical_flip(bool vertical_flip)
+
+
+so basically:
+void set_vertical_flip(true)
+for flipped
+and
+void set_vertical_flip(false)
+for not flipped

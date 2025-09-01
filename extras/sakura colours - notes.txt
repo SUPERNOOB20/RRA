@@ -1,0 +1,9 @@
+sakura:
+light:	E1BFEA
+dark:	CE97C8
+
+
+
+BG:
+6A1F92 claro
+230E38 oscuro

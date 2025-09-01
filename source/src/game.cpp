@@ -17,8 +17,11 @@
 
 #include <bn_regular_bg_ptr.h>
 #include <bn_regular_bg_item.h>
+
 #include "bn_regular_bg_items_screen1n.h"
-#include "bn_regular_bg_items_screen2n.h"
+// #include "bn_regular_bg_items_screen2n.h"
+// #include "bn_regular_bg_items_screen10n.h"
+// #include "bn_regular_bg_items_screen21n.h"
 
 #include "bn_keypad.h"
 #include "bn_log.h"
@@ -61,19 +64,25 @@ namespace game
 
         global_sprites_and_backgrounds->screen1n.set_visible(false);
         global_sprites_and_backgrounds->screen2n.set_visible(false);
+        global_sprites_and_backgrounds->screen10n.set_visible(false);
+        global_sprites_and_backgrounds->screen21n.set_visible(false);
 
         global_sprites_and_backgrounds->reimu_jump_sprite.set_visible(false);
         global_sprites_and_backgrounds->akyuu_sprite.set_visible(false);
         global_sprites_and_backgrounds->cirno_sprite.set_visible(false);
+        global_sprites_and_backgrounds->rumia_sprite.set_visible(false);
+        global_sprites_and_backgrounds->youmu_idle_sprite.set_visible(false);
+        global_sprites_and_backgrounds->spirit_sprite.set_visible(false);
 
         if (current_stage == 1) {
-            // current_stage_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
             global_sprites_and_backgrounds->screen1n.set_visible(true);
         } else if (current_stage == 2) {
-            // current_stage_bg = bn::regular_bg_items::screen2n.create_bg(8, 48);
             global_sprites_and_backgrounds->screen2n.set_visible(true);
             global_sprites_and_backgrounds->akyuu_sprite.set_visible(true);
+            global_sprites_and_backgrounds->akyuu_sprite.set_top_left_position(190, 80);
             rra::sprite_anim::akyuu_anim(global_sprites_and_backgrounds, frame_counter);
+        } else if (current_stage == 10) {
+            global_sprites_and_backgrounds->screen2n.set_visible(true);
         } else {
             int nop = 0;            // hey_compiler_whats_up_xddd
         }
@@ -97,16 +106,25 @@ namespace game
 
         if (bn::keypad::right_held())
         {
-            player_x++;
+            if (bn::keypad::l_held())
+            {
+                player_x += 10;
+            } else {
+                player_x++;
+            }
         }
 
         if (bn::keypad::left_held())
         {
-            player_x--;
+            if (bn::keypad::l_held())
+            {
+                player_x -= 10;
+            } else {
+                player_x--;
+            }
         }
 
-
-        if (bn::keypad::b_pressed())
+        if (bn::keypad::r_pressed())
         {
             BN_LOG("frame_counter, player_x, current_stage: ");
             BN_LOG(frame_counter, " ", player_x, " ", current_stage);

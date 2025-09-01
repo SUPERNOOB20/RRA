@@ -6,18 +6,21 @@
 
 #include "bn_sprite_item.h"
 // #include "bn_sprite_items_ice_block.h"
-#include "bn_sprite_items_reimu_idle_spritesheet.h"
-#include "bn_sprite_items_akyuu_spritesheet.h"
 
 #include "bn_sprite_items_reimu_idle_spritesheet.h"
 #include "bn_sprite_items_reimu_jump_spritesheet.h"
 #include "bn_sprite_items_cirno_spritesheet.h"
 #include "bn_sprite_items_akyuu_spritesheet.h"
+#include "bn_sprite_items_rumia_idle_spritesheet.h"
+#include "bn_sprite_items_youmu_idle_spritesheet.h"
+#include "bn_sprite_items_spirit.h"
 
 #include <bn_regular_bg_ptr.h>
 #include <bn_regular_bg_item.h>
 #include "bn_regular_bg_items_screen1n.h"
 #include "bn_regular_bg_items_screen2n.h"
+#include "bn_regular_bg_items_screen10n.h"
+#include "bn_regular_bg_items_screen21n.h"
 
 #include "bn_keypad.h"
 #include "bn_log.h"
@@ -25,18 +28,23 @@
 #include "sprite_animations.h"
 #include "game.h"
 
+
 /*
 struct global_data
 {
     bn::sprite_ptr reimu_idle_spritesheet;
     bn::sprite_ptr reimu_jump_spritesheet;
     bn::sprite_ptr cirno_sprite;
-    bn::sprite_ptr akyuu_sprit;
+    bn::sprite_ptr akyuu_sprite;
+    bn::sprite_ptr youmu_idle_sprite;
 
     bn::regular_bg_ptr screen1n;
     bn::regular_bg_ptr screen2n;
+    bn::regular_bg_ptr screen10n;
+    bn::regular_bg_ptr screen21n;
 };
 */
+
 
 global_data* global_ptr;
 
@@ -56,9 +64,14 @@ int main()
         bn::sprite_items::reimu_jump_spritesheet.create_sprite(0, 0),
         bn::sprite_items::cirno_spritesheet.create_sprite(0, 0),
         bn::sprite_items::akyuu_spritesheet.create_sprite(0, 0),
+        bn::sprite_items::rumia_idle_spritesheet.create_sprite(0, 0),
+        bn::sprite_items::youmu_idle_spritesheet.create_sprite(0, 0),
+        bn::sprite_items::spirit.create_sprite(0, 0),
 
         bn::regular_bg_items::screen1n.create_bg(8, 48),
-        bn::regular_bg_items::screen2n.create_bg(8, 48)
+        bn::regular_bg_items::screen2n.create_bg(8, 48),
+        bn::regular_bg_items::screen10n.create_bg(8, 48),
+        bn::regular_bg_items::screen21n.create_bg(8, 48)
     };
 
     global_ptr = &global_instance;

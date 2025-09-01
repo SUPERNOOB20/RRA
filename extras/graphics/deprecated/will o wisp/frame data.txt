@@ -1,0 +1,54 @@
+frame_1 --- x3
+frame_2
+frame_3
+frame_4
+frame_5
+frame_6 --- x3
+frame_5
+frame_4
+frame_3
+frame_2
+
+
+.
+.
+.
+
+
+1
+2
+1
+2
+3
+4
+5
+6
+5
+6
+5
+4
+3
+2
+
+
+
+
+
+sorry made an oopsies lol
+new frame data:
+
+
+2
+3
+4
+5
+6
+5
+6
+5
+4
+3
+2
+1
+2
+1

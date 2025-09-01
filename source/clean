@@ -1,7 +1,0 @@
-# --- Clean ---
-.PHONY : clean
-clean :
-    @rm -fv $(COBJS)
-    @rm -fv $(PROJ).$(EXT)
-    @rm -fv $(PROJ).elf
-

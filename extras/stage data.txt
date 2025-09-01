@@ -1,0 +1,3 @@
+easy: 1 gap of 12 pixels
+normal: ??? gaps of 22 pixels in gap
+lunatic: ??? gaps of 32 pixels in gap

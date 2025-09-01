@@ -1,2 +1,0 @@
-C:\MinGW\bin\ar.exe qc libsafeSave.a CMakeFiles/safeSave.dir/src/safeSave.cpp.obj
-C:\MinGW\bin\ranlib.exe libsafeSave.a

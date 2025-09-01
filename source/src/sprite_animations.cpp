@@ -15,6 +15,9 @@
 #include "bn_sprite_items_reimu_idle_spritesheet.h"
 #include "bn_sprite_items_cirno_spritesheet.h"
 #include "bn_sprite_items_akyuu_spritesheet.h"
+#include "bn_sprite_items_rumia_idle_spritesheet.h"
+#include "bn_sprite_items_youmu_idle_spritesheet.h"
+#include "bn_sprite_items_spirit.h"
 // #include "bn_sprite_items_akyuu_1s.h"
 // #include "bn_sprite_items_akyuu_2s.h"
 
@@ -60,13 +63,6 @@ namespace sprite_anim
     }
 
     void akyuu_anim(global_data* global_sprites_and_backgrounds, int frame_counter){
-        
-        // bn::sprite_ptr akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);
-        // bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);
-
-        global_sprites_and_backgrounds->akyuu_sprite.set_top_left_position(190, 80);
-
-        // sprite_pointer akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(96, 12);
 
         int i = 0;
 
@@ -80,6 +76,32 @@ namespace sprite_anim
         
         return;
 
+    }
+
+    void cirno_anim(global_data* global_sprites_and_backgrounds, int frame_counter){
+
+
+
+        return;
+    }
+
+    void youmu_idle_anim(global_data* global_sprites_and_backgrounds, int frame_counter){
+
+        int i = 0;
+
+        // youmu_idle_anim_frames = 60
+        // But I didn't use that var because if I don't use integer division
+        // it's prone to breaking if it's not divisible by 2 or 3!!!
+
+        if ((frame_counter % 60) < 36){         // youmu_idle_anim_frames = 60
+            i = 0;
+        } else {
+            i = 1;
+        }        
+
+        global_sprites_and_backgrounds->youmu_idle_sprite.set_tiles(bn::sprite_items::youmu_idle_spritesheet.tiles_item().create_tiles(i));  
+
+        return;
     }
 
     // cirno_anim(int frame_counter);
