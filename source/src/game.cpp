@@ -55,25 +55,6 @@ namespace game
             player_x = 200;
         }
 
-        
-        // Do I need to destroy backgrounds???
-        // bn::screen1n.~regular_bg_ptr();
-        // bn::screen2n.~regular_bg_ptr();
-
-        auto current_stage_bg = bn::regular_bg_items::screen1n.create_bg(8, 48);
-
-        global_sprites_and_backgrounds->screen1n.set_visible(false);
-        global_sprites_and_backgrounds->screen2n.set_visible(false);
-        global_sprites_and_backgrounds->screen10n.set_visible(false);
-        global_sprites_and_backgrounds->screen21n.set_visible(false);
-
-        global_sprites_and_backgrounds->reimu_jump_sprite.set_visible(false);
-        global_sprites_and_backgrounds->akyuu_sprite.set_visible(false);
-        global_sprites_and_backgrounds->cirno_sprite.set_visible(false);
-        global_sprites_and_backgrounds->rumia_sprite.set_visible(false);
-        global_sprites_and_backgrounds->youmu_idle_sprite.set_visible(false);
-        global_sprites_and_backgrounds->spirit_sprite.set_visible(false);
-
         if (current_stage == 1) {
             global_sprites_and_backgrounds->screen1n.set_visible(true);
         } else if (current_stage == 2) {
@@ -87,10 +68,7 @@ namespace game
             int nop = 0;            // hey_compiler_whats_up_xddd
         }
 
-        bn::regular_bg_ptr regular_bg = current_stage_bg;
-
         
-
         return;
     }
 

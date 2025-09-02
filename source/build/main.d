@@ -64,7 +64,6 @@ main.o: \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen2n.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen10n.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen21n.h \
- /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_keypad.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_log.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_config_log.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_log_backend.h \
@@ -134,7 +133,6 @@ main.o: \
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen2n.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen10n.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_regular_bg_items_screen21n.h:
-/media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_keypad.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_log.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_config_log.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_log_backend.h:

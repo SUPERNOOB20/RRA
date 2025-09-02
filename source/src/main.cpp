@@ -22,7 +22,7 @@
 #include "bn_regular_bg_items_screen10n.h"
 #include "bn_regular_bg_items_screen21n.h"
 
-#include "bn_keypad.h"
+// #include "bn_keypad.h"
 #include "bn_log.h"
 
 #include "sprite_animations.h"
@@ -55,6 +55,7 @@ int main()
 {
     bn::core::init();
 
+    BN_LOG("checkpoint_A");
     
     global_data global_instance = {
 
@@ -76,11 +77,22 @@ int main()
 
     global_ptr = &global_instance;
     
+    BN_LOG("checkpoint_B");
+
+    global_ptr->screen1n.set_visible(false);
+    global_ptr->screen2n.set_visible(false);
+    global_ptr->screen10n.set_visible(false);
+    global_ptr->screen21n.set_visible(false);
+
+    global_ptr->reimu_jump_sprite.set_visible(false);
+    global_ptr->akyuu_sprite.set_visible(false);
+    global_ptr->cirno_sprite.set_visible(false);
+    global_ptr->rumia_sprite.set_visible(false);
+    global_ptr->youmu_idle_sprite.set_visible(false);
+    global_ptr->spirit_sprite.set_visible(false);
 
 
-
-
-
+    BN_LOG("checkpoint_C");
 
 
     while(true)
