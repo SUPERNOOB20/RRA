@@ -21,8 +21,6 @@
 // #include "bn_sprite_items_akyuu_1s.h"
 // #include "bn_sprite_items_akyuu_2s.h"
 
-#include "bn_log.h"
-
 // #include "global_ptr.h"
 
 // #pragma once
@@ -45,10 +43,12 @@ namespace sprite_anim
     // constexpr int cirno_idle_frames = 25;
     // constexpr int cirno_laughing_frames = 10;
 
-    void reimu_anim(global_resources* global_sprites_and_backgrounds, int frame_counter, int player_x, int player_y){
+    void reimu_anim(Global_VRAM VRAM, int frame_counter, int player_x, int player_y){
 
-        // bn::sprite_ptr reimu_sprite = bn::sprite_items::reimu_idle_spritesheet.create_sprite(player_x, player_y);
-        global_sprites_and_backgrounds->reimu_idle_sprite.set_top_left_position(player_x, player_y);
+        bn::sprite_ptr reimu_sprite = bn::sprite_items::reimu_idle_spritesheet.create_sprite(player_x, player_y);
+        reimu_sprite.set_top_left_position(player_x, player_y);
+        
+        VRAM.global_player_sprites.push_back(reimu_sprite);
 
         int i = 0;
 
@@ -60,12 +60,12 @@ namespace sprite_anim
             i = 2;
         }
 
-        global_sprites_and_backgrounds->reimu_idle_sprite.set_tiles(bn::sprite_items::reimu_idle_spritesheet.tiles_item().create_tiles(i));                
+        reimu_sprite.set_tiles(bn::sprite_items::reimu_idle_spritesheet.tiles_item().create_tiles(i));                
 
         return;
     }
 
-    void akyuu_anim(global_resources* global_sprites_and_backgrounds, int frame_counter){
+    void akyuu_anim(Global_VRAM VRAM, int frame_counter){
 
         int i = 0;
 
@@ -78,7 +78,7 @@ namespace sprite_anim
         
         bn::sprite_ptr akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(0, 0); 
 
-        global_sprites_and_backgrounds->global_sprites.push_back(akyuu_sprite);
+        VRAM.global_sprites.push_back(akyuu_sprite);
 
         akyuu_sprite.set_tiles(bn::sprite_items::akyuu_spritesheet.tiles_item().create_tiles(i));  
 
@@ -90,11 +90,11 @@ namespace sprite_anim
 
     // cirno_anim(int frame_counter);
     // cirno_sprite.set_tiles(bn::sprite_items::cirno_spritesheet.tiles_item().create_tiles(3));
-    void cirno_anim(global_resources* global_sprites_and_backgrounds, int frame_counter){
+    void cirno_anim(Global_VRAM VRAM, int frame_counter){
 
         bn::sprite_ptr cirno_sprite = bn::sprite_items::cirno_spritesheet.create_sprite(0, 0); 
 
-        global_sprites_and_backgrounds->global_sprites.push_back(cirno_sprite);
+        VRAM.global_sprites.push_back(cirno_sprite);
 
         int f = frame_counter % 470;
         int i = 0;
@@ -116,11 +116,11 @@ namespace sprite_anim
         return;
     }
 
-    void youmu_idle_anim(global_resources* global_sprites_and_backgrounds, int frame_counter){
+    void youmu_idle_anim(Global_VRAM VRAM, int frame_counter){
 
         bn::sprite_ptr youmu_idle_sprite = bn::sprite_items::youmu_idle_spritesheet.create_sprite(0, 0); 
 
-        global_sprites_and_backgrounds->global_sprites.push_back(youmu_idle_sprite);
+        VRAM.global_sprites.push_back(youmu_idle_sprite);
 
         int i = 0;
 
@@ -134,18 +134,18 @@ namespace sprite_anim
             i = 1;
         }        
 
-        // global_sprites_and_backgrounds->youmu_idle_sprite.set_tiles(bn::sprite_items::youmu_idle_spritesheet.tiles_item().create_tiles(i));  
+        // VRAM->youmu_idle_sprite.set_tiles(bn::sprite_items::youmu_idle_spritesheet.tiles_item().create_tiles(i));  
 
         youmu_idle_sprite.set_tiles(bn::sprite_items::youmu_idle_spritesheet.tiles_item().create_tiles(i));  
 
         return;
     }
 
-    void rumia_anim(global_resources* global_sprites_and_backgrounds, int frame_counter){
+    void rumia_anim(Global_VRAM VRAM, int frame_counter){
 
         bn::sprite_ptr rumia_idle_sprite = bn::sprite_items::rumia_idle_spritesheet.create_sprite(0, 0); 
 
-        global_sprites_and_backgrounds->global_sprites.push_back(rumia_idle_sprite);
+        VRAM.global_sprites.push_back(rumia_idle_sprite);
 
         int i = 0;
 
@@ -157,20 +157,20 @@ namespace sprite_anim
             i = 2
         };
 
-        // global_sprites_and_backgrounds->youmu_idle_sprite.set_tiles(bn::sprite_items::youmu_idle_spritesheet.tiles_item().create_tiles(i));  
+        // VRAM->youmu_idle_sprite.set_tiles(bn::sprite_items::youmu_idle_spritesheet.tiles_item().create_tiles(i));  
 
         rumia_idle_sprite.set_tiles(bn::sprite_items::rumia_idle_spritesheet.tiles_item().create_tiles(i));
 
         return;
     }
 
-    void spirit_anim(global_resources* global_sprites_and_backgrounds, int frame_counter){
+    void spirit_anim(Global_VRAM VRAM, int frame_counter){
 
         bn::sprite_ptr spirit_sprite = bn::sprite_items::spirit.create_sprite(0, 0);
 
         spirit_sprite.set_vertical_flip(false);
 
-        global_sprites_and_backgrounds->global_sprites.push_back(spirit_sprite);
+        VRAM.global_sprites.push_back(spirit_sprite);
 
         // vvv  My animation has 13 frames. Each of them should display for 20 frames.
         int animation_frame = ((frame_counter / spirit_anim_frame_screentime) % spirit_anim_number_of_frames) + 1;       
@@ -180,7 +180,7 @@ namespace sprite_anim
             spirit_sprite.set_vertical_flip(true);     // Cases 5 to 10 should be flipped to mirror the sprite!
         }
 
-        global_sprites_and_backgrounds->spirit_sprite.set_tiles(bn::sprite_items::spirit.tiles_item().create_tiles(animation_frame));                
+        spirit_sprite.set_tiles(bn::sprite_items::spirit.tiles_item().create_tiles(animation_frame));                
 
         return;
     }

@@ -18,7 +18,7 @@
 #include <bn_regular_bg_ptr.h>
 #include <bn_regular_bg_item.h>
 
-#include "bn_regular_bg_items_screen1n.h"
+// #include "bn_regular_bg_items_screen1n.h"
 // #include "bn_regular_bg_items_screen2n.h"
 // #include "bn_regular_bg_items_screen10n.h"
 // #include "bn_regular_bg_items_screen21n.h"
@@ -30,9 +30,9 @@
 
 // #include "global_ptr.h"
 
-#include "stage1.cpp"
-#include "stage2.cpp"
-#include "stage3.cpp"
+#include "stage1.h"
+#include "stage2.h"
+#include "stage3.h"
 
 
 int player_x = 5;
@@ -53,7 +53,7 @@ namespace game
     // Levels 1 to 10 are meant to be handled by stage1.cpp.
     // Levels 11 to 20 are meant to be handled by stage2.cpp.
     // etc...
-    void change_level(global_resources* global_sprites_and_backgrounds, int frame_counter) {
+    void change_level(Global_VRAM VRAM, int frame_counter) {
         if (player_x > 220) {
             current_level++;
             player_x = 10;
@@ -67,26 +67,30 @@ namespace game
         // change_stage()
         if ((current_level >= 1) && (current_level < 10)) {
             
-            rra::stage1::load_stage(global_sprites_and_backgrounds, frame_counter, current_level);
+            rra::stage1::load_stage(VRAM, frame_counter, current_level);
             
-        } else if (current_level == 2) {
-            
-        } else if (current_level == 10) {
-            global_sprites_and_backgrounds->screen2n.set_visible(true);
-        } else if current level == 20 {
+        } else if ((current_level >= 10) && (current_level < 20)) {
+
+            rra::stage2::load_stage(VRAM, frame_counter, current_level);
+
+        } else if ((current_level >= 20) && (current_level < 30)) {
+
+            rra::stage3::load_stage(VRAM, frame_counter, current_level);
+            // VRAM->screen2n.set_visible(true);
+        } else if current_level == 20 {
             stage2;            // hey_compiler_whats_up_xddd
         }
 
         /*
         if (current_level == 1) {
-            global_sprites_and_backgrounds->screen1n.set_visible(true);
+            VRAM->screen1n.set_visible(true);
         } else if (current_level == 2) {
-            global_sprites_and_backgrounds->screen2n.set_visible(true);
-            global_sprites_and_backgrounds->akyuu_sprite.set_visible(true);
-            global_sprites_and_backgrounds->akyuu_sprite.set_top_left_position(190, 80);
-            rra::sprite_anim::akyuu_anim(global_sprites_and_backgrounds, frame_counter);
+            VRAM->screen2n.set_visible(true);
+            VRAM->akyuu_sprite.set_visible(true);
+            VRAM->akyuu_sprite.set_top_left_position(190, 80);
+            rra::sprite_anim::akyuu_anim(VRAM, frame_counter);
         } else if (current_level == 10) {
-            global_sprites_and_backgrounds->screen2n.set_visible(true);
+            VRAM->screen2n.set_visible(true);
         } else {
             int nop = 0;            // hey_compiler_whats_up_xddd
         }
@@ -97,11 +101,11 @@ namespace game
 
 
 
-    void handle_frame(global_resources* global_sprites_and_backgrounds, int frame_counter) {
+    void handle_frame(Global_VRAM VRAM, int frame_counter) {
 
-        rra::game::change_level(global_sprites_and_backgrounds, frame_counter);
+        rra::game::change_level(VRAM, frame_counter);
 
-        rra::sprite_anim::reimu_anim(global_sprites_and_backgrounds, frame_counter, player_x, player_y);
+        rra::sprite_anim::reimu_anim(VRAM, frame_counter, player_x, player_y);
 
         frame_counter++;
 
@@ -110,6 +114,8 @@ namespace game
             if (bn::keypad::l_held())
             {
                 player_x += 10;
+            } else if (bn::keypad::r_held()) {
+                player_x += 100;
             } else {
                 player_x++;
             }
@@ -120,15 +126,17 @@ namespace game
             if (bn::keypad::l_held())
             {
                 player_x -= 10;
+            } else if (bn::keypad::r_held()) {
+                player_x += 100;
             } else {
                 player_x--;
             }
         }
 
-        if (bn::keypad::r_pressed())
+        if (bn::keypad::start_pressed())
         {
             BN_LOG("frame_counter, player_x, current_level: ");
-            BN_LOG(frame_counter, " ", player_x, " ", current_level);
+            BN_LOG(frame_counter, "   ", player_x, "   ", current_level);
             // int decoy = 0;
         }
 
