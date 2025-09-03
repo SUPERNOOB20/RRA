@@ -3,7 +3,7 @@
 #include "stage_init.h"
 
 #include "bn_sprite_items_akyuu_spritesheet.h"
-#include <sprite_animations.h>
+#include "sprite_animations.h"
 
 // include "bn_regular_bg_items_screen1n.h"
 // include "bn_regular_bg_items_screen2n.h"
@@ -25,7 +25,7 @@ namespace stage1
         switch(current_level){
             case 1:
                 screen_21n.set_visible(true);
-                VRAM.push_back(screen_21n);        
+                VRAM.global_backgrounds.push_back(screen_21n);        
                 break;
 
             // case 2:

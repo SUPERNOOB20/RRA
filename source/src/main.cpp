@@ -39,6 +39,7 @@
 // #include <vector>
 #include "bn_vector.h"
 template<typename Type, int MaxSize>
+bn::vector<bn::sprite_ptr, 1>        test;          // sets the template in stone, for later use in main().
 
 int main()
 {
@@ -52,17 +53,19 @@ int main()
 
     Global_VRAM VRAM = allocate_VRAM(global_player_sprites, global_sprites, global_backgrounds);
 
+    Global_VRAM* vram_ptr;
+
     // Play main menu, intro scene... etc.
 
     BN_LOG("checkpoint_A");
 
-    bn::sprite_items::reimu_idle_spritesheet.create_sprite(0, 0),
-    bn::sprite_items::reimu_jump_spritesheet.create_sprite(0, 0),
+    bn::sprite_items::reimu_idle_spritesheet.create_sprite(0, 0);
+    bn::sprite_items::reimu_jump_spritesheet.create_sprite(0, 0);
     // bn::sprite_items::reimu_dash_spritesheet.create_sprite(0, 0),
 
     while(true)
     {
-        rra::game::handle_frame(VRAM, frame_counter);
+        rra::game::handle_frame(vram_ptr, frame_counter);
 
         frame_counter++;
 
