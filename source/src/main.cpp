@@ -40,13 +40,6 @@
 #include "bn_vector.h"
 template<typename Type, int MaxSize>
 
-#include <global_resources.h>
-
-bn::vector<bn::sprite_ptr, 27>        global_player_sprites;        
-bn::vector<bn::sprite_ptr, 100>       global_sprites;               
-bn::vector<bn::regular_bg_ptr, 4>     global_backgrounds;           
-
-
 
 
 int main()
@@ -56,7 +49,12 @@ int main()
 
     int frame_counter = 0;    // As a timer for animations :3
 
-    global_VRAM VRAM = allocate_VRAM(global_player_sprites, global_sprites, global_backgrounds);
+    bn::vector<bn::sprite_ptr, 27>        global_player_sprites;        
+    bn::vector<bn::sprite_ptr, 100>       global_sprites;               
+    bn::vector<bn::regular_bg_ptr, 4>     global_backgrounds;           
+
+
+    Global_VRAM VRAM = allocate_VRAM(global_player_sprites, global_sprites, global_backgrounds);
 
     // Play main menu, intro scene... etc.
 
