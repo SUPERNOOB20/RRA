@@ -1,4 +1,4 @@
-#ifndef STAGE_1_H
+#ifndef STAGE_2_H
 #define STAGE_2_H
 
 #include "global_resources.h"
@@ -13,4 +13,4 @@ namespace stage2
 }
 
 
-#ifndef
+#endif
