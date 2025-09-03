@@ -40,6 +40,8 @@ sprite_animations.o: \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_tiles_ptr.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/include/sprite_animations.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_ptr.h \
+ /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector.h \
+ /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector_fwd.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_actions.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_ptr.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_value_template_actions.h \
@@ -49,7 +51,6 @@ sprite_animations.o: \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_template_actions.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_animate_actions.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector.h \
- /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector_fwd.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_tiles_ptr.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_tiles_item.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_tile.h \
@@ -110,6 +111,8 @@ sprite_animations.o: \
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_tiles_ptr.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/include/sprite_animations.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_ptr.h:
+/media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector.h:
+/media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector_fwd.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_actions.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_ptr.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_value_template_actions.h:
@@ -119,7 +122,6 @@ sprite_animations.o: \
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_template_actions.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_animate_actions.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector.h:
-/media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector_fwd.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_tiles_ptr.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_sprite_tiles_item.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_tile.h:

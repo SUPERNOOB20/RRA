@@ -1,3 +1,14 @@
-Sprite exporting:
+Made with butano engine.
+
+Technical help:
+- Sherlon
+- GValiente
+- yeon
+- emifuu
+
+Help with sprite exporting:
 - Kiutgh
--
+
+Moral support:
+- Samuel_XL
+- Fofin

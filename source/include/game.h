@@ -1,4 +1,4 @@
-#pragma once
+// #pragma once
 
 // #include "bn_sprite_ptr.h"
 // #include "bn_regular_bg_ptr.h"
@@ -18,14 +18,20 @@ struct global_data
 */
 
 
+
+
+
+
+#include <global_resources.h>
+
 namespace rra
 {
 
 
 namespace game
 {
-void handle_frame(global_data* global_sprites_and_backgrounds, int frame_counter);
-void change_stage(global_data* global_sprites_and_backgrounds, int frame_counter);
+void handle_frame(global_resources* global_sprites_and_backgrounds, int frame_counter);
+void change_stage(global_resources* global_sprites_and_backgrounds, int frame_counter);
 }
 
 

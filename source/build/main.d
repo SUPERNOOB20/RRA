@@ -53,6 +53,7 @@ main.o: \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_sprite_items_rumia_idle_spritesheet.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_sprite_items_youmu_idle_spritesheet.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_sprite_items_spirit.h \
+ /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_sprite_items_fairy.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_ptr.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_item.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_bg_palette_item.h \
@@ -68,6 +69,8 @@ main.o: \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_config_log.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_log_backend.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/include/sprite_animations.h \
+ /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector.h \
+ /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector_fwd.h \
  /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/include/game.h
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_core.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_span.h:
@@ -122,6 +125,7 @@ main.o: \
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_sprite_items_rumia_idle_spritesheet.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_sprite_items_youmu_idle_spritesheet.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_sprite_items_spirit.h:
+/media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/build/bn_sprite_items_fairy.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_ptr.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_regular_bg_item.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_bg_palette_item.h:
@@ -137,4 +141,6 @@ main.o: \
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_config_log.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_log_backend.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/include/sprite_animations.h:
+/media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector.h:
+/media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/butano/include/bn_vector_fwd.h:
 /media/supernoob20/Windows_Partition1/SUPERNOOB_Studios/Indie_Development/Games/GBA_Dev_LM/RRA/source/include/game.h:

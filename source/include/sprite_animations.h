@@ -1,8 +1,14 @@
-#pragma once
+#ifndef GLOBAL_RESOURCES
+#define GLOBAL_RESOURCES
 
 #include "bn_sprite_ptr.h"
 #include "bn_regular_bg_ptr.h"
 
+// #include <bn_vector.h>
+#include <global_resources.h>
+
+
+/*
 struct global_data
 {
     bn::sprite_ptr reimu_idle_sprite;
@@ -18,6 +24,10 @@ struct global_data
     bn::regular_bg_ptr screen10n;
     bn::regular_bg_ptr screen21n;
 };
+*/
+
+
+
 
 
 namespace rra
@@ -28,12 +38,15 @@ namespace sprite_anim
     // void cirno_anim(int frame_counter, *);
     // void yukari_portal_anim(int frame_counter);
     // void yukari_anim(int frame_counter);
-    void reimu_anim(global_data* global_sprites_and_backgrounds, int frame_counter, int player_x, int player_y);
-    void akyuu_anim(global_data* global_sprites_and_backgrounds, int frame_counter);
-    void cirno_anim(global_data* global_sprites_and_backgrounds, int frame_counter);
-    void rumia_anim(global_data* global_sprites_and_backgrounds, int frame_counter);
-    void youmu_idle_anim(global_data* global_sprites_and_backgrounds, int frame_counter);
-    void spirit_anim(global_data* global_sprites_and_backgrounds, int frame_counter);
+    void reimu_anim(global_resources* global_sprites_and_backgrounds, int frame_counter, int player_x, int player_y);
+    void akyuu_anim(global_resources* global_sprites_and_backgrounds, int frame_counter);
+    void cirno_anim(global_resources* global_sprites_and_backgrounds, int frame_counter);
+    void rumia_anim(global_resources* global_sprites_and_backgrounds, int frame_counter);
+    void youmu_idle_anim(global_resources* global_sprites_and_backgrounds, int frame_counter);
+    void spirit_anim(global_resources* global_sprites_and_backgrounds, int frame_counter);
 }
 
 }
+
+
+#endif
