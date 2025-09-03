@@ -1,1 +1,0 @@
-reimu_idle_spritesheet_bn_gfx.o: reimu_idle_spritesheet_bn_gfx.s

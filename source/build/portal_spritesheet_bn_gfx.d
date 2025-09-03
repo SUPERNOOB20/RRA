@@ -1,1 +1,0 @@
-portal_spritesheet_bn_gfx.o: portal_spritesheet_bn_gfx.s
