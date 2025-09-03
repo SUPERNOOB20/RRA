@@ -40,11 +40,8 @@
 #include "bn_vector.h"
 template<typename Type, int MaxSize>
 
-
-
 int main()
 {
-
     bn::core::init();
 
     int frame_counter = 0;    // As a timer for animations :3
@@ -53,13 +50,11 @@ int main()
     bn::vector<bn::sprite_ptr, 100>       global_sprites;               
     bn::vector<bn::regular_bg_ptr, 4>     global_backgrounds;           
 
-
     Global_VRAM VRAM = allocate_VRAM(global_player_sprites, global_sprites, global_backgrounds);
 
     // Play main menu, intro scene... etc.
 
     BN_LOG("checkpoint_A");
-
 
     bn::sprite_items::reimu_idle_spritesheet.create_sprite(0, 0),
     bn::sprite_items::reimu_jump_spritesheet.create_sprite(0, 0),
@@ -67,7 +62,7 @@ int main()
 
     while(true)
     {
-        rra::game::handle_frame(global_resources*, frame_counter);
+        rra::game::handle_frame(VRAM, frame_counter);
 
         frame_counter++;
 
