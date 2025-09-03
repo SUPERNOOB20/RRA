@@ -1,8 +1,11 @@
+#ifndef GLOBAL_RESOURCES_H
+#define GLOBAL_RESOURCES_H
+
+// #pragma once
+
 #include <bn_vector.h>
 #include <bn_sprite_ptr.h>
 #include <bn_regular_bg_ptr.h>
-
-#pragma once
 
 template<typename Type, int MaxSize>
 bn::vector<bn::sprite_ptr, 1> pepe; 
@@ -20,3 +23,6 @@ struct Global_VRAM {
 // global_VRAM initializer.
 // "This trick only works once"- lest the GBA might crash!
 struct Global_VRAM allocate_VRAM(bn::vector<bn::sprite_ptr, 26> global_player_sprites, bn::vector<bn::sprite_ptr, 100> global_sprites, bn::vector<bn::regular_bg_ptr, 4> global_backgrounds);
+
+
+#endif
