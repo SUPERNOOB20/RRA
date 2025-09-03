@@ -49,6 +49,10 @@ namespace rra
 namespace game
 {
 
+    // This function changes level, calling other stageX.cpp files accordingly.
+    // Levels 1 to 10 are meant to be handled by stage1.cpp.
+    // Levels 11 to 20 are meant to be handled by stage2.cpp.
+    // etc...
     void change_level(global_resources* global_sprites_and_backgrounds, int frame_counter) {
         if (player_x > 220) {
             current_level++;
@@ -60,6 +64,20 @@ namespace game
             player_x = 200;
         }
 
+        // change_stage()
+        if ((current_level >= 1) && (current_level < 10)) {
+            
+            rra::stage1::load_stage(global_sprites_and_backgrounds, frame_counter, current_level);
+            
+        } else if (current_level == 2) {
+            
+        } else if (current_level == 10) {
+            global_sprites_and_backgrounds->screen2n.set_visible(true);
+        } else if current level == 20 {
+            stage2;            // hey_compiler_whats_up_xddd
+        }
+
+        /*
         if (current_level == 1) {
             global_sprites_and_backgrounds->screen1n.set_visible(true);
         } else if (current_level == 2) {
@@ -72,7 +90,7 @@ namespace game
         } else {
             int nop = 0;            // hey_compiler_whats_up_xddd
         }
-
+        */
 
         return;
     }
