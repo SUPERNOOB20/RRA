@@ -14,7 +14,7 @@ namespace rra
 {
 namespace stage1
 {
-    void load_stage(Global_VRAM VRAM, int frame_counter, int current_level) {
+    void load_stage(Global_VRAM* VRAM, int frame_counter, int current_level) {
 
         rra::stage_init(VRAM);   // Resets all backgrounds and non-player sprites
 
@@ -27,11 +27,11 @@ namespace stage1
         switch(current_level){
             case 1:
                 screen_1n.set_visible(true);
-                VRAM.global_backgrounds.push_back(screen_1n);     
+                VRAM->global_backgrounds.push_back(screen_1n);     
                 break;   
             case 2:
                 screen_2n.set_visible(true);
-                VRAM.global_backgrounds.push_back(screen_2n);  
+                VRAM->global_backgrounds.push_back(screen_2n);  
                 break;
             default:
                 int hey_compiler_hows_it_goin_xdddd = 0;       // <--- "nop" instruction on budget, heh

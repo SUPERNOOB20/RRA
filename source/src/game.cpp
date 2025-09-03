@@ -54,7 +54,7 @@ namespace game
     // Levels 1 to 10 are meant to be handled by stage1.cpp.
     // Levels 11 to 20 are meant to be handled by stage2.cpp.
     // etc...
-    void change_level(Global_VRAM VRAM, int frame_counter) {
+    void change_level(Global_VRAM* VRAM, int frame_counter) {
         if (player_x > 220) {
             current_level++;
             player_x = 10;
@@ -102,7 +102,7 @@ namespace game
 
 
 
-    void handle_frame(Global_VRAM VRAM, int frame_counter) {
+    void handle_frame(Global_VRAM* VRAM, int frame_counter) {
 
         rra::game::change_level(VRAM, frame_counter);
 

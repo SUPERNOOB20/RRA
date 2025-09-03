@@ -5,5 +5,5 @@
 
 namespace rra
 {
-    void stage_init(Global_VRAM VRAM);
+    void stage_init(Global_VRAM* VRAM);
 }

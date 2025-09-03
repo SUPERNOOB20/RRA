@@ -43,12 +43,12 @@ namespace sprite_anim
     // constexpr int cirno_idle_frames = 25;
     // constexpr int cirno_laughing_frames = 10;
 
-    void reimu_anim(Global_VRAM VRAM, int frame_counter, int player_x, int player_y){
+    void reimu_anim(Global_VRAM* VRAM, int frame_counter, int player_x, int player_y){
 
         bn::sprite_ptr reimu_sprite = bn::sprite_items::reimu_idle_spritesheet.create_sprite(player_x, player_y);
         reimu_sprite.set_top_left_position(player_x, player_y);
         
-        VRAM.global_player_sprites.push_back(reimu_sprite);
+        VRAM->global_player_sprites.push_back(reimu_sprite);
 
         int i = 0;
 
@@ -65,7 +65,7 @@ namespace sprite_anim
         return;
     }
 
-    void akyuu_anim(Global_VRAM VRAM, int frame_counter){
+    void akyuu_anim(Global_VRAM* VRAM, int frame_counter){
 
         int i = 0;
 
@@ -78,7 +78,7 @@ namespace sprite_anim
         
         bn::sprite_ptr akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(0, 0); 
 
-        VRAM.global_sprites.push_back(akyuu_sprite);
+        VRAM->global_sprites.push_back(akyuu_sprite);
 
         akyuu_sprite.set_tiles(bn::sprite_items::akyuu_spritesheet.tiles_item().create_tiles(i));  
 
@@ -90,11 +90,11 @@ namespace sprite_anim
 
     // cirno_anim(int frame_counter);
     // cirno_sprite.set_tiles(bn::sprite_items::cirno_spritesheet.tiles_item().create_tiles(3));
-    void cirno_anim(Global_VRAM VRAM, int frame_counter){
+    void cirno_anim(Global_VRAM* VRAM, int frame_counter){
 
         bn::sprite_ptr cirno_sprite = bn::sprite_items::cirno_spritesheet.create_sprite(0, 0); 
 
-        VRAM.global_sprites.push_back(cirno_sprite);
+        VRAM->global_sprites.push_back(cirno_sprite);
 
         int f = frame_counter % 470;
         int i = 0;
@@ -116,11 +116,11 @@ namespace sprite_anim
         return;
     }
 
-    void youmu_idle_anim(Global_VRAM VRAM, int frame_counter){
+    void youmu_idle_anim(Global_VRAM* VRAM, int frame_counter){
 
         bn::sprite_ptr youmu_idle_sprite = bn::sprite_items::youmu_idle_spritesheet.create_sprite(0, 0); 
 
-        VRAM.global_sprites.push_back(youmu_idle_sprite);
+        VRAM->global_sprites.push_back(youmu_idle_sprite);
 
         int i = 0;
 
@@ -141,11 +141,13 @@ namespace sprite_anim
         return;
     }
 
-    void rumia_anim(Global_VRAM VRAM, int frame_counter){
+
+    // This one is not implemented yet. I want the game to compile first... ;_;
+    void rumia_anim(Global_VRAM* VRAM, int frame_counter){
 
         bn::sprite_ptr rumia_idle_sprite = bn::sprite_items::rumia_idle_spritesheet.create_sprite(0, 0); 
 
-        VRAM.global_sprites.push_back(rumia_idle_sprite);
+        VRAM->global_sprites.push_back(rumia_idle_sprite);
 
         int i = 0;
 
@@ -164,13 +166,13 @@ namespace sprite_anim
         return;
     }
 
-    void spirit_anim(Global_VRAM VRAM, int frame_counter){
+    void spirit_anim(Global_VRAM* VRAM, int frame_counter){
 
         bn::sprite_ptr spirit_sprite = bn::sprite_items::spirit.create_sprite(0, 0);
 
         spirit_sprite.set_vertical_flip(false);
 
-        VRAM.global_sprites.push_back(spirit_sprite);
+        VRAM->global_sprites.push_back(spirit_sprite);
 
         // vvv  My animation has 13 frames. Each of them should display for 20 frames.
         int animation_frame = ((frame_counter / spirit_anim_frame_screentime) % spirit_anim_number_of_frames) + 1;       
