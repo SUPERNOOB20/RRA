@@ -1,6 +1,6 @@
 #include "bn_vector.h"
 #include "global_resources.h"
-#include <stage_init.h>
+#include "stage_init.h"
 
 #include "bn_sprite_items_akyuu_spritesheet.h"
 #include <sprite_animations.h>
