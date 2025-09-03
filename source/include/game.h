@@ -20,7 +20,8 @@ struct global_data
 
 
 
-
+#ifndef GAME_H
+#define GAME_H
 
 #include "global_resources.h"
 
@@ -36,3 +37,5 @@ void change_stage(Global_VRAM* global_sprites_and_backgrounds, int frame_counter
 
 
 }
+
+#endif

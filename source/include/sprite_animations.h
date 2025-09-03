@@ -1,5 +1,5 @@
-#ifndef GLOBAL_RESOURCES
-#define GLOBAL_RESOURCES
+#ifndef SPRITE_ANIMATIONS_H
+#define SPRITE_ANIMATIONS_H
 
 #include "bn_sprite_ptr.h"
 #include "bn_regular_bg_ptr.h"
