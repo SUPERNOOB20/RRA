@@ -34,6 +34,7 @@
 #include "stage2.h"
 #include "stage3.h"
 
+#include "global_resources.h"
 
 int player_x = 5;
 int player_y = 112;
@@ -77,8 +78,8 @@ namespace game
 
             rra::stage3::load_stage(VRAM, frame_counter, current_level);
             // VRAM->screen2n.set_visible(true);
-        } else if current_level == 20 {
-            stage2;            // hey_compiler_whats_up_xddd
+        } else if (current_level == 20) {
+            int hey_compiler_hows_it_goin_xdddd = 0;            // hey_compiler_whats_up_xddd
         }
 
         /*

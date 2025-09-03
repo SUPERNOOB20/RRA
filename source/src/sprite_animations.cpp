@@ -27,7 +27,7 @@
 
 
 #include <bn_vector.h>
-#include <global_resources.h>
+#include "global_resources.h"
 
 
 namespace rra
@@ -154,7 +154,7 @@ namespace sprite_anim
         } else if ((frame_counter % 60) < 38) {
             i = 1;
         } else {
-            i = 2
+            i = 2;
         };
 
         // VRAM->youmu_idle_sprite.set_tiles(bn::sprite_items::youmu_idle_spritesheet.tiles_item().create_tiles(i));  

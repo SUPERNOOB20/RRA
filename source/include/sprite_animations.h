@@ -4,8 +4,8 @@
 #include "bn_sprite_ptr.h"
 #include "bn_regular_bg_ptr.h"
 
-// #include <bn_vector.h>
-#include <global_resources.h>
+#include <bn_vector.h>
+#include "global_resources.h"
 
 
 /*

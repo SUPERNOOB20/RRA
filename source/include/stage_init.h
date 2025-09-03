@@ -1,7 +1,7 @@
 #pragma once
 
 #include <bn_vector.h>
-#include <global_resources.h>
+#include "global_resources.h"
 
 namespace rra
 {

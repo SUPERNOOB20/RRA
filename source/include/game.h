@@ -22,7 +22,7 @@ struct global_data
 
 
 
-#include <global_resources.h>
+#include "global_resources.h"
 
 namespace rra
 {
