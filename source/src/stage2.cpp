@@ -50,7 +50,7 @@ namespace stage2
 
                 auto current_rumia_sprite = VRAM->global_sprites.back();
 
-                current_rumia_sprite.set_top_left_position(224, 124);
+                current_rumia_sprite.set_top_left_position(196, 108);
 
                 VRAM->global_sprites.push_back(current_rumia_sprite);
                 }

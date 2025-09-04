@@ -69,8 +69,17 @@ namespace stage3
                 // generate_hall(VRAM);
                 // ^ Please disable push_back() after this!!!
                 // break;
-            // case 29:
-                // break;
+            case 29:
+                {
+                rra::sprite_anim::youmu_idle_anim(VRAM, frame_counter);
+
+                auto current_youmu_sprite = VRAM->global_sprites.back();
+
+                current_youmu_sprite.set_top_left_position(190, 80);
+
+                VRAM->global_sprites.push_back(current_youmu_sprite);
+                }
+                break;
 
             default:
                 int hey_compiler_hows_it_goin_xdddd = 0;       // <--- "nop" instruction on budget, heh

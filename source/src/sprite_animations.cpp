@@ -170,12 +170,12 @@ namespace sprite_anim
             if ((non_stare_duration / amount_of_loops) < (idle_frames_duration)){     // VERY roughly speaking, it's like "0f to 37f". Kinda.
                 i = 0;
             }
-        } else if ((frame_counter > (non_stare_duration + idle_frames_duration))
-        && (frame_counter < (non_stare_duration + idle_frames_duration + standby_duration))) {
+        } else if ((total_duration > (non_stare_duration + idle_frames_duration))
+        && (total_duration < (non_stare_duration + idle_frames_duration + standby_duration))) {
             i = 0;
-        } else if ((frame_counter > (non_stare_duration + idle_frames_duration + standby_duration))
-        && (frame_counter < (non_stare_duration + idle_frames_duration + standby_duration + 76))
-        || ((frame_counter > (non_stare_duration + idle_frames_duration + standby_duration + 76 + 16)))) {
+        } else if ((total_duration > (non_stare_duration + idle_frames_duration + standby_duration))
+        && (total_duration < (non_stare_duration + idle_frames_duration + standby_duration + 76))
+        || ((total_duration > (non_stare_duration + idle_frames_duration + standby_duration + 76 + 16)))) {
             i = 2;
         } else {
             i = 3;
@@ -203,6 +203,8 @@ namespace sprite_anim
     void spirit_anim(Global_VRAM* VRAM, int frame_counter){
     
         bn::sprite_ptr spirit_sprite = bn::sprite_items::spirit_spritesheet.create_sprite(0, 0);
+
+        VRAM->global_sprites.push_back(spirit_sprite);
 
         spirit_sprite.set_vertical_flip(false);
 
