@@ -37,13 +37,13 @@ namespace rra
 
 namespace sprite_anim
 {
-    constexpr int reimu_anim_frame_screentime = 20;       // Sets the amount of frames each sprite should play for (i.e. frame "screentime"). anim_frames == 60 means 1fps animation, anim_frames == 30 means 2fps animation, etc.
+    constexpr int reimu_anim_frame_screentime = 20;         // Sets the amount of frames each sprite should play for (i.e. frame "screentime"). anim_frames == 60 means 1fps animation, anim_frames == 30 means 2fps animation, etc.
     constexpr int akyuu_anim_frame_screentime = 30;
     constexpr int spirit_anim_frame_screentime = 20;
     constexpr int will_o_wisp_anim_frame_screentime = 5;
 
-    constexpr int spirit_anim_number_of_frames = 13;      // There are 13 different "poses" for the spirit sprite.
-    constexpr int will_o_wisp_anim_number_of_frames = 4;
+    constexpr int spirit_anim_number_of_frames = 4;      
+    constexpr int will_o_wisp_anim_number_of_frames = 13;   // There are 13 different "poses" for the will-o-wisp sprite.
     
     // constexpr int cirno_idle_frames = 25;
     // constexpr int cirno_laughing_frames = 10;
