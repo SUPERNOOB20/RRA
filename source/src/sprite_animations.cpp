@@ -48,10 +48,12 @@ namespace sprite_anim
         bn::sprite_ptr reimu_sprite = bn::sprite_items::reimu_idle_spritesheet.create_sprite(player_x, player_y);
         reimu_sprite.set_top_left_position(player_x, player_y);
 
-        if (frame_counter == 0) {
-            VRAM->global_player_sprites.push_back(reimu_sprite);    
+        if (frame_counter > 0) {
+            VRAM->global_player_sprites.pop_back(reimu_sprite);    
         }
-        
+
+        VRAM->global_player_sprites.push_back(reimu_sprite);    
+
         int i = 0;
 
         if ((frame_counter % (reimu_anim_frame_screentime * 3)) < (reimu_anim_frame_screentime)) {

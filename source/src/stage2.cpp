@@ -10,6 +10,8 @@
 #include "bn_regular_bg_items_screen10n.h"
 // #include "bn_regular_bg_items_screen21n.h"
 
+#include "bn_log.h"
+
 namespace rra
 {
 namespace stage2
@@ -23,9 +25,12 @@ namespace stage2
         screen_10n.set_visible(false);
 
         switch(current_level){
-            case 1:
+            case 11:
                 screen_10n.set_visible(true);
                 VRAM->global_backgrounds.push_back(screen_10n);        
+
+                BN_LOG("You've gotten to level << 21 >> successfully! (Stage < 3 >)")
+
                 break;
             // case 2:
                 // screen_2n.set_visible(true);

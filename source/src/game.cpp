@@ -128,7 +128,7 @@ namespace game
             {
                 player_x -= 10;
             } else if (bn::keypad::r_held()) {
-                player_x += 100;
+                player_x -= 100;
             } else {
                 player_x--;
             }

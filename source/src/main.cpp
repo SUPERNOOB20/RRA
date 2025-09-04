@@ -64,8 +64,8 @@ int main()
     BN_LOG("checkpoint_alpha  ", vram_ptr->global_player_sprites.size(), "   ", vram_ptr->global_sprites.size(), "   ", vram_ptr->global_backgrounds.size());
     BN_LOG("checkpoint_alpha  ", vram_ptr->global_player_sprites.max_size(), "   ", vram_ptr->global_sprites.max_size(), "   ", vram_ptr->global_backgrounds.max_size());
 
-    bn::sprite_items::reimu_idle_spritesheet.create_sprite(0, 0);
-    bn::sprite_items::reimu_jump_spritesheet.create_sprite(0, 0);
+    // bn::sprite_items::reimu_idle_spritesheet.create_sprite(0, 0);
+    // bn::sprite_items::reimu_jump_spritesheet.create_sprite(0, 0);
     // bn::sprite_items::reimu_dash_spritesheet.create_sprite(0, 0),
 
     BN_LOG("checkpoint_beta  ", vram_ptr->global_player_sprites.size(), "   ", vram_ptr->global_sprites.size(), "   ", vram_ptr->global_backgrounds.size());
