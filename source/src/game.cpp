@@ -82,21 +82,6 @@ namespace game
             int hey_compiler_hows_it_goin_xdddd = 0;            // hey_compiler_whats_up_xddd
         }
 
-        /*
-        if (current_level == 1) {
-            VRAM->screen1n.set_visible(true);
-        } else if (current_level == 2) {
-            VRAM->screen2n.set_visible(true);
-            VRAM->akyuu_sprite.set_visible(true);
-            VRAM->akyuu_sprite.set_top_left_position(190, 80);
-            rra::sprite_anim::akyuu_anim(VRAM, frame_counter);
-        } else if (current_level == 10) {
-            VRAM->screen2n.set_visible(true);
-        } else {
-            int nop = 0;            // hey_compiler_whats_up_xddd
-        }
-        */
-
         return;
     }
 

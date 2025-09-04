@@ -45,6 +45,7 @@ namespace stage2
                 // generate_hall(VRAM);
                 // ^ Please disable push_back() after this!!!
             case 19:
+                {
                 rra::sprite_anim::rumia_anim(VRAM, frame_counter);
 
                 auto current_rumia_sprite = VRAM->global_sprites.back();
@@ -52,6 +53,7 @@ namespace stage2
                 current_rumia_sprite.set_top_left_position(224, 124);
 
                 VRAM->global_sprites.push_back(current_rumia_sprite);
+                }
                 break;
 
             default:

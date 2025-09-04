@@ -38,6 +38,7 @@ namespace stage1
                 break;   
 
             case 2:
+                {
                 level_layout = bn::regular_bg_items::screen2n.create_bg(8, 48);
 
                 rra::sprite_anim::akyuu_anim(VRAM, frame_counter);
@@ -47,6 +48,7 @@ namespace stage1
                 current_akyuu_sprite.set_top_left_position(190, 80);
 
                 VRAM->global_sprites.push_back(current_akyuu_sprite);
+                }
                 break;
 
             // case 3:
@@ -66,6 +68,7 @@ namespace stage1
             case 9:
                 // level_layout = bn::regular_bg_items::screen9n.create_bg(8, 48);
 
+                {
                 rra::sprite_anim::cirno_anim(VRAM, frame_counter);
 
                 auto current_cirno_sprite = VRAM->global_sprites.back();
@@ -73,8 +76,9 @@ namespace stage1
                 current_cirno_sprite.set_top_left_position(190, 80);
 
                 VRAM->global_sprites.push_back(current_cirno_sprite);
+                }
                 break;
-                
+
             default:
                 int hey_compiler_hows_it_goin_xdddd = 0;       // <--- "nop" instruction on budget, heh
         }

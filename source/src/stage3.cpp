@@ -26,6 +26,7 @@ namespace stage3
 
         switch(current_level){
             case 21:
+                {
                 rra::sprite_anim::spirit_anim(VRAM, frame_counter);
 
                 auto current_spirit_sprite = VRAM->global_sprites.back();
@@ -33,9 +34,11 @@ namespace stage3
                 current_spirit_sprite.set_top_left_position(190, 80);
 
                 VRAM->global_sprites.push_back(current_spirit_sprite);
+                }
                 break;
 
             case 22:
+                {
                 // level_layout = bn::regular_bg_items::screen22n.create_bg(8, 48);
                 rra::sprite_anim::will_o_wisp_anim(VRAM, frame_counter);
 
@@ -44,6 +47,7 @@ namespace stage3
                 current_will_o_wisp_sprite.set_top_left_position(190, 80);
 
                 VRAM->global_sprites.push_back(current_will_o_wisp_sprite);
+                }
                 break;
 
             // case 23:

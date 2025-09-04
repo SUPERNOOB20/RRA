@@ -188,16 +188,14 @@ namespace sprite_anim
 
     void will_o_wisp_anim(Global_VRAM* VRAM, int frame_counter){
 
-        bn::sprite_ptr will_o_wisp_sprite = bn::sprite_items::will_o_wisp_spiritesheet.create_sprite(0, 0);
+        bn::sprite_ptr will_o_wisp_sprite = bn::sprite_items::will_o_wisp_spritesheet.create_sprite(0, 0);
 
-        will_o_wisp_spritesheet.set_vertical_flip(false);
-
-        VRAM->global_sprites.push_back(spirit_sprite);
+        VRAM->global_sprites.push_back(will_o_wisp_sprite);
 
         // vvv  My animation has 13 frames. Each of them should display for 20 frames.
         int animation_frame = ((frame_counter / spirit_anim_frame_screentime) % spirit_anim_number_of_frames);          // goes from 0 to 13. You can do "+ 1" if you'd rather have it go from 1 to 14.
 
-        will_o_wisp_spritesheet.set_tiles(bn::sprite_items::will_o_wisp_sprite.tiles_item().create_tiles(animation_frame));                
+        will_o_wisp_sprite.set_tiles(bn::sprite_items::will_o_wisp_spritesheet.tiles_item().create_tiles(animation_frame));                
 
         return;
     }
@@ -219,7 +217,7 @@ namespace sprite_anim
 
         return;
     }
-    
+
 }
 
 }
