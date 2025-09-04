@@ -44,5 +44,22 @@ jumpscare rumia
 1: 38f
 2: 115f
 3: 76f
-4: 16
+4: 16f
 3: 10f		// Could be 9f too
+
+
+AB x 3
+A
+BB
+C
+D
+C
+
+
+mod 228     // 76 * 3
+mod 76
+
+TOTAL:
+228 + 38 + 115 + 76 + 10 + 16 =
+264 + 115 + 76 + 26 =
+

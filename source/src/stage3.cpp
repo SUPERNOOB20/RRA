@@ -20,28 +20,60 @@ namespace stage3
 
         rra::stage_init(VRAM);   // Resets all backgrounds and non-player sprites
 
-        bn::regular_bg_ptr screen_21n = bn::regular_bg_items::screen21n.create_bg(8, 48);
-
-        screen_21n.set_visible(false);
+        bn::regular_bg_ptr level_layout = bn::regular_bg_items::screen21n.create_bg(8, 48);
 
         switch(current_level){
             case 21:
-                screen_21n.set_visible(true);
-                VRAM->global_backgrounds.push_back(screen_21n);        
+                rra::sprite_anim::spirit_anim(VRAM, frame_counter);
 
-                BN_LOG("You've gotten to level << 21 >> successfully! (Stage < 3 >)");
+                auto current_spirit_sprite = VRAM->global_sprites.back();
 
+                current_spirit_sprite.set_top_left_position(190, 80);
+
+                VRAM->global_sprites.push_back(current_spirit_sprite);
                 break;
 
-            // case 2:
-                // screen_2n.set_visible(true);
-                // VRAM.push_back(screen_2n);  
+            case 22:
+                // level_layout = bn::regular_bg_items::screen22n.create_bg(8, 48);
+                rra::sprite_anim::will_o_wisp_anim(VRAM, frame_counter);
+
+                auto current_will_o_wisp_sprite = VRAM->global_sprites.back();
+
+                current_will_o_wisp_sprite.set_top_left_position(190, 80);
+
+                VRAM->global_sprites.push_back(current_will_o_wisp_sprite);
+                break;
+
+            // case 23:
+                // level_layout = bn::regular_bg_items::screen23n.create_bg(8, 48);
+                // break;
+            // case 24:
+                // level_layout = bn::regular_bg_items::screen24n.create_bg(8, 48);
+                // break;
+            // case 25:
+                // level_layout = bn::regular_bg_items::screen25n.create_bg(8, 48);
+                // break;
+            // case 26:
+                // level_layout = bn::regular_bg_items::screen26n.create_bg(8, 48);
+                // break;
+            // .
+            // .
+            // .
+            // case 28:
+                // generate_hall(VRAM);
+                // ^ Please disable push_back() after this!!!
+                // break;
+            // case 29:
                 // break;
 
             default:
                 int hey_compiler_hows_it_goin_xdddd = 0;       // <--- "nop" instruction on budget, heh
         };
         
+
+        VRAM->global_backgrounds.push_back(level_layout);
+
+
         /*
         rra::sprite_anim::akyuu_anim(VRAM, frame_counter);
 
