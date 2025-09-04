@@ -40,7 +40,7 @@ namespace sprite_anim
     constexpr int reimu_anim_frame_screentime = 20;       // Sets the amount of frames each sprite should play for (i.e. frame "screentime"). anim_frames == 60 means 1fps animation, anim_frames == 30 means 2fps animation, etc.
     constexpr int akyuu_anim_frame_screentime = 30;
     constexpr int spirit_anim_frame_screentime = 20;
-    constexpr int will_o_wisp_screentime = 1;
+    constexpr int will_o_wisp_anim_frame_screentime = 5;
 
     constexpr int spirit_anim_number_of_frames = 13;      // There are 13 different "poses" for the spirit sprite.
     constexpr int will_o_wisp_anim_number_of_frames = 4;
@@ -230,7 +230,7 @@ namespace sprite_anim
         VRAM->global_sprites.push_back(will_o_wisp_sprite);
 
         // vvv  My animation has 13 frames. Each of them should display for 20 frames.
-        int animation_frame = ((frame_counter / spirit_anim_frame_screentime) % spirit_anim_number_of_frames);          // goes from 0 to 13. You can do "+ 1" if you'd rather have it go from 1 to 14.
+        int animation_frame = ((frame_counter / will_o_wisp_anim_frame_screentime) % will_o_wisp_anim_number_of_frames);          // goes from 0 to 13. You can do "+ 1" if you'd rather have it go from 1 to 14.
 
         will_o_wisp_sprite.set_tiles(bn::sprite_items::will_o_wisp_spritesheet.tiles_item().create_tiles(animation_frame));                
 
@@ -245,7 +245,7 @@ namespace sprite_anim
 
         spirit_sprite.set_vertical_flip(false);
 
-        int animation_frame = ((frame_counter / will_o_wisp_screentime) % will_o_wisp_anim_number_of_frames);         // goes from 0 to 3. You can do "+ 1" if you'd rather have it go from 1 to 4.
+        int animation_frame = ((frame_counter / spirit_anim_frame_screentime) % spirit_anim_number_of_frames);         // goes from 0 to 3. You can do "+ 1" if you'd rather have it go from 1 to 4.
 
         if ((animation_frame > 4) && (animation_frame < 11))
             {
