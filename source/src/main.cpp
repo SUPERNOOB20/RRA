@@ -23,12 +23,30 @@
 #include "sprite_animations.h"
 #include "game.h"
 
-
-
-
-
 #include "global_resources.h"
 
+#include "bn_keypad.h"
+
+#include "bn_sprite_text_generator.h"
+
+#include "bn_display.h"
+
+#include "bn_math.h"
+
+#include "fixed_32x64_sprite_font.h"
+
+#include "bn_sprite_items_variable_8x16_font_red.h"
+// #include "bn_sprite_items_variable_8x16_font_blue.h"
+// #include "bn_sprite_items_variable_8x16_font_yellow.h"
+
+#include "common_fixed_8x8_sprite_font.h"
+#include "common_fixed_8x16_sprite_font.h"
+#include "common_variable_8x8_sprite_font.h"
+#include "common_variable_8x16_sprite_font.h"
+
+#include "bn_regular_bg_items_reimu_bg.h"
+
+#include "stage_init.h"
 
 // #include <vector>
 #include "bn_vector.h"
@@ -51,11 +69,43 @@ int main()
 
     vram_ptr = &VRAM;
 
-    // Play main menu, intro scene... etc.
 
-    // bn::sprite_items::reimu_idle_spritesheet.create_sprite(0, 0);
-    // bn::sprite_items::reimu_jump_spritesheet.create_sprite(0, 0);
-    // bn::sprite_items::reimu_dash_spritesheet.create_sprite(0, 0),
+
+
+
+    bn::regular_bg_ptr start_menu_bg = bn::regular_bg_items::reimu_bg.create_bg(8, 48);
+
+    bn::sprite_text_generator text_generator(common::variable_8x8_sprite_font);
+    // bn::sprite_text_generator text_generator();
+
+    int start_frame_counter = 0;
+    int start = 1;
+    while(start)
+    {
+        // Play main menu, intro scene... etc.
+
+        bn::vector<bn::sprite_ptr, 12> text_sprites;
+
+        text_generator.generate(0, 70, "Press Start", text_sprites);
+        text_generator.set_center_alignment();
+
+        // text_sprites.set_visible(true)
+        if ((start_frame_counter % 90) < 40){
+            // text_sprites.set_visible(false);
+            text_sprites.clear();
+        }
+        
+        if (bn::keypad::start_pressed()){
+            rra::stage_init(vram_ptr);
+            start = 0;
+        }
+
+        start_frame_counter++;
+
+        bn::core::update();
+    }
+
+
 
     while(true)
     {

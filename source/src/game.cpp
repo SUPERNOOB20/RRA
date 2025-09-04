@@ -121,6 +121,7 @@ namespace game
 
         if (bn::keypad::start_pressed())
         {
+            BN_LOG("    ");
             BN_LOG("frame_counter, player_x, current_level: ");
             BN_LOG(frame_counter, "   ", player_x, "   ", current_level);
             BN_LOG("vv ----------- VRAM ---------- vv");
