@@ -29,7 +29,7 @@ namespace stage3
                 screen_21n.set_visible(true);
                 VRAM->global_backgrounds.push_back(screen_21n);        
 
-                BN_LOG("You've gotten to level << 21 >> successfully! (Stage < 3 >)")
+                BN_LOG("You've gotten to level << 21 >> successfully! (Stage < 3 >)");
 
                 break;
 
