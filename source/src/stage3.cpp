@@ -42,10 +42,15 @@ namespace stage3
                 int hey_compiler_hows_it_goin_xdddd = 0;       // <--- "nop" instruction on budget, heh
         };
         
-        bn::sprite_ptr akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(0, 0);    // This might create two sprites... so please do be careful
-        akyuu_sprite.set_top_left_position(190, 80);
-
+        /*
         rra::sprite_anim::akyuu_anim(VRAM, frame_counter);
+
+        auto current_akyuu_sprite = VRAM->global_sprites.back();
+
+        current_akyuu_sprite.set_top_left_position(190, 80);
+
+        VRAM->global_sprites.push_back(current_akyuu_sprite);
+        */
 
         return;
     };

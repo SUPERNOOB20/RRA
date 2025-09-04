@@ -24,8 +24,11 @@ namespace stage1
         bn::regular_bg_ptr screen_1n = bn::regular_bg_items::screen1n.create_bg(8, 48);
         bn::regular_bg_ptr screen_2n = bn::regular_bg_items::screen2n.create_bg(8, 48);
 
+        // bn::bg_palette_ptr screen_2n_palette = screen_2n.palette();
+        // void screen_2n_palette.set_colors(screen_1n.palette());
+
         screen_1n.set_visible(false);
-        screen_1n.set_visible(false);
+        screen_2n.set_visible(false);
 
         switch(current_level){
             case 1:
@@ -40,10 +43,13 @@ namespace stage1
                 int hey_compiler_hows_it_goin_xdddd = 0;       // <--- "nop" instruction on budget, heh
         }
         
-        bn::sprite_ptr akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(0, 0);    // This might create two sprites... so please do be careful
-        akyuu_sprite.set_top_left_position(190, 80);
-        
         rra::sprite_anim::akyuu_anim(VRAM, frame_counter);
+
+        auto current_akyuu_sprite = VRAM->global_sprites.back();
+
+        current_akyuu_sprite.set_top_left_position(190, 80);
+
+        VRAM->global_sprites.push_back(current_akyuu_sprite);
 
         return;
     };
