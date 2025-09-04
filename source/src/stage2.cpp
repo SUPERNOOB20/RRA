@@ -25,9 +25,9 @@ namespace stage2
         bn::regular_bg_ptr level_layout = bn::regular_bg_items::screen10n.create_bg(8, 48);
 
         switch(current_level){
-            case 10:
+            // case 10:
                 // level_layout = bn::regular_bg_items::screen10n.create_bg(8, 48);
-                break;
+                // break;
             // case 11:
                 // level_layout = bn::regular_bg_items::screen11n.create_bg(8, 48);
             // case 12:

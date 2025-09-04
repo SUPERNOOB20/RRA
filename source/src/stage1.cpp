@@ -59,7 +59,7 @@ namespace stage1
             // .
             // .
 
-            case 8:
+            // case 8:
                 // generate_hall(VRAM);
                 // ^ Please disable push_back() after this!!!
                 // break;
@@ -73,7 +73,8 @@ namespace stage1
                 current_cirno_sprite.set_top_left_position(190, 80);
 
                 VRAM->global_sprites.push_back(current_cirno_sprite);
-
+                break;
+                
             default:
                 int hey_compiler_hows_it_goin_xdddd = 0;       // <--- "nop" instruction on budget, heh
         }
