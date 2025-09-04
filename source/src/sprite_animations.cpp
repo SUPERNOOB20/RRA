@@ -39,8 +39,8 @@ namespace sprite_anim
 {
     constexpr int reimu_anim_frame_screentime = 20;       // Sets the amount of frames each sprite should play for (i.e. frame "screentime"). anim_frames == 60 means 1fps animation, anim_frames == 30 means 2fps animation, etc.
     constexpr int akyuu_anim_frame_screentime = 30;
-    constexpr int spirit_anim_frame_screentime = 30;
-    constexpr int will_o_wisp_screentime = 15;
+    constexpr int spirit_anim_frame_screentime = 20;
+    constexpr int will_o_wisp_screentime = 1;
 
     constexpr int spirit_anim_number_of_frames = 13;      // There are 13 different "poses" for the spirit sprite.
     constexpr int will_o_wisp_anim_number_of_frames = 4;
@@ -156,8 +156,10 @@ namespace sprite_anim
 
         VRAM->global_sprites.push_back(rumia_idle_sprite);
 
-        int total_duration = frame_counter % 481;
+        
+        int total_duration = frame_counter % 483;
 
+        /*
         constexpr int idle_frames_duration = 38;
         constexpr int non_stare_duration = idle_frames_duration * 6;                        // Duration of the non-stare loop. 38 * 2 * 3 = 228.
 
@@ -170,15 +172,50 @@ namespace sprite_anim
             if ((non_stare_duration / amount_of_loops) < (idle_frames_duration)){     // VERY roughly speaking, it's like "0f to 37f". Kinda.
                 i = 0;
             }
-        } else if ((total_duration > (non_stare_duration + idle_frames_duration))
-        && (total_duration < (non_stare_duration + idle_frames_duration + standby_duration))) {
+        } else if ((total_duration > (non_stare_duration + idle_frames_duration)) && (total_duration < (non_stare_duration + idle_frames_duration + standby_duration))) {
             i = 0;
-        } else if ((total_duration > (non_stare_duration + idle_frames_duration + standby_duration))
-        && (total_duration < (non_stare_duration + idle_frames_duration + standby_duration + 76))
-        || ((total_duration > (non_stare_duration + idle_frames_duration + standby_duration + 76 + 16)))) {
+        } else if (((total_duration > (non_stare_duration + idle_frames_duration + standby_duration)) && (total_duration < (non_stare_duration + idle_frames_duration + standby_duration + 76))) || ((total_duration > (non_stare_duration + idle_frames_duration + standby_duration + 76 + 16)))) {
             i = 2;
         } else {
             i = 3;
+        }
+
+        */
+
+
+
+        /*
+        int i = 1;
+        if (total_duration < 38){
+            i = 0;
+        } else if ((total_duration > 76) && (total_duration < 114)){
+            i = 0;
+        } else if ((total_duration > 152) && (total_duration < 190)){
+            i = 0;
+        } else if ((total_duration > 228) && (total_duration < 266)){
+            i = 0;
+        } else if ((total_duration > 381) && (total_duration < 457)){
+            i = 2;
+        } else if ((total_duration >= 457) && (total_duration <= 473)){
+            i = 3;
+        } else if ((total_duration > 473) && (total_duration < 483)){
+            i = 2;
+        }
+        */
+
+        int i = 1;
+        if (total_duration < 38){
+            i = 0;
+        } else if ((total_duration > 76) && (total_duration < 114)){
+            i = 0;
+        } else if ((total_duration > 152) && (total_duration < 190)){
+            i = 0;
+        } else if ((total_duration > 228) && (total_duration < 266)){
+            i = 0;
+        } else if ((total_duration > 381) && (total_duration < 445)){
+            i = 2;
+        } else if (total_duration > 445){
+            i = 1;
         }
 
         rumia_idle_sprite.set_tiles(bn::sprite_items::rumia_idle_spritesheet.tiles_item().create_tiles(i));

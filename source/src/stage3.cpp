@@ -31,7 +31,7 @@ namespace stage3
 
                 auto current_spirit_sprite = VRAM->global_sprites.back();
 
-                current_spirit_sprite.set_top_left_position(190, 80);
+                current_spirit_sprite.set_top_left_position(140, 60);
 
                 VRAM->global_sprites.push_back(current_spirit_sprite);
                 }
@@ -44,7 +44,7 @@ namespace stage3
 
                 auto current_will_o_wisp_sprite = VRAM->global_sprites.back();
 
-                current_will_o_wisp_sprite.set_top_left_position(190, 80);
+                current_will_o_wisp_sprite.set_top_left_position(140, 80);
 
                 VRAM->global_sprites.push_back(current_will_o_wisp_sprite);
                 }
