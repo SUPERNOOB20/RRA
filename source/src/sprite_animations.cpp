@@ -215,8 +215,11 @@ namespace sprite_anim
                 spirit_sprite.set_vertical_flip(true);     // Cases 5 to 10 should be flipped to mirror the sprite!
             }
 
-        spirit_sprite.set_tiles(bn::sprite_items::spirit_spritesheet.tiles_item().create_tiles(animation_frame));                
+        spirit_sprite.set_tiles(bn::sprite_items::spirit_spritesheet.tiles_item().create_tiles(animation_frame)); 
+
         return;
+    }
+    
 }
 
 }

@@ -3,6 +3,8 @@
 #include "stage_init.h"
 
 #include "bn_sprite_items_akyuu_spritesheet.h"
+// #include "bn_sprite_items_spirit_spritesheet.h"
+// #include "bn_sprite_items_will_o_wisp_spritesheet.h"
 #include "sprite_animations.h"
 
 // include "bn_regular_bg_items_screen1n.h"
@@ -68,7 +70,7 @@ namespace stage3
 
             default:
                 int hey_compiler_hows_it_goin_xdddd = 0;       // <--- "nop" instruction on budget, heh
-        };
+        }
         
 
         VRAM->global_backgrounds.push_back(level_layout);
