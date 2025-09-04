@@ -10,16 +10,19 @@
 // #include "bn_regular_bg_items_screen10n.h"
 // #include "bn_regular_bg_items_screen21n.h"
 
+// #include "bn_log.h"
+
 namespace rra
 {
 namespace stage1
 {
+
     void load_stage(Global_VRAM* VRAM, int frame_counter, int current_level) {
 
         rra::stage_init(VRAM);   // Resets all backgrounds and non-player sprites
 
-        bn::regular_bg_ptr screen_1n = bn::regular_bg_items::screen1n.create_bg(0, 0);
-        bn::regular_bg_ptr screen_2n = bn::regular_bg_items::screen2n.create_bg(0, 0);
+        bn::regular_bg_ptr screen_1n = bn::regular_bg_items::screen1n.create_bg(8, 48);
+        bn::regular_bg_ptr screen_2n = bn::regular_bg_items::screen2n.create_bg(8, 48);
 
         screen_1n.set_visible(false);
         screen_1n.set_visible(false);
@@ -39,7 +42,7 @@ namespace stage1
         
         bn::sprite_ptr akyuu_sprite = bn::sprite_items::akyuu_spritesheet.create_sprite(0, 0);    // This might create two sprites... so please do be careful
         akyuu_sprite.set_top_left_position(190, 80);
-
+        
         rra::sprite_anim::akyuu_anim(VRAM, frame_counter);
 
         return;

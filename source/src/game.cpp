@@ -138,6 +138,10 @@ namespace game
         {
             BN_LOG("frame_counter, player_x, current_level: ");
             BN_LOG(frame_counter, "   ", player_x, "   ", current_level);
+            BN_LOG("vv ----------- VRAM ---------- vv");
+            BN_LOG("current vector size:    ", VRAM->global_player_sprites.size(), "   ", VRAM->global_sprites.size(), "   ", VRAM->global_backgrounds.size());
+            BN_LOG("max vector size:    ", VRAM->global_player_sprites.max_size(), "   ", VRAM->global_sprites.max_size(), "   ", VRAM->global_backgrounds.max_size());
+            BN_LOG("---------------------------------");
             // int decoy = 0;
         }
 

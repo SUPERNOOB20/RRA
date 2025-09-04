@@ -18,7 +18,7 @@ namespace stage2
 
         rra::stage_init(VRAM);   // Resets all backgrounds and non-player sprites
 
-        bn::regular_bg_ptr screen_10n = bn::regular_bg_items::screen10n.create_bg(0, 0);
+        bn::regular_bg_ptr screen_10n = bn::regular_bg_items::screen10n.create_bg(8, 48);
 
         screen_10n.set_visible(false);
 

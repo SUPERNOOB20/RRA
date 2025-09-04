@@ -47,7 +47,7 @@ int main()
 
     int frame_counter = 0;    // As a timer for animations :3
 
-    bn::vector<bn::sprite_ptr, 27>        global_player_sprites;        
+    bn::vector<bn::sprite_ptr, 26>        global_player_sprites;        
     bn::vector<bn::sprite_ptr, 100>       global_sprites;               
     bn::vector<bn::regular_bg_ptr, 4>     global_backgrounds;           
 
@@ -55,13 +55,20 @@ int main()
 
     Global_VRAM* vram_ptr;
 
+    vram_ptr = &VRAM;
+
     // Play main menu, intro scene... etc.
 
-    BN_LOG("checkpoint_A");
+    BN_LOG("test ", global_player_sprites.size(), "   ", global_sprites.size(), "    ", global_backgrounds.size());
+    BN_LOG("test ", global_player_sprites.max_size(), "   ", global_sprites.max_size(), "    ", global_backgrounds.max_size());
+    BN_LOG("checkpoint_alpha  ", vram_ptr->global_player_sprites.size(), "   ", vram_ptr->global_sprites.size(), "   ", vram_ptr->global_backgrounds.size());
+    BN_LOG("checkpoint_alpha  ", vram_ptr->global_player_sprites.max_size(), "   ", vram_ptr->global_sprites.max_size(), "   ", vram_ptr->global_backgrounds.max_size());
 
     bn::sprite_items::reimu_idle_spritesheet.create_sprite(0, 0);
     bn::sprite_items::reimu_jump_spritesheet.create_sprite(0, 0);
     // bn::sprite_items::reimu_dash_spritesheet.create_sprite(0, 0),
+
+    BN_LOG("checkpoint_beta  ", vram_ptr->global_player_sprites.size(), "   ", vram_ptr->global_sprites.size(), "   ", vram_ptr->global_backgrounds.size());
 
     while(true)
     {
@@ -70,5 +77,9 @@ int main()
         frame_counter++;
 
         bn::core::update();
+
+        if (frame_counter == 1){
+            BN_LOG("checkpoint_BB");
+        }
     }
 }
