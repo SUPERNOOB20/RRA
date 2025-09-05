@@ -28,6 +28,8 @@
 
 #include "sprite_animations.h"
 
+#include "bn_unique_ptr_fwd.h"
+
 // #include "global_ptr.h"
 
 #include "stage1.h"
@@ -57,13 +59,20 @@ namespace game
     void change_level(Global_VRAM* VRAM, int frame_counter) {
         if (player_x > 220) {
             current_level++;
+            VRAM->global_backgrounds.pop_back();
             player_x = 10;
         }
 
         if (player_x < -15) {
             current_level--;
+            VRAM->global_backgrounds.pop_back();
             player_x = 200;
         }
+
+        // previous_level
+
+        // if current_level 
+        // previous level = current_level
 
         // change_stage()
         if ((current_level >= 1) && (current_level < 10)) {

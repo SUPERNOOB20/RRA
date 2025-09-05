@@ -10,7 +10,7 @@
 // #include "bn_regular_bg_items_screen10n.h"
 // #include "bn_regular_bg_items_screen21n.h"
 
-// #include "bn_log.h"
+#include "bn_log.h"
 
 namespace rra
 {
@@ -30,7 +30,15 @@ namespace stage1
         // screen_1n.set_visible(false);
         // screen_2n.set_visible(false);
 
+        // bn::regular_bg_ptr.set_palette(screen_1n);
+
+        // bn::regular_bg_items::screen1n(bpp_mode bpp_8);
+
+        // bn::bg_palette_ptr bg_palette = screen1n.palette();
+        // bg_palette.set_colors(screen1n_item);
+
         bn::regular_bg_ptr level_layout = bn::regular_bg_items::screen1n.create_bg(8, 48);
+        // VRAM->global_backgrounds.push_back(level_layout);
 
         switch(current_level){
             case 1:
@@ -39,6 +47,17 @@ namespace stage1
 
             case 2:
                 {
+
+                BN_LOG("    ");
+                BN_LOG("frame_counter, current_level: ");
+                BN_LOG(frame_counter, "   ", "   ", current_level);
+                BN_LOG("vv ----------- VRAM ---------- vv");
+                BN_LOG("current vector size:    ", VRAM->global_player_sprites.size(), "   ", VRAM->global_sprites.size(), "   ", VRAM->global_backgrounds.size());
+                BN_LOG("max vector size:    ", VRAM->global_player_sprites.max_size(), "   ", VRAM->global_sprites.max_size(), "   ", VRAM->global_backgrounds.max_size());
+                BN_LOG("---------------------------------");
+
+                // VRAM->global_backgrounds.pop_back();
+
                 level_layout = bn::regular_bg_items::screen2n.create_bg(8, 48);
 
                 rra::sprite_anim::akyuu_anim(VRAM, frame_counter);
@@ -48,6 +67,10 @@ namespace stage1
                 current_akyuu_sprite.set_top_left_position(190, 80);
 
                 VRAM->global_sprites.push_back(current_akyuu_sprite);
+
+                BN_LOG("    ");
+                BN_LOG(" :p ");
+                BN_LOG("    ");
                 }
                 break;
 
