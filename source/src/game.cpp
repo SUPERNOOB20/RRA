@@ -38,6 +38,11 @@
 
 #include "global_resources.h"
 
+// #include "vram_clear.h"
+#include "stage_init.h"
+
+
+
 int player_x = 5;
 int player_y = 112;
 
@@ -59,13 +64,18 @@ namespace game
     void change_level(Global_VRAM* VRAM, int frame_counter) {
         if (player_x > 220) {
             current_level++;
-            VRAM->global_backgrounds.pop_back();
+            if (VRAM->global_backgrounds.size() > 0){
+                VRAM->global_backgrounds.pop_back();
+            }
+            // reset_vram();
+            rra::stage_init(VRAM);   // Resets all backgrounds and non-player sprites
             player_x = 10;
-        }
-
-        if (player_x < -15) {
+        } else if (player_x < -15) {
             current_level--;
-            VRAM->global_backgrounds.pop_back();
+            if (VRAM->global_backgrounds.size() > 0){
+                VRAM->global_backgrounds.pop_back();
+            }
+            rra::stage_init(VRAM);   // Resets all backgrounds and non-player sprites
             player_x = 200;
         }
 
@@ -87,7 +97,7 @@ namespace game
 
             rra::stage3::load_stage(VRAM, frame_counter, current_level);
             // VRAM->screen2n.set_visible(true);
-        } else if (current_level == 20) {
+        } else if (current_level >= 30) {
             int hey_compiler_hows_it_goin_xdddd = 0;            // hey_compiler_whats_up_xddd
         }
 

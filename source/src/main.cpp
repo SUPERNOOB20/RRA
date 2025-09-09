@@ -21,6 +21,8 @@
 #include "bn_log.h"
 
 #include "sprite_animations.h"
+
+#include "main_menu.h"
 #include "game.h"
 
 #include "global_resources.h"
@@ -32,19 +34,6 @@
 #include "bn_display.h"
 
 #include "bn_math.h"
-
-#include "fixed_32x64_sprite_font.h"
-
-#include "bn_sprite_items_variable_8x16_font_red.h"
-// #include "bn_sprite_items_variable_8x16_font_blue.h"
-// #include "bn_sprite_items_variable_8x16_font_yellow.h"
-
-#include "common_fixed_8x8_sprite_font.h"
-#include "common_fixed_8x16_sprite_font.h"
-#include "common_variable_8x8_sprite_font.h"
-#include "common_variable_8x16_sprite_font.h"
-
-#include "bn_regular_bg_items_reimu_bg.h"
 
 #include "stage_init.h"
 
@@ -66,6 +55,7 @@
 template<typename Type, int MaxSize>
 bn::vector<bn::sprite_ptr, 1>        test;          // sets the template in stone, for later use in main().
 
+
 int main()
 {
     bn::core::init();
@@ -82,36 +72,22 @@ int main()
 
     vram_ptr = &VRAM;
 
-
-
-
-
-    bn::regular_bg_ptr start_menu_bg = bn::regular_bg_items::reimu_bg.create_bg(8, 48);
-    vram_ptr->global_backgrounds.push_back(start_menu_bg);
-
-    bn::sprite_text_generator text_generator(common::variable_8x8_sprite_font);
-    // bn::sprite_text_generator text_generator();
-
     int start_frame_counter = 0;
     int intro_scene_is_playing = 1;
-    while(intro_scene_is_playing)
+
+    // rra::stage_init(vram_ptr);
+
+    while(true)
     {
-        // Play main menu, intro scene... etc.
-
-        bn::vector<bn::sprite_ptr, 12> text_sprites;
-
-        text_generator.generate(0, 70, "Press Start", text_sprites);
-        text_generator.set_center_alignment();
-
-        // text_sprites.set_visible(true)
-        if ((start_frame_counter % 90) < 40){
-            // text_sprites.set_visible(false);
-            text_sprites.clear();
+        if (intro_scene_is_playing){
+            intro_scene_is_playing = rra::display_main_menu(vram_ptr, start_frame_counter);
+            start_frame_counter++;
+        } else {
+            rra::game::handle_frame(vram_ptr, frame_counter);
         }
         
-        if (bn::keypad::start_pressed()){
-            // bn::regular_bg_ptr ~regular_bg_ptr();
-            // rra::stage_init(vram_ptr);
+    
+        if (bn::keypad::select_pressed()){
 
             BN_LOG("    ");
             BN_LOG("frame_counter: ");
@@ -121,49 +97,10 @@ int main()
             BN_LOG("max vector size:    ", vram_ptr->global_player_sprites.max_size(), "   ", vram_ptr->global_sprites.max_size(), "   ", vram_ptr->global_backgrounds.max_size());
             BN_LOG("---------------------------------");
 
-            // bn::regular_bg_ptr level_layout = bn::regular_bg_items::screen1n.create_bg(8, 48);
-
-            // bn::sprite_palette_item& palette_item = bn::sprite_items::screen1n.palette_item();
-
-            // bn::bg_palette_ptr bg_palette = start_menu_bg.palette();
-            // bg_palette.set_colors(palette_item);
-
-            /*
-            bn::regular_bg_item reimu_bg(
-            regular_bg_tiles_item(span<const tile>(screen21n_bn_gfxTiles, 874), bpp_mode::BPP_8, compression_type::NONE), 
-            bg_palette_item(span<const color>(screen21n_bn_gfxPal, 80), bpp_mode::BPP_8, compression_type::NONE),
-            regular_bg_map_item(screen21n_bn_gfxMap[0], size(32, 32), compression_type::NONE, 1, false));
-            */
-
-            vram_ptr->global_backgrounds.pop_back();
-
-            intro_scene_is_playing = 0;
-
-            // template<typename regular_bg_ptr>
-            // bn::default_delete operator()(bn::regular_bg_ptr* start_menu_bg);
-
-            bn::core::update();
-
-            break;
         }
 
-        start_frame_counter++;
-
-        if ((bn::keypad::start_pressed()) || (bn::keypad::start_pressed())){
-            BN_LOG("you shall not log!");
-        }
-
-        bn::core::update();
-    }
-
-    rra::stage_init(vram_ptr);
-
-    while(true)
-    {
-        rra::game::handle_frame(vram_ptr, frame_counter);
-
+        
         frame_counter++;
-
         bn::core::update();
     }
 }

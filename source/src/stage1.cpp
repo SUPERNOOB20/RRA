@@ -21,22 +21,6 @@ namespace stage1
 
         rra::stage_init(VRAM);   // Resets all backgrounds and non-player sprites
 
-        // bn::regular_bg_ptr screen_1n = bn::regular_bg_items::screen1n.create_bg(8, 48);
-        // bn::regular_bg_ptr screen_2n = bn::regular_bg_items::screen2n.create_bg(8, 48);
-
-        // bn::bg_palette_ptr screen_2n_palette = screen_2n.palette();
-        // void screen_2n_palette.set_colors(screen_1n.palette());
-
-        // screen_1n.set_visible(false);
-        // screen_2n.set_visible(false);
-
-        // bn::regular_bg_ptr.set_palette(screen_1n);
-
-        // bn::regular_bg_items::screen1n(bpp_mode bpp_8);
-
-        // bn::bg_palette_ptr bg_palette = screen1n.palette();
-        // bg_palette.set_colors(screen1n_item);
-
         bn::regular_bg_ptr level_layout = bn::regular_bg_items::screen1n.create_bg(8, 48);
         // VRAM->global_backgrounds.push_back(level_layout);
 

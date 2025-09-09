@@ -18,8 +18,6 @@ namespace stage2
 {
     void load_stage(Global_VRAM* VRAM, int frame_counter, int current_level) {
 
-        
-
         rra::stage_init(VRAM);   // Resets all backgrounds and non-player sprites
 
         bn::regular_bg_ptr level_layout = bn::regular_bg_items::screen10n.create_bg(8, 48);

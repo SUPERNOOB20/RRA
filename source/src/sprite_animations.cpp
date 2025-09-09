@@ -54,7 +54,9 @@ namespace sprite_anim
         reimu_sprite.set_top_left_position(player_x, player_y);
 
         if (frame_counter > 0) {
-            VRAM->global_player_sprites.pop_back();    
+            if (VRAM->global_player_sprites.size() > 0){
+                VRAM->global_player_sprites.pop_back();    
+            }
         }
 
         VRAM->global_player_sprites.push_back(reimu_sprite);    
