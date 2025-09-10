@@ -19,6 +19,7 @@
 #include "bn_sprite_items_youmu_idle_spritesheet.h"
 #include "bn_sprite_items_spirit_spritesheet.h"
 #include "bn_sprite_items_will_o_wisp_spritesheet.h"
+#include "bn_sprite_items_yorihime_idle_spritesheet.h"
 // #include "bn_sprite_items_akyuu_1s.h"
 // #include "bn_sprite_items_akyuu_2s.h"
 
@@ -161,50 +162,6 @@ namespace sprite_anim
         
         int total_duration = frame_counter % 483;
 
-        /*
-        constexpr int idle_frames_duration = 38;
-        constexpr int non_stare_duration = idle_frames_duration * 6;                        // Duration of the non-stare loop. 38 * 2 * 3 = 228.
-
-        constexpr int standby_duration = 115;                          // Duration of the AA frame.
-
-        constexpr int amount_of_loops = 3;
-        int i = 1;
-
-        if (total_duration < non_stare_duration) {
-            if ((non_stare_duration / amount_of_loops) < (idle_frames_duration)){     // VERY roughly speaking, it's like "0f to 37f". Kinda.
-                i = 0;
-            }
-        } else if ((total_duration > (non_stare_duration + idle_frames_duration)) && (total_duration < (non_stare_duration + idle_frames_duration + standby_duration))) {
-            i = 0;
-        } else if (((total_duration > (non_stare_duration + idle_frames_duration + standby_duration)) && (total_duration < (non_stare_duration + idle_frames_duration + standby_duration + 76))) || ((total_duration > (non_stare_duration + idle_frames_duration + standby_duration + 76 + 16)))) {
-            i = 2;
-        } else {
-            i = 3;
-        }
-
-        */
-
-
-
-        /*
-        int i = 1;
-        if (total_duration < 38){
-            i = 0;
-        } else if ((total_duration > 76) && (total_duration < 114)){
-            i = 0;
-        } else if ((total_duration > 152) && (total_duration < 190)){
-            i = 0;
-        } else if ((total_duration > 228) && (total_duration < 266)){
-            i = 0;
-        } else if ((total_duration > 381) && (total_duration < 457)){
-            i = 2;
-        } else if ((total_duration >= 457) && (total_duration <= 473)){
-            i = 3;
-        } else if ((total_duration > 473) && (total_duration < 483)){
-            i = 2;
-        }
-        */
-
         int i = 1;
         if (total_duration < 38){
             i = 0;
@@ -259,6 +216,27 @@ namespace sprite_anim
         return;
     }
 
+    void yorihime_idle_anim(Global_VRAM* VRAM, int frame_counter){
+
+        bn::sprite_ptr yorihime_idle_sprite = bn::sprite_items::yorihime_idle_spritesheet.create_sprite(0, 0); 
+
+        VRAM->global_sprites.push_back(yorihime_idle_sprite);
+
+        int i = 0;
+
+        // yorihime_idle_anim_frames = 60
+        if ((frame_counter % 60) < 36){         // youmu_idle_anim_frames = 60
+            i = 0;
+        } else {
+            i = 1;
+        }        
+
+        // VRAM->youmu_idle_sprite.set_tiles(bn::sprite_items::youmu_idle_spritesheet.tiles_item().create_tiles(i));  
+
+        yorihime_idle_sprite.set_tiles(bn::sprite_items::yorihime_idle_spritesheet.tiles_item().create_tiles(i));  
+
+        return;
+    }
 }
 
 }
