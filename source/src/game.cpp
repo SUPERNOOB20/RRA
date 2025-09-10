@@ -85,6 +85,10 @@ namespace game
         // previous level = current_level
 
         // change_stage()
+        if (current_level == 0) {
+            // rra::stage0::load_stage(VRAM);
+            
+        }
         if ((current_level >= 1) && (current_level < 10)) {
             
             rra::stage1::load_stage(VRAM, frame_counter, current_level);
@@ -96,9 +100,13 @@ namespace game
         } else if ((current_level >= 20) && (current_level < 30)) {
 
             rra::stage3::load_stage(VRAM, frame_counter, current_level);
-            // VRAM->screen2n.set_visible(true);
-        } else if (current_level >= 30) {
-            int hey_compiler_hows_it_goin_xdddd = 0;            // hey_compiler_whats_up_xddd
+
+        } else if ((current_level >= 30) && (current_level < 40)){
+
+            rra::stage4::load_stage(VRAM, frame_counter, current_level);
+
+        } else {        // When (current_level >= 40)
+            rra::stage5::load_stage(VRAM, frame_counter, current_level);
         }
 
         return;

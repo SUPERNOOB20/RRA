@@ -23,6 +23,7 @@
 #include "bn_regular_bg_items_empty_bg.h"
 
 #include "global_resources.h"
+#include "main_menu.h"
 
 int intro_scene_is_playing = 1;
 
@@ -30,7 +31,7 @@ namespace rra
 {
 
 // Plays intro scene, main menu... etc.
-int display_main_menu(Global_VRAM* VRAM, int start_frame_counter){
+int display_main_menu(Global_VRAM* VRAM, Global_Texts* text_sprites, int start_frame_counter){
 
     /*
     if (start_frame_counter == 0){
@@ -52,7 +53,7 @@ int display_main_menu(Global_VRAM* VRAM, int start_frame_counter){
     bn::sprite_text_generator text_generator(common::variable_8x8_sprite_font);
     // bn::sprite_text_generator text_generator();
 
-    bn::vector<bn::sprite_ptr, 12> text_sprites;
+    // bn::vector<bn::sprite_ptr, 12> text_sprites;
 
     text_generator.generate(0, 70, "Press Start", text_sprites);
     text_generator.set_center_alignment();

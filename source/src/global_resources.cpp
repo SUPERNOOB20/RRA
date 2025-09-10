@@ -10,3 +10,9 @@ struct Global_VRAM allocate_VRAM(bn::vector<bn::sprite_ptr, 26> global_player_sp
 
     return allocated_VRAM;
 }
+
+struct Global_Texts allocate_text(bn::vector<bn::sprite_ptr, 12> text_to_display){
+    Global_Texts allocated_text = {.text_sprites = text_to_display};
+
+    return allocated_text;
+}

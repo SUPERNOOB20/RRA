@@ -10,7 +10,7 @@
 namespace rra
 {
 
-    int display_main_menu(Global_VRAM* global_sprites_and_backgrounds, int start_frame_counter);     // Returns 1 if the intro is still playing, and 0 otherwise.
+    int display_main_menu(Global_VRAM* global_sprites_and_backgrounds, Global_Texts* text_sprites, int start_frame_counter);     // Returns 1 if the intro is still playing, and 0 otherwise.
 
 }
 

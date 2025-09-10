@@ -24,5 +24,10 @@ struct Global_VRAM {
 // "This trick only works once"- lest the GBA might crash!
 struct Global_VRAM allocate_VRAM(bn::vector<bn::sprite_ptr, 26> global_player_sprites, bn::vector<bn::sprite_ptr, 100> global_sprites, bn::vector<bn::regular_bg_ptr, 4> global_backgrounds);
 
+struct Global_Texts {
+    bn::vector<bn::sprite_ptr, 12> text_sprites;
+};
+
+struct Global_Texts allocate_text(bn::vector<bn::sprite_ptr, 12> text_to_display);
 
 #endif

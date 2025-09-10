@@ -72,6 +72,14 @@ int main()
 
     vram_ptr = &VRAM;
 
+    bn::vector<bn::sprite_ptr, 12> text_sprites;
+
+    Global_Texts Text = allocate_text(text_sprites);
+
+    Global_Texts* text_ptr;
+
+    text_ptr = &Text;
+
     int start_frame_counter = 0;
     int intro_scene_is_playing = 1;
 
@@ -80,7 +88,7 @@ int main()
     while(true)
     {
         if (intro_scene_is_playing){
-            intro_scene_is_playing = rra::display_main_menu(vram_ptr, start_frame_counter);
+            intro_scene_is_playing = rra::display_main_menu(vram_ptr, text_ptr, start_frame_counter);
             start_frame_counter++;
         } else {
             rra::game::handle_frame(vram_ptr, frame_counter);
