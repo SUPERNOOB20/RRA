@@ -206,7 +206,7 @@ namespace sprite_anim
 
         int animation_frame = ((frame_counter / spirit_anim_frame_screentime) % spirit_anim_number_of_frames);         // goes from 0 to 6. You can do "+ 1" if you'd rather have it go from 1 to 7.
 
-        if ((animation_frame > 4))
+        if ((animation_frame > 3))
             {
                 spirit_sprite.set_vertical_flip(true);     // Cases 4 to 6 should be flipped to mirror the sprite!
                 animation_frame = 6 - animation_frame      // Maps frame #4 to flipped frame #3; frame #5 to flipped frame #2; frame #6 to flipped frame #1.
