@@ -43,7 +43,7 @@ namespace sprite_anim
     constexpr int spirit_anim_frame_screentime = 20;
     constexpr int will_o_wisp_anim_frame_screentime = 5;
 
-    constexpr int spirit_anim_number_of_frames = 4;      
+    constexpr int spirit_anim_number_of_frames = 7;      
     constexpr int will_o_wisp_anim_number_of_frames = 13;   // There are 13 different "poses" for the will-o-wisp sprite.
     
     // constexpr int cirno_idle_frames = 25;
@@ -204,11 +204,12 @@ namespace sprite_anim
 
         spirit_sprite.set_vertical_flip(false);
 
-        int animation_frame = ((frame_counter / spirit_anim_frame_screentime) % spirit_anim_number_of_frames);         // goes from 0 to 3. You can do "+ 1" if you'd rather have it go from 1 to 4.
+        int animation_frame = ((frame_counter / spirit_anim_frame_screentime) % spirit_anim_number_of_frames);         // goes from 0 to 6. You can do "+ 1" if you'd rather have it go from 1 to 7.
 
-        if ((animation_frame > 4) && (animation_frame < 11))
+        if ((animation_frame > 4))
             {
-                spirit_sprite.set_vertical_flip(true);     // Cases 5 to 10 should be flipped to mirror the sprite!
+                spirit_sprite.set_vertical_flip(true);     // Cases 4 to 6 should be flipped to mirror the sprite!
+                animation_frame = 6 - animation_frame      // Maps frame #4 to flipped frame #3; frame #5 to flipped frame #2; frame #6 to flipped frame #1.
             }
 
         spirit_sprite.set_tiles(bn::sprite_items::spirit_spritesheet.tiles_item().create_tiles(animation_frame)); 

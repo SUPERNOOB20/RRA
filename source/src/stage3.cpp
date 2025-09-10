@@ -7,9 +7,6 @@
 // #include "bn_sprite_items_will_o_wisp_spritesheet.h"
 #include "sprite_animations.h"
 
-// include "bn_regular_bg_items_screen1n.h"
-// include "bn_regular_bg_items_screen2n.h"
-// #include "bn_regular_bg_items_screen10n.h"
 #include "bn_regular_bg_items_screen21n.h"
 
 #include "bn_log.h"
