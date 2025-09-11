@@ -61,7 +61,7 @@ int display_main_menu(Global_VRAM* VRAM, Global_Texts* text_sprites, int start_f
     // text_sprites.set_visible(true)
     if ((start_frame_counter % 90) < 40){
         // text_sprites.set_visible(false);
-        text_sprites.clear();
+        text_sprites->clear();
     }
     
     if (bn::keypad::start_pressed()){

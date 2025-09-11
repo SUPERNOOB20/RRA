@@ -18,10 +18,8 @@
 #include <bn_regular_bg_ptr.h>
 #include <bn_regular_bg_item.h>
 
-// #include "bn_regular_bg_items_screen1n.h"
-// #include "bn_regular_bg_items_screen2n.h"
-// #include "bn_regular_bg_items_screen10n.h"
-// #include "bn_regular_bg_items_screen21n.h"
+#include "bn_regular_bg_items_screen0.h"
+#include "bn_sprite_items_seal.h"
 
 #include "bn_keypad.h"
 #include "bn_log.h"
@@ -41,13 +39,29 @@
 // #include "vram_clear.h"
 #include "stage_init.h"
 
-
+#include "game.h"
 
 int player_x = 5;
 int player_y = 112;
 
+bool facing_right = true;    // Allocates 1 bit of storage for the direction the player is facing. If false, player is facing left. If true, player is facing right. 
+
+
+
 int current_level = 1;
 char current_difficulty = 'n';
+
+
+
+void load_first_screen(Global_VRAM* VRAM){
+    
+    rra::stage_init(VRAM);   // Resets all backgrounds and non-player sprites
+
+    bn::regular_bg_ptr level_layout = bn::regular_bg_items::screen0.create_bg(8, 48);
+                
+    VRAM->global_backgrounds.push_back(level_layout);
+}
+
 
 
 namespace rra
@@ -67,7 +81,6 @@ namespace game
             if (VRAM->global_backgrounds.size() > 0){
                 VRAM->global_backgrounds.pop_back();
             }
-            // reset_vram();
             rra::stage_init(VRAM);   // Resets all backgrounds and non-player sprites
             player_x = 10;
         } else if (player_x < -15) {
@@ -79,15 +92,11 @@ namespace game
             player_x = 200;
         }
 
-        // previous_level
-
-        // if current_level 
-        // previous level = current_level
-
         // change_stage()
         if (current_level == 0) {
-            // rra::stage0::load_stage(VRAM);
-            
+
+            load_first_screen(VRAM);
+
         }
         if ((current_level >= 1) && (current_level < 10)) {
             
@@ -132,6 +141,9 @@ namespace game
             } else {
                 player_x++;
             }
+
+            facing_right = true;
+
         }
 
         if (bn::keypad::left_held())
@@ -144,7 +156,21 @@ namespace game
             } else {
                 player_x--;
             }
+
+            facing_right = false;
+
         }
+
+
+        if (bn::keypad::b_pressed())
+        {
+            bn::sprite_ptr seal_sprite = bn::sprite_items::seal.create_sprite(0, 0); 
+
+            VRAM->global_sprites.push_back(seal_sprite);
+
+            seal_sprite.set_tiles(bn::sprite_items::seal.tiles_item().create_tiles(i));  
+        }
+
 
         if (bn::keypad::start_pressed())
         {

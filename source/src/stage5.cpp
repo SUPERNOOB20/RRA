@@ -7,7 +7,8 @@
 // #include "bn_sprite_items_will_o_wisp_spritesheet.h"
 #include "sprite_animations.h"
 
-#include "bn_regular_bg_items_screen40n.h"
+#include "bn_regular_bg_items_screen48e.h"
+#include "bn_regular_bg_items_moon.h"
 
 #include "bn_log.h"
 
@@ -19,7 +20,8 @@ namespace stage5
 
         rra::stage_init(VRAM);   // Resets all backgrounds and non-player sprites
 
-        bn::regular_bg_ptr level_layout = bn::regular_bg_items::screen40n.create_bg(8, 48);
+        bn::regular_bg_ptr scenery = bn::regular_bg_items::moon.create_bg(8, 48);
+        bn::regular_bg_ptr level_layout = bn::regular_bg_items::screen48e.create_bg(8, 48);
 
         switch(current_level){
             case 40:
