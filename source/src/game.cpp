@@ -18,6 +18,7 @@
 #include <bn_regular_bg_ptr.h>
 #include <bn_regular_bg_item.h>
 
+#include "bn_sprite_tiles_ptr.h"
 #include "bn_regular_bg_items_screen0.h"
 #include "bn_sprite_items_seal.h"
 
@@ -33,6 +34,8 @@
 #include "stage1.h"
 #include "stage2.h"
 #include "stage3.h"
+#include "stage4.h"
+#include "stage5.h"
 
 #include "global_resources.h"
 
@@ -168,7 +171,7 @@ namespace game
 
             VRAM->global_sprites.push_back(seal_sprite);
 
-            seal_sprite.set_tiles(bn::sprite_items::seal.tiles_item().create_tiles(i));  
+            seal_sprite.set_tiles(bn::sprite_items::seal.tiles_item().create_tiles(0));  
         }
 
 

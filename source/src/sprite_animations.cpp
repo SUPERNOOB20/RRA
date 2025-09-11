@@ -1,8 +1,8 @@
 #include "bn_core.h"
-#include <bn_sprites.h>
+#include "bn_sprites.h"
 #include "bn_sprite_ptr.h"
-#include <bn_sprite_tiles.h>
-#include <bn_sprite_tiles_ptr.h>
+#include "bn_sprite_tiles.h"
+#include "bn_sprite_tiles_ptr.h"
 
 #include "sprite_animations.h"
 
@@ -208,8 +208,8 @@ namespace sprite_anim
 
         if ((animation_frame > 3))
             {
-                spirit_sprite.set_vertical_flip(true);     // Cases 4 to 6 should be flipped to mirror the sprite!
-                animation_frame = 6 - animation_frame      // Maps frame #4 to flipped frame #3; frame #5 to flipped frame #2; frame #6 to flipped frame #1.
+                spirit_sprite.set_vertical_flip(true);      // Cases 4 to 6 should be flipped to mirror the sprite!
+                animation_frame = 6 - animation_frame;      // Maps frame #4 to flipped frame #3; frame #5 to flipped frame #2; frame #6 to flipped frame #1.
             }
 
         spirit_sprite.set_tiles(bn::sprite_items::spirit_spritesheet.tiles_item().create_tiles(animation_frame)); 

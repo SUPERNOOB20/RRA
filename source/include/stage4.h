@@ -7,7 +7,7 @@
 namespace rra
 {
 
-namespace stage3
+namespace stage4
 {
     void load_stage(Global_VRAM* VRAM, int frame_counter, int current_level);
 }

@@ -22,6 +22,7 @@ namespace sprite_anim
     void youmu_idle_anim(Global_VRAM* global_sprites_and_backgrounds, int frame_counter);
     void spirit_anim(Global_VRAM* global_sprites_and_backgrounds, int frame_counter);
     void will_o_wisp_anim(Global_VRAM* global_sprites_and_backgrounds, int frame_counter);
+    void yorihime_idle_anim(Global_VRAM* global_sprites_and_backgrounds, int frame_counter);
 }
 
 }

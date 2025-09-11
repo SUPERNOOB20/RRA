@@ -50,7 +50,7 @@ namespace stage4
                 // generate_hall(VRAM);
                 // ^ Please disable push_back() after this!!!
                 // break;
-            case 29:
+            case 39:
                 {
                 rra::sprite_anim::youmu_idle_anim(VRAM, frame_counter);
 
