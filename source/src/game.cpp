@@ -15,8 +15,8 @@
 
 // #include "bn_sprite_builder.h"
 
-#include <bn_regular_bg_ptr.h>
-#include <bn_regular_bg_item.h>
+#include "bn_regular_bg_ptr.h"
+#include "bn_regular_bg_item.h"
 
 #include "bn_sprite_tiles_ptr.h"
 #include "bn_regular_bg_items_screen0.h"
@@ -44,15 +44,17 @@
 
 #include "game.h"
 
+#include <tuple>
+
 int player_x = 5;
 int player_y = 112;
 
 bool facing_right = true;    // Allocates 1 bit of storage for the direction the player is facing. If false, player is facing left. If true, player is facing right. 
 
-
-
 int current_level = 1;
 char current_difficulty = 'n';
+
+
 
 
 
@@ -65,7 +67,9 @@ void load_first_screen(Global_VRAM* VRAM){
     VRAM->global_backgrounds.push_back(level_layout);
 }
 
+void update_player_position(){
 
+}
 
 namespace rra
 {
@@ -153,9 +157,9 @@ namespace game
         {
             if (bn::keypad::l_held())
             {
-                player_x -= 10;
+                int player_speed = (1 << player_fp) + ((1 << player_fp) / 3);       // Shifting makes you move at 1/3 speed
             } else if (bn::keypad::r_held()) {
-                player_x -= 100;
+                player_x -= 5;
             } else {
                 player_x--;
             }
@@ -164,14 +168,19 @@ namespace game
 
         }
 
+        update_player_position();
 
         if (bn::keypad::b_pressed())
         {
+
+            Player_Projectile seal_projectile{}
+            /*
             bn::sprite_ptr seal_sprite = bn::sprite_items::seal.create_sprite(0, 0); 
 
             VRAM->global_sprites.push_back(seal_sprite);
 
             seal_sprite.set_tiles(bn::sprite_items::seal.tiles_item().create_tiles(0));  
+            */
         }
 
 
