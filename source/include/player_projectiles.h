@@ -10,8 +10,8 @@ class Player_Projectile
     public:
         Player_Projectile(bool facing_right, int anim_state);
 
-        void Spawn_Projectile(bool facing_right);
-        void Set_Projectile_Anim_State(int anim_state);
+        void spawn_projectile(bool facing_right);
+        void set_projectile_anim_state(int anim_state);
 };
 
 #endif
