@@ -1,3 +1,7 @@
+#include <tuple>
+#include <vector>
+#include "coordinates.h"
+
 #include "bn_vector.h"
 #include "global_resources.h"
 #include "stage_init.h"
@@ -9,6 +13,52 @@
 #include "bn_regular_bg_items_screen2n.h"
 
 #include "bn_log.h"
+
+
+std::vector<Coordinates> hazards;
+std::vector<Coordinates> collisions;
+
+
+std::vector<Coordinates> load_hazards(int current_lvl){
+    switch (current_lvl){
+        case 1:
+            /*
+            std::tuple<int, int> spike_1(112, 150);
+            std::tuple<int, int> spike_2(127, 160);
+            auto tup3 = tuple_cat(spike_1, spike_2);
+            */
+
+            std::tuple<std::tuple<int, int>, std::tuple<int, int>> spikes ((std::tuple<int, int> (112, 150)), (std::tuple<int, int> (127, 160)));
+
+            Coordinates spikes_1 = {spikes};
+            break;
+        case 2:
+            break;
+        default:
+    }
+}
+
+
+
+std::vector<Coordinates> load_collisions(int current_lvl){
+    switch (current_lvl){
+        case 1:
+            /*
+            std::tuple<int, int> spike_1(112, 150);
+            std::tuple<int, int> spike_2(127, 160);
+            auto tup3 = tuple_cat(spike_1, spike_2);
+            */
+
+            std::tuple<std::tuple<int, int>, std::tuple<int, int>> collisions ((std::tuple<int, int> (112, 150)), (std::tuple<int, int> (127, 160)));
+
+            Collision_Block collisions_1 = {collisions};
+            break;
+        case 2:
+            break;
+        default:
+    }
+}
+
 
 namespace rra
 {
@@ -24,7 +74,7 @@ namespace stage1
 
         switch(current_level){
             case 1:
-                // level_layout = bn::regular_bg_items::screen1n.create_bg(8, 48);
+                load_hazards(1);
                 break;   
 
             case 2:

@@ -8,3 +8,9 @@ Coordinates::Coordinates(std::tuple<int, int> top_left_corner, std::tuple<int, i
     , bottom_right_corner { bottom_right_corner }
 {
 }
+
+Coordinates::Coordinates(std::tuple<std::tuple<int, int>, std::tuple<int, int>> top_left_and_bottom_right_corners)
+    : top_left_corner{ std::get<0>(top_left_and_bottom_right_corners) }
+    , bottom_right_corner { std::get<1>(top_left_and_bottom_right_corners) }
+{
+}
