@@ -1,4 +1,0 @@
-class Collision_Block
-{
-    
-}

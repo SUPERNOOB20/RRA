@@ -18,6 +18,7 @@ struct Coordinates{
     public:
         Coordinates(std::tuple<int, int> top_left_corner, std::tuple<int, int> bottom_right_corner);
         Coordinates(std::tuple<std::tuple<int, int>, std::tuple<int, int>> top_left_and_bottom_right_corners);
+        Coordinates(std::tuple<std::tuple<int, int, int, int>>);
 
 };
 
