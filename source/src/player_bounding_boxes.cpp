@@ -3,23 +3,17 @@
 
 // :3
 
+#include "player.h"
+#include "player_movement.h"
 #include "player_bounding_boxes.h"
 #include <tuple>
 #include <array>
 
-Player::Player(bool alive, int player_x, int player_y, signed int player_de_facto_speed_x, signed int player_de_facto_speed_y, signed int player_speed_x, signed int player_speed_y)
 
-    : alive { true }   // If alive = false, trigger a "game over" screen.
-
-    , player_x { 0 }               // Might be changed later on with fixed-point math (signed 20.11f fixed-point)
-    , player_y { 0 }               // Might be changed later on with fixed-point math (signed 20.11f fixed-point)
-
-{
-}
 
 
 std::tuple<int, int> Player::player_topleft_damage_hitbox(){
-    std::tuple<int, int> player_topleft_hitbox = {getPosition_x() + 11, getPosition_y() + 22};    // edge INCLUDED
+    std::tuple<int, int> player_topleft_hitbox = {Player::getPosition_x() + 11, Player::getPosition_y() + 22};    // edge INCLUDED
     return player_topleft_hitbox;
 }
 
