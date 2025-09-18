@@ -21,12 +21,12 @@ struct Rect_Coordinates{
         Rect_Coordinates(std::tuple<int, int> top_left_corner, std::tuple<int, int> bottom_right_corner);
         Rect_Coordinates(std::tuple<std::tuple<int, int>, std::tuple<int, int>> top_left_and_bottom_right_corners_inside_tuple);
         Rect_Coordinates(std::tuple<int, int, int, int> tuple_of_top_left_and_bottom_right_corners_coords);
-        std::tuple<int, int> top_left_corner(Rect_Coordinates coords);
-        int top_left_corner_x(Rect_Coordinates coords);
-        int top_left_corner_y(Rect_Coordinates coords);
-        std::tuple<int, int> bottom_right_corner(Rect_Coordinates coords);
-        int bottom_right_corner_x(Rect_Coordinates coords);
-        int bottom_right_corner_y(Rect_Coordinates coords);
+        std::tuple<int, int> get_top_left_corner(Rect_Coordinates coords);
+        int get_top_left_corner_x(Rect_Coordinates coords);
+        int get_top_left_corner_y(Rect_Coordinates coords);
+        std::tuple<int, int> get_bottom_right_corner(Rect_Coordinates coords);
+        int get_bottom_right_corner_x(Rect_Coordinates coords);
+        int get_bottom_right_corner_y(Rect_Coordinates coords);
 
 };
 

@@ -26,9 +26,21 @@ Rect_Coordinates::Rect_Coordinates(std::tuple<int, int, int, int> int_coords)
 }
 
 
-top_left_corner(std::tuple<int, int> top_left_corner);
-top_left_corner_x(int top_left_corner_x_coord);
-top_left_corner_y(int top_left_corner_y_coord);
-bottom_right_corner(std::tuple<int, int> bottom_right_corner);
-bottom_right_corner_x(int bottom_right_corner_x);
-bottom_right_corner_y(int bottom_right_corner_y);
+std::tuple<int, int> get_top_left_corner(Rect_Coordinates coords){
+    return top_left_corner;
+}
+int get_top_left_corner_x(Rect_Coordinates coords){
+    return std::get<0>(top_left_corner);
+}
+int get_top_left_corner_y(Rect_Coordinates coords){
+    return std::get<1>(top_left_corner);
+}
+std::tuple<int, int> get_bottom_right_corner(Rect_Coordinates coords){
+    return bottom_right_corner;
+}
+int get_bottom_right_corner_x(Rect_Coordinates coords){
+    return std::get<0>(bottom_right_corner);
+}
+int get_bottom_right_corner_y(Rect_Coordinates coords){
+    return std::get<1>(bottom_right_corner);
+}
