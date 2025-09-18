@@ -6,6 +6,7 @@
 #include "player.h"
 #include "player_movement.h"
 #include "player_bounding_boxes.h"
+#include "coordinates.h"
 #include <tuple>
 #include <array>
 
