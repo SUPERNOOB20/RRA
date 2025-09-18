@@ -23,7 +23,7 @@ class Player {
         signed int player_speed_y {0};         // Might be changed later on with fixed-point math (signed 20.11f fixed-point)  
 
 
-
+        
     public:
         Player(bool alive, signed int player_real_x, signed int player_real_y, int player_x, int player_y, signed int player_de_facto_speed_x, signed int player_de_facto_speed_y, signed int player_speed_x, signed int player_speed_y);
 

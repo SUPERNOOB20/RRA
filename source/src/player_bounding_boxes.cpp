@@ -52,4 +52,8 @@ std::array<int, 4> Player::collision_hitbox_array(){
     return hitbox;
 }
 
+std::array<std::tuple<int, int>, 4> collision_hitbox_vertex_array(){
+    
+}
+
 // check_

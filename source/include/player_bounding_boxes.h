@@ -34,9 +34,10 @@ class Player {
         std::tuple<int, int> player_topleft_collision_hitbox();
         std::tuple<int, int> player_bottomright_collision_hitbox();
         std::tuple<std::tuple<int, int>, std::tuple<int, int>> collision_hitbox();
-        std::array<int, 4> collision_hitbox_array();                   // Same as collision_hitbox, but returns the result in a different format - in an array :3
+        std::array<int, 4> collision_hitbox_array();                                        // Same as collision_hitbox, but returns the result in a different format - in an array :3
+        std::array<std::tuple<int, int>, 4> collision_hitbox_vertex_array();                // Same as collision_hitbox, but returns the result in a different format - returns an array of the 4 vertices :3 In this order: top left corner, top right corner, bottom left corner, bottom right corner.
 
-        // std::array<int, int, int, int> collision_hitbox_array();    // Same as collision_hitbox, but returns the result in a different format - in an array :3
+        // vv  Dropped idea to make collision_hitbox argument call constructors... ew  vv
         // std::array collision_hitbox(string arr)
 };
 
