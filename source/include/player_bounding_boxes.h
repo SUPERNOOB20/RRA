@@ -16,14 +16,16 @@ public:
     class Damage_Hitbox
     {
         private:
-            std::array<int, 2>                 GetPosition_topleft_corner(Player& p) { return {p.player_x + 8, p.player_y + 15}; }
-            std::array<int, 2>                 GetPosition_bottomright_corner(Player& p) { return {p.player_x + 19, p.player_y + 32}; }
-            std::array<std::array<int, 2>, 2>  GetPosition_topleft_and_bottomright_corners(Player& p) { return {{p.player_x + 8, p.player_y + 15}, {p.player_x + 19, p.player_y + 32}}; }
+            std::array<int, 2>                 getPosition_topleft_corner(Player& p) { return {p.player_x + 8, p.player_y + 15}; }
+            std::array<int, 2>                 getPosition_bottomright_corner(Player& p) { return {p.player_x + 19, p.player_y + 32}; }
+            std::array<std::array<int, 2>, 2>  getPosition_topleft_and_bottomright_corners(Player& p) { return {{p.player_x + 8, p.player_y + 15}, {p.player_x + 19, p.player_y + 32}}; }
 
         public:
             std::tuple<int, int> player_topleft_damage_hitbox();
             std::tuple<int, int> player_bottomright_damage_hitbox();
             std::tuple<std::tuple<int, int>, std::tuple<int, int>> damage_hitbox();
+            std::array<int, 4> damage_hitbox_array();                                        // Same as collision_hitbox, but returns the result in a different format - returns an array of the 4 vertices :3 In this order: top_left_corner_x, top_left_corner_y, bottom_left_corner_x, bottom_left_corner_y.
+            std::array<std::tuple<int, int>, 4> damage_hitbox_vertex_array();                // Same as collision_hitbox, but returns the result in a different format - returns an array of the 4 vertices :3 In this order: top left corner, top right corner, bottom left corner, bottom right corner.
     };
 
     class Collision_Hitbox

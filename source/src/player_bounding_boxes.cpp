@@ -14,7 +14,7 @@
 
 
 std::tuple<int, int> Player::Damage_Hitbox::player_topleft_damage_hitbox(){
-    std::tuple<int, int> player_topleft_hitbox = {getPosition_x() + 11, getPosition_y() + 22};    // edge INCLUDED
+    std::tuple<int, int> player_topleft_hitbox = {getPosition_topleft_corner()[0] + 11, getPosition_topleft_corner()[1] + 22};    // edge INCLUDED
     return player_topleft_hitbox;
 }
 
@@ -27,6 +27,21 @@ std::tuple<std::tuple<int, int>, std::tuple<int, int>> Player::Damage_Hitbox::da
     std::tuple<std::tuple<int, int>, std::tuple<int, int>> hitbox = {player_topleft_damage_hitbox(), player_bottomright_damage_hitbox()};
     return hitbox;
 } 
+
+std::array<int, 4> damage_hitbox_array(){
+    std::array<int, 4> hitbox = {std::get<0>(player_topleft_damage_hitbox()), std::get<1>(player_topleft_damage_hitbox()), std::get<0>(player_bottomright_damage_hitbox()), std::get<1>(player_bottomright_damage_hitbox())};
+    return hitbox;
+} 
+
+std::array<std::tuple<int, int>, 4> damage_hitbox_vertex_array(){
+    std::tuple<int, int> topleft_corner = Player::Damage_Hitbox::player_topleft_damage_hitbox();
+    std::tuple<int, int> topright_corner = {std::get<0>(Player::Damage_Hitbox::player_bottomright_damage_hitbox()), std::get<1>(Player::Damage_Hitbox::player_topleft_damage_hitbox())};
+    std::tuple<int, int> bottomleft_corner = {std::get<0>(Player::Damage_Hitbox::player_topleft_damage_hitbox()), std::get<1>(Player::Damage_Hitbox::player_bottomright_damage_hitbox())};
+    std::tuple<int, int> bottomright_corner = Player::Damage_Hitbox::player_bottomright_damage_hitbox();
+
+    std::array<std::tuple<int, int>, 4> hitbox = {topleft_corner, topright_corner, bottomleft_corner, bottomright_corner};
+    return hitbox;
+}
 
 std::tuple<int, int> Player::Collision_Hitbox::player_topleft_collision_hitbox(){
     std::tuple<int, int> player_topleft_hitbox = {getPosition_x() + 8, getPosition_y() + 15};    // edge INCLUDED
