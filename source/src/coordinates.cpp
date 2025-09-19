@@ -20,7 +20,7 @@ Rect_Coordinates::Rect_Coordinates(std::array<std::array<int, 2>, 2> top_left_an
 
 Rect_Coordinates::Rect_Coordinates(std::array<int, 4> int_coords)
     : top_left_corner{ std::array<int, 2> {int_coords[0], int_coords[1]} }
-    , bottom_right_corner{ std::array<int, 2> {int_coords[2], int_coords[3])} }
+    , bottom_right_corner{ std::array<int, 2> {int_coords[2], int_coords[3]} }
 {
 }
 
