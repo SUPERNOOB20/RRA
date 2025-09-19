@@ -1,0 +1,10 @@
+damage hitbox:     8  15     19 32
+collision hitbox:  11 22     15 25
+
+
+
+en game.cpp, en el primer frame
+
+usando (Player& p):
+Rect damage_hitbox = {p.player_x + 8, p.player_y + 15, p.player_x + 19, p.player_y + 32}
+Rect collision_hitbox = {p.player_x + 11, p.player_y + 22, p.player_x + 15, p.player_y + 25}

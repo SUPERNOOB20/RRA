@@ -28,7 +28,7 @@ class Player {
         Player(bool alive, signed int player_real_x, signed int player_real_y, int player_x, int player_y, signed int player_de_facto_speed_x, signed int player_de_facto_speed_y, signed int player_speed_x, signed int player_speed_y);
 
         // std::tuple<int, int> Player::get_position();
-        std::tuple<int, int> getPosition() const { return std::tuple<int,int> (player_x, player_y); }
+        std::array<int, int> getPosition() const { return std::tuple<int,int> (player_x, player_y); }
         int getPosition_x() const { return player_x; }
         int getPosition_y() const { return player_y; }
 
