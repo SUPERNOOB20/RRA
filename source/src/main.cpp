@@ -92,6 +92,7 @@ int main()
             start_frame_counter++;
         } else {
             rra::game::handle_frame(vram_ptr, frame_counter);
+            frame_counter++;
         }
         
     
@@ -108,7 +109,6 @@ int main()
         }
 
         
-        frame_counter++;
         bn::core::update();
     }
 }

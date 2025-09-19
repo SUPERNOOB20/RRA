@@ -38,13 +38,14 @@
 #include "stage5.h"
 
 #include "global_resources.h"
-
-// #include "vram_clear.h"
 #include "stage_init.h"
-
 #include "game.h"
+#include "player.h"
+#include "rect.h"
 
 #include <tuple>
+#include <array>
+
 
 int player_x = 5;
 int player_y = 112;
@@ -68,12 +69,14 @@ void load_first_screen(Global_VRAM* VRAM){
 }
 
 void update_player_position(){
-
+    return;
 }
+
+
+
 
 namespace rra
 {
-
 
 namespace game
 {
@@ -83,6 +86,7 @@ namespace game
     // Levels 11 to 20 are meant to be handled by stage2.cpp.
     // etc...
     void change_level(Global_VRAM* VRAM, int frame_counter) {
+
         if (player_x > 220) {
             current_level++;
             if (VRAM->global_backgrounds.size() > 0){
@@ -131,6 +135,22 @@ namespace game
 
 
     void handle_frame(Global_VRAM* VRAM, int frame_counter) {
+
+        if (frame_counter == 0){
+            // Player p (int player_x = player_x, int player_y = player_y);
+
+            Player p;
+            Player* p_ptr = &p;
+
+            p_ptr->set_position(p_ptr, player_x, player_y);
+            
+            // Rect damage_hitbox[] = {(p_ptr->getPosition_x()) + 8, (p_ptr->getPosition_y()) + 15, (p_ptr->getPosition_x()) + 19, (p_ptr->getPosition_y()) + 32};
+            // Rect collision_hitbox[] = {(p_ptr->getPosition_x()) + 11, (p_ptr->getPosition_y()) + 22, (p_ptr->getPosition_x()) + 15, (p_ptr->getPosition_y()) + 25}
+
+            rra::Rect test[] = {1, 2, 3, 4};
+            Rect damage_hitbox[] {(p_ptr->getPosition_x()) + 8, (p_ptr->getPosition_y()) + 15, (p_ptr->getPosition_x()) + 19, (p_ptr->getPosition_y()) + 32};
+            Rect collision_hitbox[] {(p_ptr->getPosition_x()) + 11, (p_ptr->getPosition_y()) + 22, (p_ptr->getPosition_x()) + 15, (p_ptr->getPosition_y()) + 25};
+        }
 
         rra::game::change_level(VRAM, frame_counter);
 
