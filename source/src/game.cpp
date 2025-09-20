@@ -180,7 +180,7 @@ namespace game
         {
             if (bn::keypad::l_held())
             {
-                int player_speed = (1 << player_fp) + ((1 << player_fp) / 3);       // Shifting makes you move at 1/3 speed
+                // int player_speed = (1 << player_fp) + ((1 << player_fp) / 3);       // Shifting makes you move at 1/3 speed
             } else if (bn::keypad::r_held()) {
                 player_x -= 5;
             } else {
@@ -196,7 +196,7 @@ namespace game
         if (bn::keypad::b_pressed())
         {
 
-            Player_Projectile seal_projectile{}
+            // Player_Projectile seal_projectile{}
             /*
             bn::sprite_ptr seal_sprite = bn::sprite_items::seal.create_sprite(0, 0); 
 

@@ -4,9 +4,9 @@
 #ifndef PLAYER_MOVEMENT_H
 #define PLAYER_MOVEMENT_H
 
-class Player {
+// class Player {
 
-};
+//  };
 
 
 // bool collides_horizontally (player.Coordinates) {

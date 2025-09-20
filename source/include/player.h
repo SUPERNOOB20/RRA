@@ -1,5 +1,5 @@
-#ifndef PLAYER
-#define PLAYER
+#ifndef PLAYER_H
+#define PLAYER_H
 
 // #include <tuple>
 #include <array>
@@ -35,7 +35,7 @@ class Player {
         int getPosition_x() { return m_player_x; }
         int getPosition_y() { return m_player_y; }
 
-        void Player::set_position(Player* player, int player_x, int player_y);
+        void set_position(Player* player, int player_x, int player_y);
 
         bool is_alive();
 };

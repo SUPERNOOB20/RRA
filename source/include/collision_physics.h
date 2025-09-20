@@ -1,11 +1,11 @@
-#ifndef PLAYER_COLLISIONS
-#define PLAYER_COLLISIONS
+#ifndef COLLISION_PHYSICS_H
+#define COLLISION_PHYSICS_H
 
 
-class Collision_Block
-{
+// class Collision_Block
+// {
     
-}
+// }
 
 
 #endif

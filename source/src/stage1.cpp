@@ -1,6 +1,7 @@
 #include <tuple>
 #include <vector>
-#include "coordinates.h"
+#include <array>
+#include "rect.h"
 
 #include "bn_vector.h"
 #include "global_resources.h"
@@ -15,11 +16,11 @@
 #include "bn_log.h"
 
 
-std::vector<Coordinates> hazards;
-std::vector<Coordinates> collisions;
+std::vector<rra::Rect> hazards;
+std::vector<rra::Rect> collisions;
 
 
-std::vector<Coordinates> load_hazards(int current_lvl){
+std::vector<rra::Rect> load_hazards(int current_lvl){
     switch (current_lvl){
         case 1:
             /*
@@ -28,9 +29,10 @@ std::vector<Coordinates> load_hazards(int current_lvl){
             auto tup3 = tuple_cat(spike_1, spike_2);
             */
 
-            std::tuple<std::tuple<int, int>, std::tuple<int, int>> spikes ((std::tuple<int, int> (112, 150)), (std::tuple<int, int> (127, 160)));
+            // std::array<std::array<int, 2>, 2> spikes ((std::array<int, 2> {112, 150}), (std::array<int, 2> {127, 160}));
+            std::array<std::array<int, 2>, 2> spikes {(std::array<int, 2> {112, 150}), (std::array<int, 2> {127, 160})};
 
-            Coordinates spikes_1 = {spikes};
+            rra::Rect spikes_1 = {spikes};
             break;
         case 2:
             break;
@@ -40,21 +42,27 @@ std::vector<Coordinates> load_hazards(int current_lvl){
 
 
 
-std::vector<Coordinates> load_collisions(int current_lvl){
+std::vector<rra::Rect> load_collisions(int current_lvl){
     switch (current_lvl){
         case 1:
-            /*
-            std::tuple<int, int> spike_1(112, 150);
-            std::tuple<int, int> spike_2(127, 160);
-            auto tup3 = tuple_cat(spike_1, spike_2);
-            */
 
-            std::tuple<std::tuple<int, int>, std::tuple<int, int>> collisions ((std::tuple<int, int> (112, 150)), (std::tuple<int, int> (127, 160)));
-
-            Collision_Block collisions_1 = {collisions};
+            // std::array<std::array<int, 2>, 2> collisions
+            rra::Rect collisions {(std::array<int, 2> {112, 150}), (std::array<int, 2> {127, 160})};
+        
             break;
+
         case 2:
+
+            rra::Rect collisions {(std::array<int, 2> {112, 150}), (std::array<int, 2> {127, 160})};
+
             break;
+
+        case 3:
+
+            rra::Rect collisions {(std::array<int, 2> {50, 50}), (std::array<int, 2> {240, 160})};
+
+            break;
+
         default:
     }
 }
@@ -75,6 +83,7 @@ namespace stage1
         switch(current_level){
             case 1:
                 load_hazards(1);
+                load_collisions(1);
                 break;   
 
             case 2:

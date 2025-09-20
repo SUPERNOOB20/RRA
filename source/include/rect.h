@@ -1,5 +1,5 @@
-#ifndef COORDINATES_H
-#define COORDINATES_H
+#ifndef RECT_H
+#define RECT_H
 
 
 
@@ -18,8 +18,8 @@ struct Rect{
     
     private:
         // Don't worry, it's just (x1, y1), (x2, y2)
-        std::array<int, 2> top_left_corner;         
-        std::array<int, 2> bottom_right_corner;     
+        std::array<int, 2> top_left_corner{};         
+        std::array<int, 2> bottom_right_corner{};     
 
     public:
         Rect(std::array<int, 2> top_left_corner, std::array<int, 2> bottom_right_corner);
