@@ -151,8 +151,8 @@ namespace game
             std::array<int, 4> test = {1, 2, 3, 4};
             rra::Rect { test };
 
-            Rect damage_hitbox[] { std::array<int, 4> {(p_ptr->getPosition_x()) + 8, (p_ptr->getPosition_y()) + 15, (p_ptr->getPosition_x()) + 19, (p_ptr->getPosition_y()) + 32}};
-            Rect collision_hitbox[] { std::array<int, 4> {(p_ptr->getPosition_x()) + 11, (p_ptr->getPosition_y()) + 22, (p_ptr->getPosition_x()) + 15, (p_ptr->getPosition_y()) + 25}};
+            Rect collision_hitbox[] { std::array<int, 4> {(p_ptr->getPosition_x()) + 8, (p_ptr->getPosition_y()) + 15, (p_ptr->getPosition_x()) + 19, (p_ptr->getPosition_y()) + 32}};
+            Rect damage_hitbox[] { std::array<int, 4> {(p_ptr->getPosition_x()) + 11, (p_ptr->getPosition_y()) + 22, (p_ptr->getPosition_x()) + 15, (p_ptr->getPosition_y()) + 25}};
         }
 
         rra::game::change_level(VRAM, frame_counter);
