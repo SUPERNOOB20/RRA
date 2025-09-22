@@ -55,9 +55,15 @@ bool facing_right = true;    // Allocates 1 bit of storage for the direction the
 int current_level = 1;
 char current_difficulty = 'n';
 
+/*
+Player p;
+Player* p_ptr = &p;
 
+p_ptr->Player::set_position(p_ptr, player_x, player_y);
 
-
+rra::Rect damage_hitbox[] { std::array<int, 4> {(p_ptr->getPosition_x()) + 8, (p_ptr->getPosition_y()) + 15, (p_ptr->getPosition_x()) + 19, (p_ptr->getPosition_y()) + 32}};
+rra::Rect collision_hitbox[] { std::array<int, 4> {(p_ptr->getPosition_x()) + 11, (p_ptr->getPosition_y()) + 22, (p_ptr->getPosition_x()) + 15, (p_ptr->getPosition_y()) + 25}};
+*/
 
 void load_first_screen(Global_VRAM* VRAM){
     
@@ -69,6 +75,39 @@ void load_first_screen(Global_VRAM* VRAM){
 }
 
 void update_player_position(){
+
+    if (bn::keypad::right_held())
+    {
+        if (bn::keypad::l_held())
+        {
+            // Shifting makes you move at 1/3 speed.
+            // int player_speed = (1 << player_fp) + ((1 << player_fp) / 3);
+        } else if (bn::keypad::r_held()) {
+            player_x += 5;
+        } else {
+            player_x++;
+        }
+
+        facing_right = true;
+
+    }
+
+    if (bn::keypad::left_held())
+    {
+        if (bn::keypad::l_held())
+        {
+            // Shifting makes you move at 1/3 speed.
+            // int player_speed = (1 << player_fp) + ((1 << player_fp) / 3);
+        } else if (bn::keypad::r_held()) {
+            player_x -= 5;
+        } else {
+            player_x--;
+        }
+
+        facing_right = false;
+
+    }
+
     return;
 }
 
@@ -133,27 +172,24 @@ namespace game
     }
 
 
-
     void handle_frame(Global_VRAM* VRAM, int frame_counter) {
 
+        /*
         if (frame_counter == 0){
-            // Player p (int player_x = player_x, int player_y = player_y);
 
+            
             Player p;
             Player* p_ptr = &p;
 
             p_ptr->set_position(p_ptr, player_x, player_y);
             
-            // Rect damage_hitbox[] = {(p_ptr->getPosition_x()) + 8, (p_ptr->getPosition_y()) + 15, (p_ptr->getPosition_x()) + 19, (p_ptr->getPosition_y()) + 32};
-            // Rect collision_hitbox[] = {(p_ptr->getPosition_x()) + 11, (p_ptr->getPosition_y()) + 22, (p_ptr->getPosition_x()) + 15, (p_ptr->getPosition_y()) + 25}
-
-            // rra::Rect test[] {1, 2, 3, 4};
             std::array<int, 4> test = {1, 2, 3, 4};
             rra::Rect { test };
 
             Rect collision_hitbox[] { std::array<int, 4> {(p_ptr->getPosition_x()) + 8, (p_ptr->getPosition_y()) + 15, (p_ptr->getPosition_x()) + 19, (p_ptr->getPosition_y()) + 32}};
             Rect damage_hitbox[] { std::array<int, 4> {(p_ptr->getPosition_x()) + 11, (p_ptr->getPosition_y()) + 22, (p_ptr->getPosition_x()) + 15, (p_ptr->getPosition_y()) + 25}};
         }
+        */
 
         rra::game::change_level(VRAM, frame_counter);
 
@@ -161,37 +197,9 @@ namespace game
 
         frame_counter++;
 
-        if (bn::keypad::right_held())
-        {
-            if (bn::keypad::l_held())
-            {
-                player_x += 10;
-            } else if (bn::keypad::r_held()) {
-                player_x += 100;
-            } else {
-                player_x++;
-            }
-
-            facing_right = true;
-
-        }
-
-        if (bn::keypad::left_held())
-        {
-            if (bn::keypad::l_held())
-            {
-                // int player_speed = (1 << player_fp) + ((1 << player_fp) / 3);       // Shifting makes you move at 1/3 speed
-            } else if (bn::keypad::r_held()) {
-                player_x -= 5;
-            } else {
-                player_x--;
-            }
-
-            facing_right = false;
-
-        }
-
         update_player_position();
+
+        check_and_handle_collisions();
 
         if (bn::keypad::b_pressed())
         {

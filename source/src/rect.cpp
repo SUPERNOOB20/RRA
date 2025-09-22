@@ -75,6 +75,8 @@ std::array<std::array<int, 2>, 4> Rect::get_vertex_array(Rect coords){
     return hitbox;
 }
 
-
+std::array<int, 2> Rect::get_vertex(Rect rectangle, int index){
+    return rectangle.get_vertex_array(rectangle)[index];
+}
 
 };

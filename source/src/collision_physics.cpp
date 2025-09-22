@@ -10,7 +10,7 @@
 // Checks if any player-block collisions are happening. If so, then it solves them.
 // "player_coords" stands for player_collision_coordinates
 // "block_coords" stands for blocks_collision_coordinates
-void check_and_handle_collisions(Player* player, bn::vector<rra::Rect, 9999>* block_coords){
+void check_and_handle_collisions(Player* player_collision_hitbox, bn::vector<rra::Rect, 9999>* block_coords){
 
     // player_vertices = ((x1, y1), (x2, y2), (x3, y3), (x4, y4))
     std::array<<int, 2>, 4> player_vertices = player->get_();

@@ -38,6 +38,9 @@ struct Rect{
         std::array<int, 4> get_array(Rect coords);                                        // Same as collision_hitbox, but returns the result in a different format - returns an array of the 4 vertices :3 In this order: top_left_corner_x, top_left_corner_y, bottom_left_corner_x, bottom_left_corner_y.
         std::array<std::array<int, 2>, 4> get_vertex_array(Rect coords);                // Same as collision_hitbox, but returns the result in a different format - returns an array of the 4 vertices :3 In this order: top left corner, top right corner, bottom left corner, bottom right corner.
 
+        // Friendly reminder that this one is 0-indexed! (!o _o)
+        std::array<int, 2> get_vertex(Rect rectangle, int index);
+
     };
 };
 
