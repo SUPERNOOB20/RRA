@@ -55,7 +55,7 @@ bool facing_right = true;    // Allocates 1 bit of storage for the direction the
 int current_level = 1;
 char current_difficulty = 'n';
 
-/*
+
 Player p;
 Player* p_ptr = &p;
 
@@ -63,7 +63,7 @@ p_ptr->Player::set_position(p_ptr, player_x, player_y);
 
 rra::Rect damage_hitbox[] { std::array<int, 4> {(p_ptr->getPosition_x()) + 8, (p_ptr->getPosition_y()) + 15, (p_ptr->getPosition_x()) + 19, (p_ptr->getPosition_y()) + 32}};
 rra::Rect collision_hitbox[] { std::array<int, 4> {(p_ptr->getPosition_x()) + 11, (p_ptr->getPosition_y()) + 22, (p_ptr->getPosition_x()) + 15, (p_ptr->getPosition_y()) + 25}};
-*/
+
 
 void load_first_screen(Global_VRAM* VRAM){
     
@@ -199,7 +199,7 @@ namespace game
 
         update_player_position();
 
-        check_and_handle_collisions();
+        check_and_handle_collisions(Player* p, rra::Rect collision_hitbox);
 
         if (bn::keypad::b_pressed())
         {

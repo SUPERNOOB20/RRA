@@ -1,4 +1,6 @@
 #include "player.h"
+#include "player.h"
+#include "rect.h"
 #include <tuple>
 
 const int player_fp = 11;
@@ -22,6 +24,18 @@ Player::Player(bool alive, signed int player_real_x, signed int player_real_y, i
 {
 }
 
+
+std::array<int, 2> Player::getPositionRect(Player* player, int player_x, int player_y){
+
+    std::array<int, 2> c1 = {player_x, player_y};
+    std::array<int, 2> c2 = {player_x, player_y};
+    std::array<int, 2> c3 = {player_x, player_y};
+    std::array<int, 2> c4 = {player_x, player_y};
+
+    rra::Rect player_rect{c1, c2, c3, c4};
+
+    return player_rect;
+}
 
 // signed 20.11f fixed-point format.
 void Player::set_position(Player* player, int player_x, int player_y){

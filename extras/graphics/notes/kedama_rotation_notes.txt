@@ -1,0 +1,3 @@
+kedama ("ying yang"):	clockwise
+kedama_inner:		counter-clockwise
+kedama_outer:		clockwise

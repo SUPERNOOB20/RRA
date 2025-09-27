@@ -3,7 +3,7 @@
 
 // #include <tuple>
 #include <array>
-
+#include "rect.h"
 
 // Generic stuff to define generic player atributes, like position, speed, and of course, alive status :p
 class Player {
@@ -31,10 +31,11 @@ class Player {
         Player() {};
 
         // std::tuple<int, int> Player::get_position();
-        std::array<int, 2> getPosition() { return std::array<int, 2> {m_player_x, m_player_y}; }
+        std::array<int, 4> getPosition() { return std::array<int, 2> {m_player_x, m_player_y}; }
         int getPosition_x() { return m_player_x; }
         int getPosition_y() { return m_player_y; }
 
+        std::array<int, 2> getPositionRect(Player* player, int player_x, int player_y);
         void set_position(Player* player, int player_x, int player_y);
 
         bool is_alive();
