@@ -71,5 +71,49 @@ namespace stage2
 
         return;
     };
+
+    std::vector<rra::Rect> load_collisions(int current_lvl){
+
+        bn::vector<rra::Rect, 9999> collision_vector;                               // Initializes collision_vector.
+        bn::vector<rra::Rect, 9999>* collision_vector_ptr = &collision_vector       // Initializes a pointer to collision_vector.
+
+        switch (current_lvl){
+            case 10:
+
+                
+
+                // std::array<std::array<int, 2>, 2> collisions.
+                // You can also define them as std::array<int, 4> if you're into that ("^-^)
+                rra::Rect collisions1L {(std::array<int, 2> {0, 80}), (std::array<int, 2> {15, 160})};
+                rra::Rect collisions2L {(std::array<int, 2> {16, 112}), (std::array<int, 2> {31, 160})};
+                rra::Rect collisions3L {(std::array<int, 2> {32, 144}), (std::array<int, 2> {64, 160})};
+
+                rra::Rect collisions1R {(std::array<int, 2> {160, 144}), (std::array<int, 2> {240, 160})};
+                rra::Rect collisions2R {(std::array<int, 2> {176, 128}), (std::array<int, 2> {240, 143})};
+                rra::Rect collisions3R {(std::array<int, 2> {192, 112}), (std::array<int, 2> {240, 127})};
+                rra::Rect collisions4R {(std::array<int, 2> {208, 96}), (std::array<int, 2> {240, 111})};
+                rra::Rect collisions5R {(std::array<int, 2> {224, 80}), (std::array<int, 2> {240, 95})};
+            
+
+
+                collision_Vector_ptr->push.back(collisions1L);
+                collision_Vector_ptr->push.back(collisions2L);
+                collision_Vector_ptr->push.back(collisions3L);
+
+                collision_Vector_ptr->push.back(collisions1R);
+                collision_Vector_ptr->push.back(collisions2R);
+                collision_Vector_ptr->push.back(collisions3R);
+                collision_Vector_ptr->push.back(collisions4R);
+                collision_Vector_ptr->push.back(collisions5R);
+
+                break;
+
+
+            default:
+        }
+
+        return collision_vector_ptr;
+
+    }
 }
 }

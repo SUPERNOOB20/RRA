@@ -87,5 +87,21 @@ namespace stage5
 
         return;
     };
+
+
+
+
+    std::vector<rra::Rect> load_collisions(int current_lvl){
+    switch (current_lvl){
+        case 8:
+
+            // Floor
+            rra::Rect collisions {(std::array<int, 2> {0, 156}), (std::array<int, 2> {240, 156})};
+
+            break;
+
+        default:
+    }
+}
 }
 }

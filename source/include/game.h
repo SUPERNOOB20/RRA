@@ -12,7 +12,7 @@ namespace rra
 namespace game
 {
 void handle_frame(Global_VRAM* global_sprites_and_backgrounds, int frame_counter);
-void change_stage(Global_VRAM* global_sprites_and_backgrounds, int frame_counter);
+// void change_stage(Global_VRAM* global_sprites_and_backgrounds, int frame_counter);
 }
 
 

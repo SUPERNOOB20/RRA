@@ -21,6 +21,8 @@ Player::Player(bool alive, signed int player_real_x, signed int player_real_y, i
     , m_player_speed_x { 0 }         // Might be changed later on with fixed-point math (signed 20.11f fixed-point)
     , m_player_speed_y { 0 }         // Might be changed later on with fixed-point math (signed 20.11f fixed-point)    
 
+    , collision_hitbox { std::array<int, 4> {(m_player_x + 11), (m_player_y + 8), (m_player_x + 15), (m_player_y + 25)}}
+    , damage_hitbox { std::array<int, 4> {(m_player_x + 8), (m_player_y + 15), (m_player_x + 19), (m_player_y + 32)}}
 {
 }
 
