@@ -27,24 +27,17 @@ Player::Player(bool alive, signed int player_real_x, signed int player_real_y, i
 }
 
 
-std::array<int, 2> Player::getPositionRect(Player* player, int player_x, int player_y){
-
-    std::array<int, 2> c1 = {player_x, player_y};
-    std::array<int, 2> c2 = {player_x, player_y};
-    std::array<int, 2> c3 = {player_x, player_y};
-    std::array<int, 2> c4 = {player_x, player_y};
-
-    rra::Rect player_rect{c1, c2, c3, c4};
-
-    return player_rect;
-}
-
 // signed 20.11f fixed-point format.
 void Player::set_position(Player* player, int player_x, int player_y){
     // std::tuple<int, int> player->player_position = {player_x, player_y};
     player->m_player_x = player_x;
     player->m_player_y = player_y;
     return;
+}
+
+std::array<int, 2> Player::setDeFactoSpeed(Player* player, int player_de_facto_speed_x, int player_de_facto_speed_y){
+    player->m_player_de_facto_speed_x = player_de_facto_speed_x;
+    player->m_player_de_facto_speed_y = player_de_facto_speed_y;
 }
 
 // If the player isn't alive, they shouldn't be able to move anymore! :p

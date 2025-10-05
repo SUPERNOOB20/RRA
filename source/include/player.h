@@ -35,6 +35,8 @@ class Player {
         std::array<int, 2> getPosition() { return std::array<int, 2> {m_player_x, m_player_y}; }
         int getPosition_x() { return m_player_x; }
         int getPosition_y() { return m_player_y; }
+        
+        std::array<int, 2> getDeFactoSpeed() { return std::array<int, 2> {m_player_de_facto_speed_x, m_player_de_facto_speed_y}; }
 
         rra::Rect get_collision_hitbox() { return collision_hitbox; }
         rra::Rect get_damage_hitbox() { return damage_hitbox; }
@@ -47,10 +49,9 @@ class Player {
         rra::Rect get_damage_hitbox_width() { return damage_hitbox[2] - damage_hitbox[0]; }
         */
 
-
-        // Returns the position in Rect format: ((x1, y1), (x2, y2), (x3, y3), (x4, y4))
-        rra::Rect getPositionRect(Player* player, int player_x, int player_y);
         void set_position(Player* player, int player_x, int player_y);
+        std::array<int, 2> setDeFactoSpeed(Player* player, int player_de_facto_speed_x, int player_de_facto_speed_y);
+
 
         bool is_alive();
 };

@@ -26,23 +26,24 @@ struct Rect{
         Rect(std::array<std::array<int, 2>, 2> top_left_and_bottom_right_corners_inside_array);
         Rect(std::array<int, 4> int_coords);
 
-        int get_width(Rect coords) { return get_array(coords)[1] - get_array(coords)[0]; }
-        int get_height(Rect coords) { return get_array(coords)[2] - get_array(coords)[0]; }
+        int get_width() { return get_array()[1] - get_array()[0]; }
+        int get_height() { return get_array()[2] - get_array()[0]; }
 
-        std::array<int, 2> get_top_left_corner(Rect coords);
-        int get_top_left_corner_x(Rect coords);
-        int get_top_left_corner_y(Rect coords);
-        std::array<int, 2> get_bottom_right_corner(Rect coords);
-        int get_bottom_right_corner_x(Rect coords);
-        int get_bottom_right_corner_y(Rect coords);
+        std::array<int, 2> get_top_left_corner();
+        int get_top_left_corner_x();
+        int get_top_left_corner_y();
+        std::array<int, 2> get_bottom_right_corner();
+        int get_bottom_right_corner_x();
+        int get_bottom_right_corner_y();
 
     
-        std::array<std::array<int, 2>, 2> get_top_left_and_bottom_right_corners(Rect coords);
-        std::array<int, 4> get_array(Rect coords);                                        // Same as collision_hitbox, but returns the result in a different format - returns an array of the 4 vertices :3 In this order: top_left_corner_x, top_left_corner_y, bottom_left_corner_x, bottom_left_corner_y.
-        std::array<std::array<int, 2>, 4> get_vertex_array(Rect coords);                // Same as collision_hitbox, but returns the result in a different format - returns an array of the 4 vertices :3 In this order: top left corner, top right corner, bottom left corner, bottom right corner.
+        std::array<std::array<int, 2>, 2> get_top_left_and_bottom_right_corners();
+        std::array<int, 4> get_array();                                        // Same as collision_hitbox, but returns the result in a different format - returns an array of the 4 vertices :3 In this order: top_left_corner_x, top_left_corner_y, bottom_left_corner_x, bottom_left_corner_y.
+        std::array<std::array<int, 2>, 4> get_vertex_array();                // Same as collision_hitbox, but returns the result in a different format - returns an array of the 4 vertices :3 In this order: top left corner, top right corner, bottom left corner, bottom right corner.
 
         // Friendly reminder that this one is 0-indexed! (!o _o)
-        std::array<int, 2> get_vertex(Rect rectangle, int index);
+        // Invariant: 0 <= index <= 3
+        std::array<int, 2> get_vertex(int index);
 
     };
 };

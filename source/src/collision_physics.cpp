@@ -37,20 +37,6 @@ bool vertex_contained_within_rect(std::array<int, 2> v, rra::Rect r){
     return res;      
 }
 
-bool vertex_contained_within_rect(std::array<int, 2> v, rra::Rect r){
-
-    bool res = false;
-
-    // if v's x and y coords are within r's x and y coords, res = true.
-    if ((v[0] >= r.get_top_left_corner(r)[0]) && (v[0] <= r.get_bottom_right_corner(r)[0]) &&
-        (v[1] >= r.get_bottom_right_corner(r)[1]) && (v[1] <= r.get_top_left_corner(r)[1])){
-
-            res = true;
-        }
-    
-    return res;      
-}
-
 bool rect_contained_within_another_rect(rra::Rect r1, rra::Rect r2){
 
     bool res = false;
@@ -69,24 +55,22 @@ bool rect_contained_within_another_rect(rra::Rect r1, rra::Rect r2){
 }
 
 // Returns: player collision hitbox's "clipped_corners".
-std::vector<int> check_partial_collisions(Player* player, bn::vector<rra::Rect, 9999>* block_coords){
+std::vector<int> check_partial_collisions(Player* player, rra::Rect block_coords){
 
     // Any clipped corners will be indexed here.
     std::vector<int> clipped_corners_indices = {};
 
-    // rra::Rect 
-
     // player_vertices = ((x1, y1), (x2, y2), (x3, y3), (x4, y4))
-    std::array<std::array<int, 2>, 4> player_vertices = (player->get_collision_hitbox()).get_array();
+    std::array<std::array<int, 2>, 4> player_vertices = (player->get_collision_hitbox()).get_vertex_array(player->get_collision_hitbox());
 
     // for (Rect_Coordinates block : block_coords){
-    for (int block_coord_index = 0 ; block_coords->size() ; block_coord_index++){
+    for (int player_vertex_index = 0 ; player_vertex_index == 3 ; player_vertex_index++){
 
-        bool block_collides_with_player = check_collisions(player_vertices, block_coords);
+        bool block_collides_with_this_player_corner = vertex_contained_within_rect(player_vertices[player_vertex_index], block_coords);
 
-        if (block_collides_with_player){
+        if (block_collides_with_this_player_corner){
             // corners_in_partial_clip++;
-            clipped_corners_indices.push_back(block_coords);
+            clipped_corners_indices.push_back(player_vertex_index);
         }
     }
 
@@ -95,22 +79,19 @@ std::vector<int> check_partial_collisions(Player* player, bn::vector<rra::Rect, 
 
 // Invariant: clipped_corners_indices.size() == 1.
 void handle_one_partial_collision(std::vector<int> clipped_corners_indices, Player* player, rra::Rect block){
-    // int
-    // coord clipped_corner = corners_in_partial_clip;
 
     rra::Rect player_collision_hitbox = player->get_collision_hitbox();
 
-
-
-    int delta_x = block.get_bottom_right_corner.x() - player.get_collision_hitbox_width()
-    int delta_y = block.get_bottom_right_corner.y() - player.get_collision_hitbox_width()
-
     switch (clipped_corners_indices.back()){
         case 1:
+
+            int delta_x = block.get_bottom_right_corner_x() - player.get_collision_hitbox_width();
+            int delta_y = block.get_bottom_right_corner.y() - player.get_collision_hitbox_height();
+
             if (delta_x > delta_y){
-                player->setPosition_x(block.get_top_left_corner.x() - player->get_collision_hitbox_width());
+                player->setPosition_y(block.get_bottom_right_corner.x() - player->get_collision_hitbox_width());
             } else
-                player->setPosition_x(block.get_top_left_corner.x() - player->get_collision_hitbox_width());
+                player->setPosition_x(block.get_bottom_right_corner.x() - player->get_collision_hitbox_width());
             break;
         case 2:
             if (delta x > delta y){
@@ -172,9 +153,8 @@ void check_and_handle_full_2c(rra::Rect player, rra::Rect block, std::vector<int
 
 
 // Checks if any player-block collisions are happening. If so, then it solves them.
-// "player_coords" stands for player_collision_coordinates
 // "blocks_coords" stands for blocks_collision_coordinates
-void check_and_handle_collisions(std::vector<int> clipped_corner_indices, Player* player, bn::vector<rra::Rect, 9999>* blocks_coords){
+void check_and_handle_collisions(Player* player, bn::vector<rra::Rect, 9999>* blocks_coords){
 
     // "for block in blocks".
     for(int block = 0 ; int blocks_coords->size() ; block++){
@@ -212,28 +192,9 @@ void check_and_handle_collision(Player* player, rra::Rect block_coords){
     if (block_is_inside_player || player_is_inside_block){
 
         // Handles full 4c.
-        player->setDeFactoSpeed(player->getDeFactoSpeed() + 99);      // Solves collision via brute-forcing :3
+        player->setDeFactoSpeed(player, (player->getDeFactoSpeed()[0] + 99), (player->getDeFactoSpeed()[1] + 99));      // Solves collision via brute-forcing :3
 
     }
 
     return;
 }
-
-
-
-
-/*
-bool check_collisions(std::array<int, 4> player_vertices, rra::Rect block){
-
-    bool block_collides_with_player = false;
-
-    // for (std::array<int, 2> vertex : player_vertices){
-    for (int player_vertex_index ; 3 ; player_vertex_index++){
-        if ((player_vertices[player_vertex_index].x()) && ()){
-            block_collides_with_player = true;
-        }
-    }
-
-    return;
-}
-*/
