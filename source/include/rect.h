@@ -26,6 +26,9 @@ struct Rect{
         Rect(std::array<std::array<int, 2>, 2> top_left_and_bottom_right_corners_inside_array);
         Rect(std::array<int, 4> int_coords);
 
+        int get_width(Rect coords) { return get_array(coords)[1] - get_array(coords)[0]; }
+        int get_height(Rect coords) { return get_array(coords)[2] - get_array(coords)[0]; }
+
         std::array<int, 2> get_top_left_corner(Rect coords);
         int get_top_left_corner_x(Rect coords);
         int get_top_left_corner_y(Rect coords);

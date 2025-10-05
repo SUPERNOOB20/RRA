@@ -6,7 +6,21 @@
 // #include "player_bounding_boxes.h"
 #include "player.h"
 
-
+// I've decided to keep this function name small so that it takes up less space and for it to be easier to type and read :)
+// In the future, maybe learn to overload == operator? Or rewrite this by making a new operator! "^^
+bool eq(std::vector<int> a, std::vector<int> b){
+    if (a.size() != b.size()){
+        return false;
+    }
+        
+    for (int i; a.size(); i++){
+        if (a[i] != b[i]){
+        return false;
+    }
+    }
+       
+    return true;
+}
 
 
 bool vertex_contained_within_rect(std::array<int, 2> v, rra::Rect r){
@@ -54,14 +68,16 @@ bool rect_contained_within_another_rect(rra::Rect r1, rra::Rect r2){
     return res;      
 }
 
-// Returns: clipped_corners
+// Returns: player collision hitbox's "clipped_corners".
 std::vector<int> check_partial_collisions(Player* player, bn::vector<rra::Rect, 9999>* block_coords){
 
     // Any clipped corners will be indexed here.
     std::vector<int> clipped_corners_indices = {};
 
+    // rra::Rect 
+
     // player_vertices = ((x1, y1), (x2, y2), (x3, y3), (x4, y4))
-    std::array<std::array<int, 2>, 4> player_vertices = player->get_();
+    std::array<std::array<int, 2>, 4> player_vertices = (player->get_collision_hitbox()).get_array();
 
     // for (Rect_Coordinates block : block_coords){
     for (int block_coord_index = 0 ; block_coords->size() ; block_coord_index++){
@@ -78,37 +94,43 @@ std::vector<int> check_partial_collisions(Player* player, bn::vector<rra::Rect, 
 }
 
 // Invariant: clipped_corners_indices.size() == 1.
-void handle_one_partial_collision(std::vector<int> clipped_corners_indices, rra::Rect player, rra::Rect block){
+void handle_one_partial_collision(std::vector<int> clipped_corners_indices, Player* player, rra::Rect block){
     // int
     // coord clipped_corner = corners_in_partial_clip;
 
+    rra::Rect player_collision_hitbox = player->get_collision_hitbox();
+
+
+
+    int delta_x = block.get_bottom_right_corner.x() - player.get_collision_hitbox_width()
+    int delta_y = block.get_bottom_right_corner.y() - player.get_collision_hitbox_width()
+
     switch (clipped_corners_indices.back()){
         case 1:
-            int delta_x = block.get_bottom_right_corner.x() - player.get
-            if (delta x > delta y){
-                player.setPosition_x(block.get_top_left_corner.x() - player.get_collision_hitbox_width());
+            if (delta_x > delta_y){
+                player->setPosition_x(block.get_top_left_corner.x() - player->get_collision_hitbox_width());
             } else
-                player.setPosition_x(block.get_top_left_corner.x() - player.get_collision_hitbox_width());
+                player->setPosition_x(block.get_top_left_corner.x() - player->get_collision_hitbox_width());
             break;
         case 2:
             if (delta x > delta y){
-                player.setPosition_x(block.get_top_left_corner.x() - player.get_collision_hitbox_width());
+                player->setPosition_x(block.get_top_left_corner.x() - player->get_collision_hitbox_width());
             } else {
-                player.setPosition_x(block.get_top_left_corner.x() - player.get_collision_hitbox_width());
+                player->setPosition_x(block.get_top_left_corner.x() - player->get_collision_hitbox_width());
             }
             break;
         case 3:
             if (delta x > delta y){
-                player.setPosition_x(block.get_top_left_corner.x() - player.get_collision_hitbox_width());
+                player->setPosition_x(block.get_top_left_corner.x() - player->get_collision_hitbox_width());
             } else {
-                player.setPosition_x(block.get_top_left_corner.x() - player.get_collision_hitbox_width());
+                player->setPosition_x(block.get_top_left_corner.x() - player->get_collision_hitbox_width());
             }
             break;
         case 4:
             if (delta x > delta y){
-                player.setPosition_x(block.get_top_left_corner.x() - player.get_collision_hitbox_width());
+                player->setPosition_x(block.get_top_left_corner.x() - player->get_collision_hitbox_width());
             } else {
-                player.setPosition_x(block.get_top_left_corner.x() - player.get_collision_hitbox_width());
+                player->setPosition_x(block.get_top_left_corner.x() - player->get_collision_hitbox_width());
             }
             break;
         default:
@@ -128,13 +150,13 @@ void handle_two_partial_collisions(std::vector<int> clipped_corner_indices, Play
     c_br_y = block.get_top_left_corner.y()
     */
 
-    if (clipped_corner_indices == {3, 4}){
+    if (eq(clipped_corner_indices, {3, 4})){
         player.setPosition_y(block->get_top_left_corner_x)      // Case 1.
-    } else if (clipped_corner_indices == {2, 4}) {
+    } else if (eq(clipped_corner_indices, {2, 4})) {
         player.setPosition_y(block->get_top_left_corner_x)      // Case 2.
-    } else if (clipped_corner_indices == {1, 2}) {
+    } else if (eq(clipped_corner_indices == {1, 2})) {
         player.setPosition_y(block->get_top_left_corner_x)      // Case 3.
-    } else (clipped_corner_indices == {1, 3}) {
+    } else (eq(clipped_corner_indices == {1, 3})) {
         player.setPosition_y(block->get_top_left_corner_x)      // Case 4.
     }
 
