@@ -52,8 +52,8 @@
 
 // #include <vector>
 #include "bn_vector.h"
-template<typename Type, int MaxSize>
-bn::vector<bn::sprite_ptr, 1>        test;          // sets the template in stone, for later use in main().
+// template<typename Type, int MaxSize>
+// bn::vector<bn::sprite_ptr, 1>        test;          // sets the template in stone, for later use in main().
 
 
 int main()
