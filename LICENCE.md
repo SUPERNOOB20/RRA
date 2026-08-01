@@ -2,7 +2,7 @@ Copyright (CC BY 4.0) 2025 - 2026 SUPERNOOB20
 
 Attribution ShareAlike (CC BY-SA)
 
-[Attribution 4.0 International] (https://creativecommons.org/licenses/by/4.0/legalcode.en)
+[Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode.en)
 
 =======================================================================
 
